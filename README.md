@@ -1,3 +1,3 @@
 # dotfiles
 
-These are my configuration files for i3 and polybar.
+The configuration files are almost similar with the ArcoLinux i3 and polybar configuration files, with some personalization.
