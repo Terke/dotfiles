@@ -121,20 +121,20 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = arrow1 weather arrow2 memory2 arrow3 cpu2 arrow4 pavolume arrow5 wired-network arrow6 date
+modules-right = arrow1 kernel arrow2 memory2 arrow3 cpu2 arrow4 pavolume arrow5 wired-network arrow6 date
 
 separator =
 
 ;dim-value = 1.0
 
+tray-position = right
 tray-detached = false
+tray-maxsize = 20
+tray-background = ${colors.background}
 tray-offset-x = 0
 tray-offset-y = 0
-tray-padding = 2
-tray-maxsize = 20
+tray-padding = 4
 tray-scale = 1.0
-tray-position = right
-tray-background = ${colors.background}
 
 #i3: Make the bar appear below windows
 ;wm-restack = i3
@@ -1759,6 +1759,7 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 
+format-prefix = "  "
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
