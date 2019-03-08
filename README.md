@@ -4,4 +4,4 @@ The configuration files are almost the same with the `i3` and `polybar` configur
 
 How it looks like:
 
-! [Screenshots](https://i.imgur.com/W8I2XVk.jpg)
+![ScreenShot](https://i.imgur.com/W8I2XVk.jpg)
