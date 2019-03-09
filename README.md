@@ -8,4 +8,4 @@ Polybar
 ![ScreenShot](https://i.imgur.com/W8I2XVk.jpg)
 
 Polybar-Powerline
-![ScreenShot](https://i.imgur.com/I3U8EvF.jpg)
+![ScreenShot](https://i.imgur.com/undefined.png)
