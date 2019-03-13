@@ -8,4 +8,4 @@ How it looks like:
 ![ScreenShot](https://i.imgur.com/W8I2XVk.jpg)
 
 **Polybar-Powerline**
-![alt text](/home/tasos/Pictures/arcolinux.png "Description goes here")
+![ScreenShot](https://i.imgur.com/UDXYk7E.jpg)
