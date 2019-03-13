@@ -5,7 +5,7 @@ The configuration files are almost the same with the `i3` and `polybar` configur
 How it looks like:
 
 **Polybar**
-![ScreenShot](https://i.imgur.com/wnEaNeK.jpg)
+![ScreenShot](https://i.imgur.com/UIMiU6X.jpg)
 
 **Polybar-Powerline**
 ![ScreenShot](https://i.imgur.com/UDXYk7E.jpg)
