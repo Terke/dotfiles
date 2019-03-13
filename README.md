@@ -8,4 +8,4 @@ How it looks like:
 ![ScreenShot](https://i.imgur.com/W8I2XVk.jpg)
 
 **Polybar-Powerline**
-![ScreenShot](https://i.imgur.com/1vAGUtI.jpg)
+![ScreenShot](https://i.imgur.com/azibevH.jpg)

@@ -127,7 +127,7 @@ separator =
 
 ;dim-value = 1.0
 
-tray-position = right
+#tray-position = right
 tray-detached = false
 tray-maxsize = 20
 tray-background = ${colors.background}
@@ -1034,7 +1034,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-;   
+;      
 format-prefix = " "
 format-prefix-foreground = #cd1f3f
 format-underline = #645377
@@ -1089,7 +1089,7 @@ type = internal/cpu
 interval = 1
 format-foreground = #ffffff
 format-background = #cd1f3f
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = #ffffff
 
 label-font = 1
@@ -1106,7 +1106,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = CPU %percentage:3%%
+label = Cpu %percentage:3%%
 
 ################################################################################
 
@@ -1313,7 +1313,7 @@ interval = 1
 ;   %mb_total%
 label = %percentage_used%%
 
-format = RAM <label>
+format = Mem <label>
 format-prefix = " "
 format-prefix-foreground = #ffffff
 format-foreground = #ffffff
@@ -1653,7 +1653,7 @@ label-disconnected = %ifname% disconnected
 format-connected-foreground = #000000
 format-connected-background = #99d1ce
 format-connected-underline = #99d1ce
-format-connected-prefix = ""
+format-connected-prefix = ""
 format-connected-prefix-foreground = #000000
 format-connected-prefix-background = #99d1ce
 

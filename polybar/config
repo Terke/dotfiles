@@ -974,7 +974,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-;    
+;      
 format-prefix = " "
 format-prefix-foreground = #cd1f3f
 format-underline = #cd1f3f
