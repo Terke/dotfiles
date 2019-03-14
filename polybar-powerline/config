@@ -121,7 +121,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = arrow1 kernel arrow2 memory2 arrow3 cpu2 arrow4 pavolume arrow5 wired-network arrow6 date
+modules-right = arrow1 kernel arrow2 memory2 arrow3 cpu2 arrow4 pamac-manager arrow5 wired-network arrow6 date
 
 separator =
 
@@ -873,7 +873,7 @@ content-background = #3384d0
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #84598D
+content-foreground = #738adb
 content-background = #cd1f3f
 
 [module/arrow5]
@@ -882,7 +882,7 @@ type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
 content-foreground = #99d1ce
-content-background = #84598D
+content-background = #738adb
 
 [module/arrow6]
 ; grey to Blue
@@ -1034,7 +1034,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-;      
+;     
 format-prefix = " "
 format-prefix-foreground = #cd1f3f
 format-underline = #645377
@@ -1422,13 +1422,13 @@ exec = pamac checkupdates -q | wc -l
 interval = 1000
 label = Pamac : %output%
 tail = true
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix-foreground = #738adb
+format-foreground = #ffffff
+format-background = #738adb
+format-prefix-foreground = #ffffff
 format-underline = #738adb
 click-right = pamac-manager &
 click-left = pamac-manager &
-format-prefix = " "
+format-prefix = " "
 
 ################################################################################
 
