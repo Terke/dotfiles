@@ -9,3 +9,6 @@ How it looks like:
 
 **Polybar-Powerline**
 ![ScreenShot](https://i.imgur.com/UDXYk7E.jpg)
+
+**Polybar-Purple**
+![ScreenShot](https://i.imgur.com/B8PuYjY.png)
