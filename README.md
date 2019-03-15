@@ -14,6 +14,8 @@ How it looks like:
 ![ScreenShot](https://i.imgur.com/B8PuYjY.png)
 
 **How to use:**
-Put all the files of the i3 folder in '/home/$USER/.config/i3/'
-Put all the files of the polybar folder you want in '/home/$USER/.config/polybar/' and execute 'launch.sh' to start the polybar
+
+1. Put all the files of the i3 folder in '/home/$USER/.config/i3/'
+
+2. Put all the files of the polybar folder you want in '/home/$USER/.config/polybar/' and execute 'launch.sh' to start the polybar
 
