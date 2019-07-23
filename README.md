@@ -8,7 +8,7 @@ How it looks like:
 
 **How to use:**
 
-1. Put all the files of the i3 folder in '/home/$USER/.config/i3/'
+1. Put all the files of the i3 folder in `/home/$USER/.config/i3/`
 
-2. Put all the files of the polybar folder in '/home/$USER/.config/polybar/' and execute 'launch.sh' to start the polybar.
+2. Put all the files of the polybar folder in `/home/$USER/.config/polybar/` and execute `launch.sh` to start the polybar.
 
