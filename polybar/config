@@ -121,7 +121,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = arrow1 networkspeedup networkspeeddown arrow2 memory2 arrow3 cpu2 arrow4 pavolume arrow5 arch-aur-updates arrow6 date
+modules-right = arrow1 weather arrow2 memory2 arrow3 cpu2 arrow4 pavolume arrow5 arch-aur-updates arrow6 date
 
 separator =
 
@@ -1628,10 +1628,10 @@ type = custom/script
 interval = 10
 format = <label>
 format-prefix = " "
-format-prefix-foreground = #3EC13F
-format-underline = #3EC13F
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+format-prefix-foreground = ${colors.background}
+format-underline = #C3E88D
+format-foreground = ${colors.background}
+format-background = #C3E88D
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
 

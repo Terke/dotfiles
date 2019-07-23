@@ -14,8 +14,8 @@
 
 import requests
 
-CITY = YOUR CITY CODE
-API_KEY = YOUR API KEY
+CITY = "264371"
+API_KEY = "eabd51c875766f9c83eef075043931dd"
 UNITS = "Metric"
 UNIT_KEY = "C"
 #UNIT_KEY = "F"
