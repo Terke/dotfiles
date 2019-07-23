@@ -72,20 +72,22 @@ exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 
 
 # my current setup
-set $firstMonitor HDMI1
-set $secondMonitor HDMI2
 
-#set $firstMonitor LVDS1
+#set $firstMonitor DP3
 #set $secondMonitor LVDS1
 
-#set $firstMonitor DVI-I-2
-#set $secondMonitor VGA-0
+#set $firstMonitor DVI-I-0
+#set $secondMonitor HDMI-0
 
-#set $firstMonitor DVI-I-2
-#set $secondMonitor DVI-I-3
 
 #set $firstMonitor DVI-0
 #set $secondMonitor DVI-1
+
+#set $firstMonitor DVI-I-1
+#set $secondMonitor DVI-D-1
+
+set $firstMonitor HDMI1
+set $secondMonitor HDMI2
 
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
@@ -194,7 +196,7 @@ bindsym $mod+Shift+c reload
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
+bindsym $mod+q kill
 
 
 
@@ -415,6 +417,7 @@ for_window [class="Vivaldi-stable"] focus
 for_window [class="Spotify"] focus
 
 
+
 # TRAY APPLICATIONS
 
 # applications that are not installed will not start
@@ -472,6 +475,9 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #####################################################################################################################
 
 #not workspace related
+
+#conky
+#bindsym $mod+c exec --no-startup-id conky-toggle
 
 # terminal
 bindsym $mod+Return exec --no-startup-id termite;focus
@@ -679,11 +685,11 @@ bindsym mod1+Down exec --no-startup-id variety --resume
 #####################################################################################################################
 
 # next wallpaper
-bindsym mod1+Shift+n exec --no-startup-id variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+bindsym mod1+Shift+n exec --no-startup-id variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)& 
 # previous wallpaper
-bindsym mod1+Shift+p exec --no-startup-id variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+bindsym mod1+Shift+p exec --no-startup-id variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)& 
 # trash wallpaper
-bindsym mod1+Shift+t exec --no-startup-id variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+bindsym mod1+Shift+t exec --no-startup-id variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)& 
 # Update Wallpaper
 bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)
 
