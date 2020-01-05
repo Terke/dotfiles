@@ -889,7 +889,7 @@ content-background = #FFE585
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #1D2330
+content-foreground = #292d3e
 content-background = #F07178
 
 
@@ -1123,7 +1123,7 @@ time-alt = %l:%M%p
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-foreground = ${colors.foreground}
-format-background = #1D2330
+format-background = #292d3e
 label = "%date% %time% "
 
 #################################################################
