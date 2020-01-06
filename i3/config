@@ -131,7 +131,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#42a7f4' -sb '#42a7f4' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#C792EA' -sb '#C792EA' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -354,7 +354,7 @@ font pango:Noto Mono Regular 13
 # you can find the class with the program xprop
 
 # Workspace 1 browser related
-#assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
+assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
 assign [class="Chromium|Google-chrome"]                                             → 1
 
 # Workspace 3 text editor related
@@ -400,7 +400,7 @@ assign [class="Geary|Evolution"]                                                
 
 #browser
 #exec --no-startup-id vivaldi-stable
-for_window [class="Vivaldi-stable"] focus
+#for_window [class="Vivaldi-stable"] focus
 
 #text-editor
 #exec --no-startup-id geany
