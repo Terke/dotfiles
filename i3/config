@@ -419,6 +419,8 @@ assign [class="Geary|Evolution"]                                                
 #exec --no-startup-id spotify
 for_window [class="Spotify"] focus
 
+#change keyboard layout
+exec_always "setxkbmap -model pc104 -layout us,gr -variant ,, -option grp:alt_shift_toggle"
 
 
 # TRAY APPLICATIONS
@@ -442,7 +444,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
 
 # dropbox
-#exec --no-startup-id dropbox start
+exec --no-startup-id dropbox start
 
 # insync
 #exec --no-startup-id insync start
@@ -492,7 +494,7 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #bindsym $mod+c exec --no-startup-id conky-toggle
 
 # terminal
-bindsym $mod+Return exec --no-startup-id termite;focus
+bindsym $mod+Return exec --no-startup-id st;focus
 bindsym $mod+KP_Enter exec --no-startup-id termite;focus
 bindsym control+mod1+t exec --no-startup-id termite; focus
 bindsym control+mod1+Return exec --no-startup-id termite; focus
