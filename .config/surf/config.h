@@ -123,7 +123,6 @@ static SiteSpecific styles[] = {
 	/* regexp               file in $styledir */
 	/* { ".*",                 "default.css" }, */
 	{ ".*suckless.org.*",   "suckless.css" },
-	{ ".*wikipedia.org.*",  "wikipedia.css" },
 };
 
 /* certificates */

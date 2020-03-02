@@ -1255,8 +1255,8 @@ date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground}
+format-prefix-foreground = #F07178
+format-foreground = #F07178
 format-background = #292d3e
 label = "%date% %time% "
 
