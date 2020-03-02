@@ -1,40 +1,40 @@
 /**
  * ROFI Color theme
- * User: Derek Taylor (DistroTube)
+ * User: Terke
  * Copyright: Derek Taylor (DistroTube)
  */
 
 * {
     font: "Ubuntu 14";
-    selected-normal-foreground:  rgba ( 29, 35, 48, 100 % );
-    foreground:                  rgba ( 192, 197, 206, 100 % );
+    selected-normal-foreground:  rgba ( 29, 35, 48, 80 % );
+    foreground:                  rgba ( 192, 197, 206, 80 % );
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 255, 255, 255, 7 % );
-    red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  rgba ( 51, 51, 51, 100 % );
-    blue:                        rgba ( 38, 139, 210, 100 % );
-    urgent-foreground:           rgba ( 255, 153, 153, 100 % );
+    red:                         rgba ( 220, 50, 47, 80 % );
+    selected-urgent-foreground:  rgba ( 51, 51, 51, 80 % );
+    blue:                        rgba ( 38, 139, 210, 80 % );
+    urgent-foreground:           rgba ( 255, 153, 153, 80 % );
     alternate-urgent-background: rgba ( 255, 255, 255, 7 % );
-    active-foreground:           rgba ( 170, 170, 17, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  rgba ( 51, 51, 51, 100 % );
+    active-foreground:           rgba ( 170, 170, 17, 80 % );
+    lightbg:                     rgba ( 238, 232, 213, 80 % );
+    selected-active-foreground:  rgba ( 51, 51, 51, 80 % );
     alternate-active-background: rgba ( 255, 255, 255, 7 % );
-    background:                  rgba ( 29, 35, 48, 100 % );
-    bordercolor:                 rgba ( 100, 83, 119, 100 % );
+    background:                  rgba ( 29, 35, 48, 80 % );
+    bordercolor:                 rgba ( 80, 83, 119, 80 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 0, 0 % );
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 173, 105, 175, 100 % );
-    border-color:                rgba ( 173, 105, 175, 100 % );
+    lightfg:                     rgba ( 88, 104, 117, 80 % );
+    selected-normal-background:  rgba ( 173, 105, 175, 80 % );
+    border-color:                rgba ( 173, 105, 175, 80 % );
     spacing:                     2;
-    separatorcolor:              rgba ( 100, 83, 119, 100 % );
+    separatorcolor:              rgba ( 80, 83, 119, 80 % );
     urgent-background:           rgba ( 0, 0, 0, 0 % );
-    selected-urgent-background:  rgba ( 255, 153, 153, 100 % );
+    selected-urgent-background:  rgba ( 255, 153, 153, 80 % );
     alternate-urgent-foreground: @urgent-foreground;
     background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
     active-background:           rgba ( 0, 0, 0, 0 % );
-    selected-active-background:  rgba ( 170, 170, 17, 100 % );
+    selected-active-background:  rgba ( 170, 170, 17, 80 % );
 }
 #window {
     background-color: @background;
