@@ -121,7 +121,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = i3 xwindow
 modules-center = mpd
-modules-right = cpu2 memory2 weather pub-ip date
+modules-right = cpu2 memory2 weather networkspeeddown networkspeedup date
 
 separator =
 
@@ -1519,10 +1519,10 @@ type = internal/network
 interface = enp0s3
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = " "
-format-connected-prefix-foreground = #292d3e
-format-connected-foreground = #292d3e
-format-connected-background = #C3E88D
+format-connected-prefix = "  "
+format-connected-prefix-foreground = #C3E88D
+format-connected-foreground = #C3E88D
+format-connected-background = ${colors.background}
 
 ################################################################################
 
@@ -1536,9 +1536,9 @@ interface = enp0s3
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "  "
-format-connected-prefix-foreground = #292d3e
-format-connected-foreground = #292d3e
-format-connected-background = #C3E88D
+format-connected-prefix-foreground = #C3E88D
+format-connected-foreground = #C3E88D
+format-connected-background = ${colors.background}
 
 ################################################################################
 
