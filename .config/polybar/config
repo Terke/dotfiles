@@ -1239,7 +1239,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = cpu: %percentage:3%%
+label = cpu:%percentage:3%%
 
 ################################################################################
 
