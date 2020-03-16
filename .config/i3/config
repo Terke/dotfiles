@@ -458,7 +458,10 @@ exec --no-startup-id volumeicon
 #exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #feh sets wallpaper
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+#exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+
+# Nitrogen sets wallpaper
+exec --no-startup-id nitrogen --restore
 
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
@@ -499,10 +502,10 @@ bindsym control+mod1+KP_Enter exec --no-startup-id st; focus
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 
 #settings
-bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
+#bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
 
 #catfish
-bindsym control+mod1+c exec --no-startup-id catfish;focus
+#bindsym control+mod1+c exec --no-startup-id catfish;focus
 
 #slimlock
 #arcolinux conflict
@@ -577,9 +580,22 @@ bindsym $mod+F9 exec --no-startup-id evolution;focus
 
 #workspace 10 related
 bindsym $mod+F10 exec --no-startup-id spotify;focus
-bindsym control+mod1+s exec --no-startup-id spotify;focus
+#bindsym control+mod1+s exec --no-startup-id spotify;focus
 
 
+#####################################################################################################################
+#################                          dmenu scripts                                            #################
+#####################################################################################################################
+
+
+# Dmenu script for launching system monitoring programs.
+bindsym control+mod1+m exec ~/.dmenu/sysmon.sh
+
+# Dmenu script for editing config files.
+bindsym control+mod1+c exec ~/.dmenu/configs.sh
+
+# Dmenu script for taking screenshots
+bindsym control+mod1+s exec ~/.dmenu/scrot.sh
 
 
 #####################################################################################################################

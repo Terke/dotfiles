@@ -38,7 +38,6 @@
 }
 #window {
     background-color: @background;
-    border-color: @bordercolor;
     border:           1;
     padding:          5;
 }
@@ -48,7 +47,7 @@
 }
 #message {
     border:       1px dash 0px 0px ;
-    border-color: @bordercolor;
+    border-color: @separatorcolor;
     padding:      1px ;
 }
 #textbox {
@@ -103,14 +102,14 @@
     text-color:       @alternate-active-foreground;
 }
 #scrollbar {
-    width:        0px ;
+    width:        4px ;
     border:       0;
-    handle-width: 0px ;
+    handle-width: 8px ;
     padding:      0;
 }
-#sidebar {
+#mode-switcher {
     border:       2px dash 0px 0px ;
-    border-color: @bordercolor;
+    border-color: @separatorcolor;
 }
 #button.selected {
     background-color: @selected-normal-background;
@@ -131,5 +130,14 @@
 }
 #prompt {
     spacing:    0;
+    text-color: @normal-foreground;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
