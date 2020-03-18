@@ -1,4 +1,8 @@
-# dotfiles
+## i3wm dotfiles [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
+
+## Screenshots
+![ScreenShot](https://i.imgur.com/2NTO46a.png)
+![ScreenShot](https://i.imgur.com/gz0WnmC.png)
 
 The configuration files are almost the same with the `i3` and `polybar` configuration files of [ArcoLinux](https://arcolinux.info/), with some personalization. I also use the configuration files of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
 
@@ -27,8 +31,7 @@ The configuration files are almost the same with the `i3` and `polybar` configur
 - **PDF Reader :** [Zathura](https://pwmt.org/projects/zathura/)
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** Sardi-Arc
-- **GTK Cursors :** Breeze_Snow
+- **GTK Cursors :** Breeze_Snow `yay -S breeze-snow-cursor-theme`
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[ohmyzsh](https://ohmyz.sh/) - theme: xiong-chiamiov-plus
 
-## Screenshot
-![ScreenShot](https://i.imgur.com/2NTO46a.png)
+
