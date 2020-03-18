@@ -21,7 +21,7 @@ The configuration files are almost the same with the `i3` and `polybar` configur
 - **Web Browser :** [Brave](https://brave.com/)
 - **Terminal 1**: [termite](https://github.com/thestinger/termite)
 - **Terminal 2**: [st](https://st.suckless.org/)
-- **Terminal Font :** [hack](https://github.com/fonts/Hack)
+- **Terminal Font :** [Hack](https://github.com/fonts/Hack)
 - **CLI Text Editor :** [GNU nano](https://www.nano-editor.org/download.php)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
 - **CLI Music Player :** [ncmpcpp](https://github.com/arybczak/ncmpcpp)
