@@ -2,13 +2,12 @@
 
 The configuration files are almost the same with the `i3` and `polybar` configuration files of [ArcoLinux](https://arcolinux.info/), with some personalization. I also use the configuration files of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
 
-Their YouTube channels:
-
+## Their YouTube Channels
 [Erik Dubois](https://www.youtube.com/channel/UCJdmdUp5BrsWsYVQUylCMLg)
 
 [DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)
 
-## Software that I use:
+## Software that I use
 - **Window Manager** : [i3-gaps](https://github.com/Airblader/i3)
 - **Bar** : [polybar](https://github.com/polybar/polybar)
 - **Program Launcher 1** : [rofi](https://github.com/davatorium/rofi)
