@@ -492,11 +492,11 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #bindsym $mod+c exec --no-startup-id conky-toggle
 
 # terminal
-bindsym $mod+Return exec --no-startup-id st;focus
-bindsym $mod+KP_Enter exec --no-startup-id st;focus
-bindsym control+mod1+t exec --no-startup-id st; focus
-bindsym control+mod1+Return exec --no-startup-id st; focus
-bindsym control+mod1+KP_Enter exec --no-startup-id st; focus
+bindsym $mod+Return exec --no-startup-id termite;focus
+bindsym $mod+KP_Enter exec --no-startup-id termite;focus
+bindsym control+mod1+t exec --no-startup-id termite; focus
+bindsym control+mod1+Return exec --no-startup-id termite; focus
+bindsym control+mod1+KP_Enter exec --no-startup-id termite; focus
 
 #System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
