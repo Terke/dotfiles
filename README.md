@@ -1,6 +1,4 @@
 ## i3wm dotfiles [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
-
-## Screenshots
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
 ![ScreenShot](https://i.imgur.com/gz0WnmC.png)
 
@@ -12,7 +10,7 @@ The configuration files are almost the same with the `i3` and `polybar` configur
 - **[DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)**
 
 ## Software that I use
-- **Window Manager** : [i3-gaps](https://github.com/Airblader/i3)
+- **Window Manager** : [i3](https://github.com/i3/i3)
 - **Bar** : [polybar](https://github.com/polybar/polybar)
 - **Program Launcher 1** : [rofi](https://github.com/davatorium/rofi)
 - **Program Launcher 2** : [dmenu](https://tools.suckless.org/dmenu/)
@@ -32,6 +30,6 @@ The configuration files are almost the same with the `i3` and `polybar` configur
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** Sardi-Arc
 - **GTK Cursors :** Breeze_Snow `yay -S breeze-snow-cursor-theme`
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[ohmyzsh](https://ohmyz.sh/) - theme: xiong-chiamiov-plus
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - theme: xiong-chiamiov-plus
 
 
