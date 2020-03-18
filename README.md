@@ -31,6 +31,5 @@ Their YouTube channels:
 - **GTK Cursors :** Breeze_Snow
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[ohmyzsh](https://ohmyz.sh/) - theme: xiong-chiamiov-plus
 
-**How it looks like:**
-
+## Screenshot
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
