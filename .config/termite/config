@@ -8,7 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Monospace 11
+font = Hack 12
 #font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
@@ -45,42 +45,42 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-# ArcoLinux Default Theme
-background = rgba(40, 42, 54, 0.8)
+#background = #292d3e
+background = rgba(40, 42, 54, 0.95)
 
 # special
-foreground      = #f8f8f2
-foreground_bold = #f8f8f2
-cursor          = #f8f8f2
+foreground      = #bbc5ff
+foreground_bold = #bbc5ff
+cursor          = #bbc5ff
 
 # black
-color0  = #000000
-color8  = #79A9FF
+color0 =  #101010  !! originally #292d3e
+color8 =  #434758
 
 # red
-color1  = #ff5555
-color9  = #ff6e67
+color1 =  #f07178
+color9 =  #ff8b92
 
 # green
-color2  = #50fa7b
-color10 = #5af78e
+color2 =  #c3e88d
+color10 = #ddffa7
 
 # yellow
-color3  = #f1fa8c
-color11 = #f4f99d
+color3 =  #ffcb6b
+color11 = #ffe585
 
 # blue
-color4  = #6790EB
-color12 = #79A9FF
+color4 =  #82aaff
+color12 = #9cc4ff
 
 # magenta
-color5  = #ff79c6
-color13 = #ff92d0
+color5  = #c792ea
+color13 = #e1acff
 
 # cyan
-color6  = #8be9fd
-color14 = #9aedfe
+color6  = #89ddff
+color14 = #a3f7ff
 
 # white
-color7  = #bfbfbf
-color15 = #e6e6e6
+color7  = #d0d0d0
+color15 = #ffffff

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Dmenu script for launching system monitoring programs.
 
 declare -a options=("htop
@@ -7,6 +8,8 @@ gtop
 iftop
 iotop
 iptraf-ng
+nmon
+s-tui
 quit")
 
 choice=$(echo -e "${options[@]}" | dmenu -l -i -p 'System monitors: ')
@@ -18,13 +21,16 @@ case $choice in
 	htop| \
 	glances| \
 	gtop| \
+	nmon| \
+	s-tui)
+        exec termite -e $choice
+	;;
 	iftop| \
 	iotop| \
 	iptraf-ng)
-        exec st -e gksu $choice
+        exec termite -e gksu $choice
 	;;
 	*)
 		exit 1
 	;;
 esac
-
