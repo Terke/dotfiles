@@ -5,6 +5,7 @@
 declare -a options=("htop
 glances
 gtop
+gotop
 iftop
 iotop
 iptraf-ng
@@ -21,6 +22,7 @@ case $choice in
 	htop| \
 	glances| \
 	gtop| \
+	gotop| \
 	nmon| \
 	s-tui)
         exec termite -e $choice

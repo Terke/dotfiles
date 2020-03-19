@@ -40,7 +40,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #cc282A36
+background = #cc292d3e
 foreground = #c0c5ce
 alert = #bd2c40
 volume-min = #a3be8c
@@ -1220,10 +1220,10 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = #FFB86C
+format-foreground = #ffcb6b
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #FFB86C
+format-prefix-foreground = #ffcb6b
 
 label-font = 1
 
@@ -1255,8 +1255,8 @@ date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
 format-prefix = "  "
-format-prefix-foreground = #8BE9FD
-format-foreground = #8BE9FD
+format-prefix-foreground = #89ddff
+format-foreground = #89ddff
 format-background = ${colors.background}
 label = "%date% %time% "
 
@@ -1455,8 +1455,8 @@ label = %percentage_used%%
 
 format = mem: <label>
 format-prefix = "  "
-format-prefix-foreground = #FF5555
-format-foreground = #FF5555
+format-prefix-foreground = #f07178
+format-foreground = #f07178
 format-background = ${colors.background}
 
 ################################################################################

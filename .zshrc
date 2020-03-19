@@ -11,7 +11,7 @@ export ZSH=/usr/share/oh-my-zsh/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="xiong-chiamiov-plus"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -215,15 +215,14 @@ alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Publi
 #shopt -s expand_aliases # expand aliases
 
 #youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
+alias yt-aac="youtube-dl --extract-audio --audio-format aac --audio-quality 0 "
+alias yt-best="youtube-dl --extract-audio --audio-format best "
 alias yt-flac="youtube-dl --extract-audio --audio-format flac --audio-quality 0 "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+alias yt-m4a="youtube-dl --extract-audio --audio-format m4a --audio-quality 0 "
 alias yt-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-
+alias yt-opus="youtube-dl --extract-audio --audio-format opus --audio-quality 0 "
+alias yt-vorbis="youtube-dl --extract-audio --audio-format vorbis --audio-quality 0 "
+alias yt-wav="youtube-dl --extract-audio --audio-format wav --audio-quality 0 "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 #Recent Installed Packages

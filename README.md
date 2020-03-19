@@ -30,6 +30,6 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** Sardi-Arc
 - **GTK Cursors :** Breeze_Snow `yay -S breeze-snow-cursor-theme`
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - theme: xiong-chiamiov-plus
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - theme: robbyrussell
 
 
