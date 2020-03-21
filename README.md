@@ -2,7 +2,7 @@
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
 ![ScreenShot](https://i.imgur.com/gz0WnmC.png)
 
-My config files, are almost the same with the configuration files of [ArcoLinux](https://arcolinux.info/), with some personalization. I also use the dotfiles of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
+My config files, are almost the same with the configuration files of [ArcoLinux](https://arcolinux.info/) (an Arch based distro), with some personalization. I also use the dotfiles of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
 
 ## Their YouTube Channels
 - **[Erik Dubois](https://www.youtube.com/channel/UCJdmdUp5BrsWsYVQUylCMLg)**

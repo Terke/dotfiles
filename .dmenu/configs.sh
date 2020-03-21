@@ -7,11 +7,13 @@ picom
 i3
 polybar
 neofetch
+dwm
 st
 dmenu
 surf
 termite
 vim
+ncmpcpp
 xresources
 zsh
 zathura
@@ -38,6 +40,9 @@ case "$choice" in
 	neofetch)
 		choice="$HOME/.config/neofetch/config.conf"
 	;;
+	dwm)
+		choice="$HOME/.config/dwm/config.h"
+	;;
 	st)
 		choice="$HOME/.config/st/config.h"
 	;;
@@ -52,6 +57,9 @@ case "$choice" in
 	;;
 	vim)
 		choice="$HOME/.vimrc"
+	;;
+	ncmpcpp)
+		choice="$HOME/.ncmpcpp/config"
 	;;
 	xresources)
 		choice="$HOME/.Xresources"
