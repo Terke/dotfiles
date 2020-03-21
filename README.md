@@ -33,3 +33,8 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - theme: robbyrussell
 
 
+## License
+
+[WTFPL](http://www.wtfpl.net/)
+
+
