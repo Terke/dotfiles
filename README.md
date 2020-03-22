@@ -9,21 +9,21 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 
 - **[DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)**
 
-## Software that I use
+## Hot stuff
+- **OS :** [ArcoLinux](https://arcolinux.com/)
 - **Window Manager :** [i3](https://github.com/i3/i3)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
-- **Program Launcher 1 :** [rofi](https://github.com/davatorium/rofi)
-- **Program Launcher 2 :** [dmenu](https://tools.suckless.org/dmenu/)
+- **Program Launcher :** [rofi](https://github.com/davatorium/rofi) or [dmenu](https://tools.suckless.org/dmenu/)
 - **GUI File Manager :** [thunar](https://github.com/xfce-mirror/thunar)
 - **CLI File Manager :** [ranger](https://github.com/ranger/ranger)
 - **Image Viewer :** [Feh](https://github.com/derf/feh)
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot)
 - **Web Browser :** [Brave](https://brave.com/)
-- **Terminal 1 :** [termite](https://github.com/thestinger/termite)
-- **Terminal 2 :** [st](https://st.suckless.org/)
+- **Terminal :** [termite](https://github.com/thestinger/termite) or [st](https://st.suckless.org/)
 - **Terminal Font :** [Hack](https://github.com/fonts/Hack)
 - **CLI Text Editor :** [GNU nano](https://www.nano-editor.org/download.php)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
+- **Music Daemon :** [mpd](https://www.musicpd.org/)
 - **CLI Music Player :** [ncmpcpp](https://github.com/arybczak/ncmpcpp)
 - **Multimedia Player :** [mpv](https://mpv.io/)
 - **PDF Reader :** [Zathura](https://pwmt.org/projects/zathura/)
