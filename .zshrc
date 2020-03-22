@@ -262,6 +262,12 @@ alias music="ncmpcpp"
 #ranger file manager
 alias r="ranger"
 
+# Changing "ls" to "exa"
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias ls-a='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ls-l='exa -l --color=always --group-directories-first'  # long format
+alias ls-t='exa -aT --color=always --group-directories-first' # tree listing
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
