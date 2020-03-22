@@ -5,9 +5,9 @@
 My config files, are almost the same with the configuration files of [ArcoLinux](https://arcolinux.info/) (an Arch based distro), with some personalization. I also use the dotfiles of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
 
 ## Their YouTube Channels
-- **[Erik Dubois](https://www.youtube.com/channel/UCJdmdUp5BrsWsYVQUylCMLg)**
+- **[Erik Dubois](https://www.youtube.com/channel/UCJdmdUp5BrsWsYVQUylCMLg)** (Tutorials about ArcoLinux)
 
-- **[DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)**
+- **[DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)** (Tutorials about Linux and Free and Open Source Software)
 
 ## Hot stuff
 - **OS :** [ArcoLinux](https://arcolinux.com/)
