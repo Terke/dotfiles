@@ -46,7 +46,7 @@ urgent_on_bell = true
 
 [colors]
 #background = #292d3e
-background = rgba(40, 42, 54, 0.95)
+background = rgba(40, 42, 54, 0.85)
 
 # special
 foreground      = #bbc5ff
