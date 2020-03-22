@@ -35,6 +35,6 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 
 ## License
 
-[WTFPL](http://www.wtfpl.net/)
+The files and scripts in this repository are licensed under the MIT License.
 
 

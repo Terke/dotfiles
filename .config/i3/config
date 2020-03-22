@@ -131,7 +131,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+shift+d exec --no-startup-id dmenu_run 
+bindsym $mod+shift+d exec --no-startup-id dmenu_run
 #-i -nb '#191919' -nf '#C792EA' -sb '#C792EA' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 # gmrun
@@ -366,7 +366,7 @@ assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]   
 assign [class="Xed|xed|Brackets|Atom|Code|Geany"]                                   → 3
 
 # Workspace 4 music related
-assign [class="Spotify|spotify"]                                                    → 4
+assign [class="Spotify|spotify|Deadbeef|deadbeef"]                                  → 4
 #fix for spotify not moving to workspace 4
 for_window [class="Spotify"] move to workspace 4
 
@@ -386,7 +386,7 @@ assign [class="Meld"]                                                           
 
 # Workspace 9 Gpick
 assign [class="Gpick"]                                                              → 9
-                                                      
+
 #####################################################################################################################
 #################           autostart   -    execute applications at boot time                      #################
 #####################################################################################################################
@@ -881,7 +881,7 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 # class                 border  backgr. text    indicator
 client.placeholder      #242424 #242424 #242424
 client.background       #242424 #242424 #242424
-client.focused          #2E9AFE #2E9AFE #e5e5e5 #2E9AFE
+client.focused          #2E9AFE #2E9AFE #e5e5e5 #e1acff
 client.unfocused        #222222 #222222 #aaaaaa #222222
 client.focused_inactive #222222 #222222 #a9a9a9 #222222
 client.urgent           #FFAF00 #FFAF00 #f7f7f7 #FFAF00
