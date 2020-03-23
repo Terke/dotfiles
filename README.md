@@ -25,10 +25,10 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
 - **Music Daemon :** [mpd](https://www.musicpd.org/)
 - **CLI Music Player :** [ncmpcpp](https://github.com/arybczak/ncmpcpp)
-- **Multimedia Player :** [VLC](https://www.videolan.org/vlc/index.el.html)
+- **Video Player :** [VLC](https://www.videolan.org/vlc/index.el.html)
 - **PDF Reader :** [Zathura](https://pwmt.org/projects/zathura/)
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
-- **GTK Icons :** Sardi-Arc
+- **GTK Icons :** [Sardi-Arc](https://sourceforge.net/projects/sardi/files/)
 - **GTK Cursors :** Breeze_Snow `yay -S breeze-snow-cursor-theme`
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - theme: robbyrussell
 
