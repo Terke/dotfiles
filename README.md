@@ -32,6 +32,28 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **GTK Cursors :** Breeze_Snow `yay -S breeze-snow-cursor-theme`
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - theme: robbyrussell
 
+## My Keybindings
+
+MODKEY = Super key (aka the Windows key).
+
+| Keybinding | Action |
+| :--- | :--- |
+| `MODKEY + RETURN` | opens terminal |
+| `MODKEY + SHIFT + RETURN` | opens file manager |
+| `MODKEY + SHIFT + d` | dmenu |
+| `MODKEY + SHIFT + q` | closes window with focus |
+| `MODKEY + SHIFT + r` | restarts i3 |
+| `MODKEY + SHIFT + 1-9` | send focused window to workspace (1-9) |
+| `MODKEY + SHIFT + space` | toggle tiling / floating |
+| `MODKEY + 1-9` | switch focus to workspace (1-9) |
+| `MODKEY + x` | exit i3 |
+| `MODKEY + r` | resize mode |
+| `MODKEY + F12` | rofi small |
+| `MODKEY + F1` | default browser |
+| `MODKEY + Arrow Keys` | change focus |
+| `MODKEY + SHIFT + Arrow Keys` | move focused window |
+| `MODKEY + h` | split windows in horizontal orientation |
+| `MODKEY + v` | split windows in vertical orientation |
 
 ## License
 
