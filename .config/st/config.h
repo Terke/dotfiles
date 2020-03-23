@@ -87,42 +87,36 @@ unsigned int alpha = 0xdf;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-    "#282a36",
-	"#ff5555",
-	"#50fa7b",
-	"#f1fa8c",
-	"#bd93f9",
-	"#ff79c6",
-	"#8be9fd",
-	"#bbbbbb",
-
-	/* 8 bright colors */
-	"#44475a",
-	"#FF6E67",
-	"#5AF78E",
-	"#F4F99D",
-	"#CAA9FA",
-	"#FF92D0",
-	"#9AEDFE",
-	"#E6E6E6",
-
+	"#0a0200", // color0
+	"#cf5252", // color1
+	"#92ad4a", // color2
+	"#c9895b", // color3
+	"#6f97b8", // color4
+	"#ab6ba6", // color5
+	"#6fa69f", // color6
+	"#cccccc", // color7
+	"#22262e", // color8
+	"#cf5252", // color9
+	"#92ad4a", // color10
+	"#c9895b", // color11
+	"#6f97b8", // color12
+	"#ab6ba6", // color13
+	"#6fa69f", // color14
+	"#cccccc", // color15
 	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#282a36",
-	"#f8f8f2",
-	"#d7d7d7",
+	// more colors can be added after 255 to use with DefaultXX
+	"#071616",   // color256 -> background
+	"#cccccc",   // color257 -> foreground
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultbg = 256;
 unsigned int defaultfg = 257;
-static unsigned int defaultcs = 258;
-static unsigned int defaultrcs = 258;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
