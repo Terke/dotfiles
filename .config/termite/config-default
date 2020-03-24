@@ -8,8 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Hack 12
-#font = Hack Bold 10
+font = Monospace 12
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -45,42 +44,46 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-#background = #071616
-background = rgba(7, 22, 22, 0.75)
+# https://critical.ch/xterm/
+#dracula theme adapted by Erik Dubois
+background = rgba(40, 42, 54, 0.8)
 
 # special
-foreground      = #cccccc
-foreground_bold = #cccccc
-cursor          = #cccccc
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+#background      = #282a36
 
 # black
-color0 =  #0a0200 !! originally #292d3e
-color8 =  #22262e
+color0  = #000000
+color8  = #79A9FF
 
 # red
-color1 =  #cf5252
-color9 =  #cf5252
+color1  = #ff5555
+color9  = #ff6e67
 
 # green
-color2 =  #92ad4a
-color10 = #92ad4a
+color2  = #50fa7b
+color10 = #5af78e
 
 # yellow
-color3 =  #c9895b
-color11 = #c9895b
+color3  = #f1fa8c
+color11 = #f4f99d
 
 # blue
-color4 =  #6f97b8
-color12 = #6f97b8
+color4  = #6790EB
+color12 = #79A9FF
 
 # magenta
-color5  = #ab6ba6
-color13 = #ab6ba6
+color5  = #ff79c6
+color13 = #ff92d0
 
 # cyan
-color6  = #6fa69f
-color14 = #6fa69f
+color6  = #8be9fd
+color14 = #9aedfe
 
 # white
-color7  = #cccccc
-color15 = #cccccc
+color7  = #bfbfbf
+color15 = #e6e6e6
+
+

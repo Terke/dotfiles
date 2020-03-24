@@ -112,19 +112,6 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
-#list
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -la'
-alias l='ls'
-alias l.="ls -A | egrep '^\.'"
-
-#fix obvious typo's
-alias cd..='cd ..'
-alias pdw="pwd"
-alias udpate='sudo pacman -Syyu'
-alias upate='sudo pacman -Syyu'
-
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -206,14 +193,6 @@ alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pac
 #mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
 
-#shopt
-#shopt -s autocd # change to named directory
-#shopt -s cdspell # autocorrects cd misspellings
-#shopt -s cmdhist # save multi-line commands in history as single line
-#shopt -s dotglob
-#shopt -s histappend # do not overwrite history
-#shopt -s expand_aliases # expand aliases
-
 #youtube-dl
 alias yt-aac="youtube-dl --extract-audio --audio-format aac --audio-quality 0 "
 alias yt-best="youtube-dl --extract-audio --audio-format best "
@@ -226,7 +205,7 @@ alias yt-wav="youtube-dl --extract-audio --audio-format wav --audio-quality 0 "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 #Recent Installed Packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
 #Cleanup orphaned packages
@@ -263,10 +242,8 @@ alias music="ncmpcpp"
 alias r="ranger"
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias ls-a='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ls-l='exa -l --color=always --group-directories-first'  # long format
-alias ls-t='exa -aT --color=always --group-directories-first' # tree listing
+alias ls='exa -l'
+alias lt='exa -aT --color=always --group-directories-first'
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
