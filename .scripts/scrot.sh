@@ -6,7 +6,7 @@
 #1.Added variable for notification timeouts. 2. Show link in notification
 
 
-IMG_PATH=/home/tasos/Pictures/scrot
+IMG_PATH=/home/tasos/Pictures/Screenshots
 UL=fb
 EDIT=gimp
 TIME=3000 #Miliseconds notification should remain visible
