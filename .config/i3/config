@@ -584,18 +584,21 @@ bindsym $mod+F10 exec --no-startup-id spotify;focus
 
 
 #####################################################################################################################
-#################                          dmenu scripts                                            #################
+#################                          scripts                                            #######################
 #####################################################################################################################
 
 
 # Dmenu script for launching system monitoring programs.
-bindsym control+mod1+m exec ~/.dmenu/sysmon.sh
+bindsym control+mod1+m exec ~/.scripts/sysmon.sh
 
 # Dmenu script for editing config files.
-bindsym control+mod1+c exec ~/.dmenu/configs.sh
+bindsym control+mod1+c exec ~/.scripts/configs.sh
 
-# Dmenu script for taking screenshots
-bindsym control+mod1+s exec ~/.dmenu/scrot.sh
+# Dmenu script for taking screenshots.
+bindsym control+mod1+s exec ~/.scripts/scrot.sh
+
+# Rofi script for taking screenshots.
+bindsym control+mod1+z exec ~/.scripts/screenshot
 
 
 #####################################################################################################################
