@@ -1,9 +1,3 @@
-#  _____    _              
-# |__  /___| |__  _ __ ___ 
-#   / // __| '_ \| '__/ __|
-#  / /_\__ \ | | | | | (__ 
-# /____|___/_| |_|_|  \___|
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -17,7 +11,7 @@ export ZSH=/usr/share/oh-my-zsh/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,51 +76,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# Set name of the theme to load.
-source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
-
-# Font mode for powerlevel9k
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-# Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon custom_user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(disk_usage ip ram time)
-POWERLEVEL9K_DISABLE_RPROMPT=true
-
-# OS segment
-POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{cyan} Arch %F{white}Linux%f'
-
-# User with skull
-user_with_skull() {
-    echo -n " Terke"
-}
-POWERLEVEL9K_CUSTOM_USER="user_with_skull"
-
-# Dir colours
-POWERLEVEL9K_DIR_HOME_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='yellow'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_DIR_SHORTEN_LENGTH=2
-POWERLEVEL9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
-
-# Status
-POWERLEVEL9K_STATUS_OK_BACKGROUND='black'
-POWERLEVEL9K_STATUS_OK_ICON=$'\uf164'
-POWERLEVEL9K_STATUS_ERROR_ICON=$'\uf165'
-POWERLEVEL9K_STATUS_ERROR_CR_ICON=$'\uf165'
-
-# VCS colors (Information about this git or hg repository)
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='white'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='red'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -327,4 +276,4 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-pfetch
+neofetch
