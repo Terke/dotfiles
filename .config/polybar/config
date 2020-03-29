@@ -114,10 +114,10 @@ module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Cascadia code:size=9;1"
-font-1 = "Cascadia code:size=9;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
-font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
+font-1 = "Cascadia code:size=9;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;1"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
+font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
 
 modules-left = i3 xwindow
 modules-center = mpd
@@ -830,7 +830,7 @@ fuzzy-match = false
 ;http://fontawesome.io/cheatsheet/
 ;       v      
 
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
@@ -1222,7 +1222,7 @@ type = internal/cpu
 interval = 1
 format-foreground = #ffcb6b
 format-background = ${colors.background}
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = #ffcb6b
 
 label-font = 1
