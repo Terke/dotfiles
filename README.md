@@ -11,7 +11,7 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 
 - **[DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)** (Tutorials about Linux and Free and Open Source Software)
 
-## Hot stuff
+## Cool stuff
 
 - **OS :** [ArcoLinux](https://arcolinux.com/)
 - **Window Manager :** [i3](https://github.com/i3/i3)
@@ -24,7 +24,7 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **Web Browser :** [Brave](https://brave.com/)
 - **Terminal :** [termite](https://github.com/thestinger/termite) or [st](https://st.suckless.org/)
 - **Terminal Font :** [Hack](https://github.com/fonts/Hack)
-- **CLI Text Editor :** [GNU nano](https://www.nano-editor.org/download.php)
+- **CLI Text Editor :** [vim](https://github.com/vim/vim)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
 - **Music Daemon :** [mpd](https://www.musicpd.org/)
 - **CLI Music Player :** [ncmpcpp](https://github.com/arybczak/ncmpcpp)
@@ -34,11 +34,11 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** [Sardi-Arc](https://sourceforge.net/projects/sardi/files/)
 - **GTK Cursors :** Breeze `yay -S xcursor-breeze`
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - theme: robbyrussell
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - Theme: Powerlevel9k
 
 ## My Keybindings
 
-MODKEY = Super key (aka the Windows key).
+MODKEY = Super key (aka the Windows key). One key to rule them all!
 
 | Keybinding | Action |
 | :--- | :--- |
