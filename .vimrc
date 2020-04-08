@@ -46,18 +46,6 @@ filetype plugin indent on    " required
 "Remap ESC to ii
 :imap ii <Esc>
 
-"Disable arrow keys in Normal mode
-no <Up> <Nop>
-no <Down> <Nop>
-no <Left> <Nop>
-no <Right> <Nop>
-
-"Disable arrow keys in Insert mode
-ino <Up> <Nop>
-ino <Down> <Nop>
-ino <Left> <Nop>
-ino <Right> <Nop>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

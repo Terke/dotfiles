@@ -21,7 +21,7 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **CLI File Manager :** [ranger](https://github.com/ranger/ranger)
 - **Image Viewer :** [feh](https://github.com/derf/feh)
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot)
-- **Web Browser :** [Brave](https://brave.com/)
+- **Web Browser :** [Chromium](https://github.com/chromium/chromium)
 - **Terminal :** [termite](https://github.com/thestinger/termite) or [st](https://st.suckless.org/)
 - **Terminal Font :** [Hack](https://github.com/fonts/Hack)
 - **CLI Text Editor :** [vim](https://github.com/vim/vim)
@@ -32,7 +32,7 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **PDF Reader :** [Zathura](https://pwmt.org/projects/zathura/)
 - **Notify Daemon :** [dunst](https://github.com/dunst-project/dunst)
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
-- **GTK Icons :** [Sardi-Arc](https://sourceforge.net/projects/sardi/files/)
+- **GTK Icons :** [Zafiro-icons](https://github.com/zayronxio/Zafiro-icons)
 - **GTK Cursors :** Breeze `yay -S xcursor-breeze`
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - Theme: Powerlevel9k
 
@@ -62,5 +62,3 @@ MODKEY = Super key (aka the Windows key). One key to rule them all!
 ## License
 
 The files and scripts in this repository are licensed under the MIT License.
-
-
