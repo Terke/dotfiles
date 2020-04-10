@@ -63,4 +63,4 @@ MODKEY = Super key (aka the Windows key). One key to rule them all!
 
 ## License
 
-The files and scripts in this repository are licensed under the MIT License.
+### [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
