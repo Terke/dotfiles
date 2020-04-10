@@ -1,7 +1,7 @@
 ## i3wm dotfiles [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
 
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/Screenshots/IV.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/IV.png)
 
 My config files, are almost the same with the configuration files of [ArcoLinux](https://arcolinux.info/) (an Arch based distro), with some personalization. I also use the dotfiles of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
 
