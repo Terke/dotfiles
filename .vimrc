@@ -66,7 +66,7 @@ let g:Powerline_theme='long'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='angr'
+let g:airline_theme='solarized_flood'
 
 " Uncomment to prevent non-normal modes showing in powerline and below powerline.
 set noshowmode
@@ -134,6 +134,3 @@ set guioptions-=L  "remove left-hand scroll bar
 " => Fixes mouse issues using Alacritty terminal
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ttymouse=sgr
-
-
-

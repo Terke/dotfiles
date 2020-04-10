@@ -45,42 +45,42 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-#background = #071616
-background = rgba(7, 22, 22, 0.75)
+#background = #292d3e
+background = rgba(40, 42, 54, 0.85)
 
 # special
-foreground      = #cccccc
-foreground_bold = #cccccc
-cursor          = #cccccc
+foreground      = #bbc5ff
+foreground_bold = #bbc5ff
+cursor          = #bbc5ff
 
 # black
-color0 =  #0a0200 !! originally #292d3e
-color8 =  #22262e
+color0 =  #101010  !! originally #292d3e
+color8 =  #434758
 
 # red
-color1 =  #cf5252
-color9 =  #cf5252
+color1 =  #f07178
+color9 =  #ff8b92
 
 # green
-color2 =  #92ad4a
-color10 = #92ad4a
+color2 =  #c3e88d
+color10 = #ddffa7
 
 # yellow
-color3 =  #c9895b
-color11 = #c9895b
+color3 =  #ffcb6b
+color11 = #ffe585
 
 # blue
-color4 =  #6f97b8
-color12 = #6f97b8
+color4 =  #82aaff
+color12 = #9cc4ff
 
 # magenta
-color5  = #ab6ba6
-color13 = #ab6ba6
+color5  = #c792ea
+color13 = #e1acff
 
 # cyan
-color6  = #6fa69f
-color14 = #6fa69f
+color6  = #89ddff
+color14 = #a3f7ff
 
 # white
-color7  = #cccccc
-color15 = #cccccc
+color7  = #d0d0d0
+color15 = #ffffff

@@ -17,7 +17,7 @@ export ZSH=/usr/share/oh-my-zsh/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -83,51 +83,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Set name of the theme to load.
-source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
-
-# Font mode for powerlevel9k
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-# Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon custom_user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(disk_usage ip ram time)
-POWERLEVEL9K_DISABLE_RPROMPT=true
-
-# OS segment
-POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{cyan} Arch %F{white}Linux%f'
-
-# User with skull
-user_with_skull() {
-    echo -n " Terke"
-}
-POWERLEVEL9K_CUSTOM_USER="user_with_skull"
-
-# Dir colours
-POWERLEVEL9K_DIR_HOME_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='yellow'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_DIR_SHORTEN_LENGTH=2
-POWERLEVEL9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
-
-# Status
-POWERLEVEL9K_STATUS_OK_BACKGROUND='black'
-POWERLEVEL9K_STATUS_OK_ICON=$'\uf164'
-POWERLEVEL9K_STATUS_ERROR_ICON=$'\uf165'
-POWERLEVEL9K_STATUS_ERROR_CR_ICON=$'\uf165'
-
-# VCS colors (Information about this git or hg repository)
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='white'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='red'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -168,25 +123,25 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-#readable output
+# readable output
 alias df='df -h'
 
-#pacman unlock
+# pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 
-#free
+# free
 alias free="free -mt"
 
-#use all cores
+# use all cores
 alias uac="sh ~/.bin/main/000*"
 
-#continue download
+# continue download
 alias wget="wget -c"
 
-#userlist
+# userlist
 alias userlist="cut -d: -f1 /etc/passwd"
 
-#merge new settings
+# merge new settings
 alias merge="xrdb -merge ~/.Xresources"
 
 # Aliases for software managment
@@ -198,53 +153,53 @@ alias update='sudo pacman -Syyu'
 alias pksyua="yay -Syu --noconfirm"
 alias upall="yay -Syu --noconfirm"
 
-#ps
+# ps
 alias psa="ps auxf"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 
-#grub update
+# grub update
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-#add new fonts
+# add new fonts
 alias update-fc='sudo fc-cache -fv'
 
-#copy/paste all content of /etc/skel over to home folder - backup of config created - beware
+# copy/paste all content of /etc/skel over to home folder - backup of config created - beware
 alias skel='cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
-#backup contents of /etc/skel to hidden backup folder in home/user
+# backup contents of /etc/skel to hidden backup folder in home/user
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
-#copy bashrc-latest over on bashrc - cb= copy bashrc
-#alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
-#copy /etc/skel/.zshrc over on ~/.zshrc - cb= copy zshrc
+# copy bashrc-latest over on bashrc - cb= copy bashrc
+# alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
+# copy /etc/skel/.zshrc over on ~/.zshrc - cb= copy zshrc
 alias cz='sudo cp /etc/skel/.zshrc ~/.zshrc && source ~/.zshrc'
 
-#switch between bash and zsh
+# switch between bash and zsh
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
-#quickly kill conkies
+# quickly kill conkies
 alias kc='killall conky'
 
-#hardware info --short
+# hardware info --short
 alias hw="hwinfo --short"
 
-#skip integrity check
+# skip integrity check
 alias yayskip='yay -S --mflags --skipinteg'
 alias trizenskip='trizen -S --skipinteg'
 
-#check vulnerabilities microcode
+# check vulnerabilities microcode
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 
-#get fastest mirrors in your neighborhood
+# get fastest mirrors in your neighborhood
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-#mounting the folder Public for exchange between host and guest on virtualbox
+# mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
 
-#youtube-dl
+# youtube-dl
 alias yt-aac="youtube-dl --extract-audio --audio-format aac --audio-quality 0 "
 alias yt-best="youtube-dl --extract-audio --audio-format best "
 alias yt-flac="youtube-dl --extract-audio --audio-format flac --audio-quality 0 "
@@ -255,18 +210,21 @@ alias yt-vorbis="youtube-dl --extract-audio --audio-format vorbis --audio-qualit
 alias yt-wav="youtube-dl --extract-audio --audio-format wav --audio-quality 0 "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-#Recent Installed Packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100 | nl"
+# ytmdl
+alias yt="ytmdl"
+
+# Recent Installed Packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
-#Cleanup orphaned packages
+# Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
-#get the error messages from journalctl
+# get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
-#nano for important configration files
-#know what you do in these files
+# nano for important configuration files
+# know what you do in these files
 alias nlightdm="sudo nano /etc/lightdm/lightdm.conf"
 alias npacman="sudo nano /etc/pacman.conf"
 alias ngrub="sudo nano /etc/default/grub"
@@ -276,20 +234,20 @@ alias noblogout="sudo nano /etc/oblogout.conf"
 alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
 alias nconfgrub="sudo nano /boot/grub/grub.cfg"
 
-#gpg
-#verify signature for isos
+# gpg
+# verify signature for isos
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-#receive the key of a developer
+# receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
-#shutdown or reboot
-alias ssn="sudo shutdown now"
+# shutdown or reboot
+alias ss="sudo shutdown now"
 alias sr="sudo reboot"
 
-#music
+# Music
 alias music="ncmpcpp"
 
-#ranger file manager
+# ranger file manager
 alias r="ranger"
 
 # Changing "ls" to "exa"
@@ -315,6 +273,7 @@ ex ()
       *.7z)        7z x $1      ;;
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;      
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
