@@ -22,7 +22,7 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **Image Viewer :** [feh](https://github.com/derf/feh)
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot)
 - **Web Browser :** [Chromium](https://github.com/chromium/chromium)
-- **Terminal :** [termite](https://github.com/thestinger/termite) or [st](https://st.suckless.org/)
+- **Terminal :** [termite](https://github.com/thestinger/termite) or [alacritty](https://github.com/alacritty/alacritty)
 - **Terminal Font :** [Mononoki](https://madmalik.github.io/mononoki/)
 - **CLI Text Editor :** [vim](https://github.com/vim/vim)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)

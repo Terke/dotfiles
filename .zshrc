@@ -251,7 +251,7 @@ alias music="ncmpcpp"
 alias r="ranger"
 
 # Changing "ls" to "exa"
-alias ls='exa'
+alias ls='exa -l'
 
 # cd..
 alias ..='cd ..'
