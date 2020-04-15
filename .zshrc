@@ -9,15 +9,15 @@
 
 # Path to your oh-my-zsh installation.
 #installation via script from github
-#export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 #installation via yay -S oh-my-zsh-git
-export ZSH=/usr/share/oh-my-zsh/
+#export ZSH=/usr/share/oh-my-zsh/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="muse"
+ZSH_THEME="gallois"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

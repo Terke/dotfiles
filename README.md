@@ -1,5 +1,7 @@
 ## i3wm dotfiles [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
 
+**B**tw. **I** **u**se **A**rch **L**inux
+
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/IV.png)
 
@@ -13,8 +15,8 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 
 ## Cool stuff
 
-- **OS :** [ArcoLinux](https://arcolinux.com/)
-- **Window Manager :** [i3](https://github.com/i3/i3)
+- **OS :** [Arch Linux](https://www.archlinux.org/)
+- **Window Manager :** [i3-gaps](https://github.com/Airblader/i3)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
 - **Program Launcher :** [rofi](https://github.com/davatorium/rofi) or [dmenu](https://tools.suckless.org/dmenu/)
 - **GUI File Manager :** [thunar](https://github.com/xfce-mirror/thunar)
