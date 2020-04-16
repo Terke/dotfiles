@@ -3,7 +3,7 @@
 **B**tw. **I** **u**se **A**rch
 
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/IV.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/V.png)
 
 My config files, are almost the same with the configuration files of [ArcoLinux](https://arcolinux.info/) (an Arch based distro), with some personalization. I also use the dotfiles of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
 
@@ -56,10 +56,10 @@ MODKEY = Super key (aka the Windows key). One key to rule them all!
 | `MODKEY + 1-9` | switch focus to workspace (1-9) |
 | `MODKEY + x` | quits i3 |
 | `MODKEY + r` | resize mode |
-| `MODKEY + F12` | rofi small |
+| `MODKEY + F12` | rofi |
 | `MODKEY + F1` | default browser |
 | `MODKEY + Arrow Keys` | change focus |
-| `MODKEY + SHIFT + Arrow Keys` | move focused window |
+| `MODKEY + SHIFT + Arrow Keys` | moves focused window |
 | `MODKEY + h` | splits windows in horizontal orientation |
 | `MODKEY + v` | splits windows in vertical orientation |
 
