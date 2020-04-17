@@ -35,10 +35,10 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **Notify Daemon :** [dunst](https://github.com/dunst-project/dunst)
 - **ASCII Generator :** [figlet](http://www.figlet.org/)
 - **Compositor :** [picom](https://github.com/yshui/picom)
-- **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
-- **GTK Icons :** [Zafiro-icons](https://github.com/zayronxio/Zafiro-icons)
+- **GTK Theme :** [Custom-Gruvbox-Theme](https://github.com/jkehler/gruvbox-gtk)
+- **GTK Icons :** [Custom-Gruvbox-Icons](https://github.com/jkehler/gruvbox-icons)
 - **GTK Cursors :** Breeze `yay -S xcursor-breeze`
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - Theme: [Powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k)
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - Theme: [Powerlevel10k](https://github.com/romkatv/powerlevel10k#manual)
 
 ## Basic Keybindings
 
