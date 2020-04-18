@@ -56,7 +56,7 @@ set rtp+=/usr/share/powerline/bindings/vim/
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
-" set t_Co=256
+set t_Co=256
 
 syntax enable   
 set relativenumber
@@ -66,7 +66,7 @@ let g:Powerline_theme='long'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized_flood'
+let g:airline_theme='deus'
 
 " Uncomment to prevent non-normal modes showing in powerline and below powerline.
 set noshowmode
@@ -134,3 +134,6 @@ set guioptions-=L  "remove left-hand scroll bar
 " => Fixes mouse issues using Alacritty terminal
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ttymouse=sgr
+
+" Open a NERDTree automatically when vim starts up
+" autocmd vimenter * NERDTree

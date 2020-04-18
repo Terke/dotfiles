@@ -4,4 +4,4 @@ rofi.show-icons: true
 rofi.m: 0
 rofi.lines:  20
 rofi.width:  30
-rofi.theme: /home/tasos/.config/rofi/green.rasi
+rofi.theme: /home/terke/.config/rofi/nord.rasi

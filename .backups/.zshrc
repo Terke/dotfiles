@@ -11,12 +11,18 @@ export ZSH="/home/$USER/.oh-my-zsh"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-# Show OS info when opening a new terminal
-neofetch
+# For Powerlevel9k
+# source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
+# For Powerlevel10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source $ZSH/oh-my-zsh.sh
+
+# Show OS info when opening a new terminal
+neofetch
 
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -27,7 +33,7 @@ POWERLEVEL9K_DISABLE_RPROMPT=true
 
 # OS segment
 POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{white} Arch %F{cyan}Linux%f'
+POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
 
 # User with skull
 user_with_skull() {
@@ -60,7 +66,7 @@ alias update='sudo pacman -Syyu'
 alias upall="yay -Syu --noconfirm"
 
 # Fastest mirrors
-alias mirror="reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+alias mirror="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 
 # youtube-dl
 alias yt-flac="youtube-dl --extract-audio --audio-format flac --audio-quality 0 "

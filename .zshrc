@@ -291,4 +291,4 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-pfetch
+neofetch
