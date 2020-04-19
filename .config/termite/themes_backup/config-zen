@@ -8,7 +8,8 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Monospace 13
+font = Ubuntu Mono Nerd Font 13
+#font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -36,7 +37,7 @@ urgent_on_bell = true
 #### You can change the color coding to your liking
 #### There is a folder themes in ~/config/termite/themes
 #### Copy/paste the colors from one of the 79+ templates to this one
-#### A backup of the original config termite is present  
+#### A backup of the original config termite is present
 ############################################################
 #### Use websites to make the terminal your own
 #### https://terminal.sexy
@@ -44,46 +45,43 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-# https://critical.ch/xterm/
-#dracula theme adapted by Erik Dubois
-background = rgba(40, 42, 54, 0.8)
+# Base16 Nord
+# Author: arcticicestudio
 
-# special
-foreground      = #f8f8f2
-foreground_bold = #f8f8f2
-cursor          = #f8f8f2
-#background      = #282a36
+foreground          = #B8B9B4
+foreground_bold     = #B8B9B4
+cursor              = #AFB0AB
+cursor_foreground   = #AFB0AB
+background          = #171717
 
-# black
-color0  = #000000
-color8  = #79A9FF
+# 16 color space
+
+# black, gray, silver, white
+color0  = #292927
+color8  = #2E2E2C
+color7  = #696966
+color15 = #AFB0AB
 
 # red
-color1  = #ff5555
-color9  = #ff6e67
+color1  = #939490
+color9  = #989995
 
 # green
-color2  = #50fa7b
-color10 = #5af78e
+color2  = #5E5E5C
+color10 = #636361
 
 # yellow
-color3  = #f1fa8c
-color11 = #f4f99d
+color3  = #B6B8B3
+color11 = #BBBDB8
 
 # blue
-color4  = #bd93f9
-color12 = #caa9fa
+color4  = #727370
+color12 = #777875
 
 # magenta
-color5  = #ff79c6
-color13 = #ff92d0
+color5  = #D1D1CB
+color13 = #D6D6D0
 
 # cyan
-color6  = #8be9fd
-color14 = #9aedfe
-
-# white
-color7  = #bfbfbf
-color15 = #e6e6e6
-
-
+color6  = #636361
+color14 = #696966
