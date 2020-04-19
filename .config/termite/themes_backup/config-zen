@@ -45,8 +45,6 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-# Base16 Nord
-# Author: arcticicestudio
 
 foreground          = #B8B9B4
 foreground_bold     = #B8B9B4
