@@ -1,6 +1,6 @@
 **B**tw. **I** **u**se **A**rch
 
-## i3wm dotfiles [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
+## i3wm [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VI.png)
 
