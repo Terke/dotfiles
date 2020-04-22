@@ -1,4 +1,6 @@
+#################################################################
 # BSPWM HOTKEYS
+#################################################################
 
 # Default Browser
 super + F1
@@ -6,7 +8,7 @@ super + F1
 
 # dmenu
 super + shift + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'Ubuntu Mono Nerd Font:bold:pixelsize=16'
+	dmenu_run -i -nb '#292d3e' -nf '#9cc4ff' -sb '#9cc4ff' -sf '#292d3e' -fn 'Ubuntu Mono Nerd Font:bold:pixelsize=16'
 
 # Rofi
 super + F12
@@ -28,7 +30,7 @@ super + shift + s
 super + shift + r
 	~/.config/bspwm/bspwmrc
 
-# Close applications  
+# Close applications
 super + shift + q
 	bspc node -c
 
@@ -44,7 +46,6 @@ super + Escape
 super + shift + x
 	bspc quit
 
-# STATE/FLAGS
 # set the window state
 super + {t,shift + t,p,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -63,18 +64,20 @@ super + ctrl + {m,x,y,z}
 
 # Edit common config files
 alt + ctrl + c
-   /home/terke/.scripts/dmenu-configs.sh
+   $HOME/.scripts/dmenu-configs.sh
 # Common system montoring programs
 alt + ctrl + m
-   /home/terke/.scripts/dmenu-sysmon.sh
+   $HOME/.scripts/dmenu-sysmon.sh
 # dmenu-screenshot
 alt + ctrl + s
-   /home/terke/.scripts/dmenu-scrot.sh 
+   $HOME/.scripts/dmenu-scrot.sh
 # rofi-screenshot
 alt + ctrl + z
-   /home/terke/.scripts/rofi-screenshot
+   $HOME/.scripts/rofi-screenshot
 
+#################################################################
 # FOCUS/SWAP
+#################################################################
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
@@ -83,20 +86,6 @@ super + {_,shift + }{1-9,0}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
-
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
 
 # Focus next/previous window
 ctrl + alt + Left
@@ -113,3 +102,22 @@ ctrl +alt + Up
 # Focus Down window
 ctrl + alt + Down
 	bspc node --focus south
+
+# Move floating window
+	 bspc config pointer_action1 move
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+

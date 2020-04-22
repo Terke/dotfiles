@@ -16,8 +16,8 @@ compositing-underline = over
 compositing-border = over
 
 ; Define fallback values used by all module formats
-format-foreground = #FF0000
-format-background = #00FF00
+format-foreground = #f07178
+format-background = #c3e88d
 format-underline =
 format-overline =
 format-spacing =
@@ -27,11 +27,11 @@ format-offset =
 
 [colors]
 background = #292d3e
-foreground = #c0c5ce
-alert = #bd2c40
-volume-min = #a3be8c
-volume-med = #ebcb8b
-volume-max = #bf616a
+foreground = #bbc5ff
+alert = #f07178
+volume-min = #ddffa7
+volume-med = #ffe585
+volume-max = #ff8b92
 ; =======================
 
 ################################################################################
@@ -87,7 +87,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = arrow1 weather arrow2 memory arrow3 cpu arrow4 pavolume arrow5 date
+modules-right = arrow1 weather arrow2 memory arrow3 cpu arrow4 pavolume arrow5 arch-aur-updates arrow6 date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -122,7 +122,7 @@ format = <label-state> <label-mode>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-underline= #6790eb
+label-focused-underline= #82aaff
 label-focused-padding = 4
 label-focused-foreground = ${colors.foreground}
 
@@ -157,7 +157,7 @@ label-private-foreground = ${colors.foreground}
 ; Separator in between workspaces
 ;label-separator = |
 ;label-separator-padding = 10
-;label-separator-foreground = #ffb52a
+;label-separator-foreground = #ffcb6b
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -205,7 +205,7 @@ content-background = #C792EA
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #292d3e
+content-foreground = #F07178
 content-background = #FFE585
 
 [module/arrow6]
@@ -214,7 +214,7 @@ type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
 content-foreground = #292d3e
-content-background = #292d3e
+content-background = #F07178
 
 ################################################################################
 ###############################################################################
@@ -227,21 +227,10 @@ type = custom/script
 exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 label = Updates: %output%
-format-foreground = #ffffff
+format-foreground = ${colors.background}
 format-background = #F07178
 format-prefix = "  "
-format-prefix-foreground = #ffffff
-
-[module/aur-updates]
-type = custom/script
-exec = cower -u | wc -l
-interval = 1000
-label = Aur: %output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-format-underline = #FFBB00
+format-prefix-foreground = ${colors.background}
 
 ################################################################################
 
@@ -288,7 +277,7 @@ time-alt = %l:%M%p
 format-prefix = " "
 format-prefix-foreground = #F07178
 format-foreground = #F07178
-format-background = #292d3e
+format-background = ${colors.background}
 label = "%date% %time% "
 
 #################################################################
@@ -322,7 +311,7 @@ label-monitor = %name%
 label-active = %name%
 label-active-foreground = ${colors.foreground}
 label-active-background = ${colors.background}
-label-active-underline= #6790eb
+label-active-underline= #89ddff
 label-active-padding = 1
 
 label-occupied = %name%
@@ -361,8 +350,8 @@ label = %percentage_used%%
 
 format = Mem <label>
 format-prefix = " "
-format-prefix-foreground = #292d3e
-format-foreground = #292d3e
+format-prefix-foreground = ${colors.background}
+format-foreground = ${colors.background}
 format-background = #82AAFF
 
 ################################################################################
@@ -417,5 +406,20 @@ format-foreground = ${colors.background}
 format-background = #C3E88D
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
+
+################################################################################
+
+[module/xwindow]
+;https://github.com/jaagr/polybar/wiki/Module:-xwindow
+type = internal/xwindow
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+format-foreground = #bbc5ff
+format-background = ${colors.background}
 
 ################################################################################

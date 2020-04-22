@@ -6,6 +6,8 @@ declare options=("bash
 picom
 i3
 polybar
+bspwm
+sxhkd
 neofetch
 dwm
 st
@@ -36,6 +38,12 @@ case "$choice" in
 	;;
 	polybar)
 		choice="$HOME/.config/polybar/config"
+	;;
+	bspwm)
+		choice="$HOME/.config/bspwm/bspwmrc"
+	;;
+	sxhkd)
+		choice="$HOME/.config/sxhkd/sxhkdrc"
 	;;
 	neofetch)
 		choice="$HOME/.config/neofetch/config.conf"

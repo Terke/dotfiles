@@ -8,7 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Hack 12
+font = Mononoki 12
 #font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
@@ -52,9 +52,10 @@ background = rgba(40, 42, 54, 0.85)
 foreground      = #bbc5ff
 foreground_bold = #bbc5ff
 cursor          = #bbc5ff
+cursor_foreground   = #292d3e
 
 # black
-color0 =  #101010  !! originally #292d3e
+color0 =  #292d3e
 color8 =  #434758
 
 # red

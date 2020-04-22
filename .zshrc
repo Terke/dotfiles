@@ -148,7 +148,25 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 # pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 
-## Colorize the grep command output for ease of use (good for log files)##
+# Colorize the grep command output for ease of use (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+# free
+alias free="free -mt"
+
+# merge new settings
+alias merge="xrdb -merge ~/.Xresources"
+
+# Hardware info --short
+alias hw="hwinfo --short"
+
+# shutdown or reboot
+alias ss="sudo shutdown now"
+alias sr="sudo reboot"
+
+# Bash insulter
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
