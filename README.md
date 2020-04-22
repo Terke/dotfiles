@@ -1,22 +1,16 @@
-## i3wm dotfiles [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
-
 **B**tw. **I** **u**se **A**rch
 
+## i3wm dotfiles [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VI.png)
 
-My config files, are almost the same with the configuration files of [ArcoLinux](https://arcolinux.info/) (an Arch based distro), with some personalization. I also use the dotfiles of [DistroTube (Derek Taylor)](https://gitlab.com/dwt1).
-
-## Their YouTube Channels
-
-- **[Erik Dubois](https://www.youtube.com/channel/UCJdmdUp5BrsWsYVQUylCMLg)** (Tutorials about ArcoLinux)
-
-- **[DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)** (Tutorials about Linux and Free and Open Source Software)
+## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VII.png)
 
 ## Cool stuff
 
 - **OS :** [Arch Linux](https://www.archlinux.org/)
-- **Window Manager :** [i3-gaps](https://github.com/Airblader/i3)
+- **Window Manager :** [i3-gaps](https://github.com/Airblader/i3) , [bspwm](https://github.com/baskerville/bspwm)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
 - **Program Launcher :** [rofi](https://github.com/davatorium/rofi) or [dmenu](https://tools.suckless.org/dmenu/)
 - **GUI File Manager :** [thunar](https://github.com/xfce-mirror/thunar)
@@ -40,29 +34,6 @@ My config files, are almost the same with the configuration files of [ArcoLinux]
 - **GTK Icons :** [Custom-Gruvbox-Icons](https://github.com/jkehler/gruvbox-icons)
 - **GTK Cursors :** Breeze `yay -S xcursor-breeze`
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - Theme: Muse
-
-## Basic Keybindings
-
-MODKEY = Super key (aka the Windows key). One key to rule them all!
-
-| Keybinding | Action |
-| :--- | :--- |
-| `MODKEY + RETURN` | opens terminal |
-| `MODKEY + SHIFT + RETURN` | opens file manager |
-| `MODKEY + SHIFT + d` | dmenu |
-| `MODKEY + SHIFT + q` | closes window with focus |
-| `MODKEY + SHIFT + r` | restarts i3 |
-| `MODKEY + SHIFT + 1-9` | send focused window to workspace (1-9) |
-| `MODKEY + SHIFT + SPACE` | toggle tiling / floating |
-| `MODKEY + 1-9` | switch focus to workspace (1-9) |
-| `MODKEY + x` | quits i3 |
-| `MODKEY + r` | resize mode |
-| `MODKEY + F12` | rofi |
-| `MODKEY + F1` | default browser |
-| `MODKEY + Arrow Keys` | change focus |
-| `MODKEY + SHIFT + Arrow Keys` | moves focused window |
-| `MODKEY + h` | splits windows in horizontal orientation |
-| `MODKEY + v` | splits windows in vertical orientation |
 
 ## License
 
