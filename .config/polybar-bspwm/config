@@ -88,9 +88,9 @@ module-margin-right = 0
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Ubuntu Mono Nerd Font:size=10;2"
 font-1 = "Ubuntu Mono Nerd Font:size=16;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
-font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;2"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=10;2"
+font-4 = "Font Awesome 5 Brands:pixelsize=10;2"
 
 modules-left = bspwm xwindow
 modules-center =

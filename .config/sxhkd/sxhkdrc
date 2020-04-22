@@ -34,7 +34,7 @@ super + Return
 super + shift + Return
 	thunar
 
-# reload sxhkd
+# Reload sxhkd
 super + shift + s
 	pkill -USR1 -x sxhkd
 
@@ -58,34 +58,37 @@ super + Escape
 super + shift + x
 	bspc quit
 
-# set the window state
+# Set the window state
 super + {t,shift + t,p,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# set the window state (Second option)
-super + space
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-# set the node flags
+# Set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
 #################################################################
-# SCRIPTS
+# PRESELECT
 #################################################################
 
-# Edit common config files
-alt + ctrl + c
-   $HOME/.scripts/dmenu-configs.sh
-# Common system montoring programs
-alt + ctrl + m
-   $HOME/.scripts/dmenu-sysmon.sh
-# dmenu-screenshot
-alt + ctrl + s
-   $HOME/.scripts/dmenu-scrot.sh
-# rofi-screenshot
-alt + ctrl + z
-   $HOME/.scripts/rofi-screenshot
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #################################################################
 # FOCUS/SWAP
@@ -115,9 +118,6 @@ ctrl +alt + Up
 ctrl + alt + Down
 	bspc node --focus south
 
-# Move floating window
-	 bspc config pointer_action1 move
-
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
@@ -132,4 +132,19 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
+#################################################################
+# SCRIPTS
+#################################################################
 
+# Edit common config files
+alt + ctrl + c
+   $HOME/.scripts/dmenu-configs.sh
+# Common system montoring programs
+alt + ctrl + m
+   $HOME/.scripts/dmenu-sysmon.sh
+# dmenu-screenshot
+alt + ctrl + s
+   $HOME/.scripts/dmenu-scrot.sh
+# rofi-screenshot
+alt + ctrl + z
+   $HOME/.scripts/rofi-screenshot
