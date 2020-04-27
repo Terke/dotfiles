@@ -1,63 +1,102 @@
-#  _____    _
-# |__  /___| |__  _ __ ___
+#  _____    _              
+# |__  /___| |__  _ __ ___ 
 #   / // __| '_ \| '__/ __|
-#  / /_\__ \ | | | | | (__
+#  / /_\__ \ | | | | | (__ 
 # /____|___/_| |_|_|  \___|
 
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+#installation via script from github
 export ZSH="/home/$USER/.oh-my-zsh"
+#installation via yay -S oh-my-zsh-git
 #export ZSH=/usr/share/oh-my-zsh/
 
-# USER CONFIGURATION
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="muse"
 
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
-# For Powerlevel9k
-# source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-
-# For Powerlevel10k
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source $ZSH/oh-my-zsh.sh
 
-# Show OS info when opening a new terminal
-pfetch
+# User configuration
 
-# Font mode for powerlevel9k
-POWERLEVEL9K_MODE="nerdfont-complete"
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon custom_user dir vcs)
-POWERLEVEL9K_DISABLE_RPROMPT=true
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# OS segment
-POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{cyan} Arch %F{white}Linux%f'
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# User with skull
-user_with_skull() {
-    echo -n " Terke"
-}
-POWERLEVEL9K_CUSTOM_USER="user_with_skull"
-
-# Dir colours
-POWERLEVEL9K_DIR_HOME_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='blue'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_DIR_SHORTEN_LENGTH=2
-POWERLEVEL9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
-
-# VCS colors
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='white'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='red'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
 # ALIASES
 
@@ -162,11 +201,13 @@ alias merge="xrdb -merge ~/.Xresources"
 # Hardware info --short
 alias hw="hwinfo --short"
 
-# shutdown or reboot
+# Shutdown or Reboot
 alias ss="sudo shutdown now"
 alias sr="sudo reboot"
 
-# Bash insulter
+# Bash insulter ;)
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
+
+neofetch

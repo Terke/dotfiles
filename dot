@@ -17,7 +17,6 @@ elif [ "$GDMSESSION" = "i3" ]; then
 	cp config ~/.config/polybar/
 	cp launch.sh ~/.config/polybar/
 	cp -r scripts ~/.config/polybar/	
-		
 fi
 
 cd ~/DOTFILES/dotfiles/.config/
