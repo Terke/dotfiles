@@ -94,7 +94,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=10;2"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = arrow1 weather arrow2 memory arrow3 cpu arrow4 pavolume arrow5 arch-aur-updates arrow6 date
+modules-right = arrow1 weather arrow2 memory arrow3 cpu arrow4 pavolume arrow5 pacman-updates arrow6 date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -239,6 +239,8 @@ format-background = #F07178
 format-prefix = "   "
 format-prefix-foreground = ${colors.background}
 
+################################################################################
+
 [module/aur-updates]
 type = custom/script
 exec = cower -u | wc -l
@@ -250,17 +252,20 @@ format-prefix = "  "
 format-prefix-foreground = #FFBB00
 format-underline = #FFBB00
 
+################################################################################
+
 [module/pacman-updates]
 type = custom/script
-;exec = pacman -Qu | wc -l
-exec = checkupdates | wc -l
+exec = pacman -Qu | wc -l
+; exec = checkupdates | wc -l
 interval = 1000
-label = Repo: %output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-format-underline = #FFBB00
+label = Updates: %output%
+format-foreground = ${colors.background}
+format-background = #F07178
+format-prefix = "   "
+format-prefix-foreground = ${colors.background}
+
+################################################################################
 
 [module/pamac-manager]
 type = custom/script
@@ -322,7 +327,7 @@ format-prefix = "  "
 format-prefix-foreground = #F07178
 format-foreground = #F07178
 format-background = ${colors.background}
-label = "%date% %time% "
+label = "%date%   %time% "
 
 ################################################################################
 
