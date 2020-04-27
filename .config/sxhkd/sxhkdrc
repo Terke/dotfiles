@@ -30,6 +30,10 @@ super + F12
 super + Return
     termite
 
+# ArcoLinux-logout
+super + x
+    arcolinux-logout
+
 # File Manager
 super + shift + Return
 	thunar
