@@ -8,7 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Mononoki 12
+font = Ubuntu Mono Nerd Font 13
 #font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
@@ -45,43 +45,41 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-#background = #292d3e
-background = rgba(40, 42, 54, 0.85)
 
-# special
-foreground      = #bbc5ff
-foreground_bold = #bbc5ff
-cursor          = #bbc5ff
-cursor_foreground   = #292d3e
+foreground          = #8fa398
+foreground_bold     = #8fa398
+cursor              = #8fa398
+cursor_foreground   = #071616
+background          = rgba (7, 22, 22, 0.8)
 
-# black
-color0 =  #101010  !! originally #292d3e
-color8 =  #434758
+# 16 color space
 
-# red
-color1 =  #f07178
-color9 =  #ff8b92
+# Black, Gray, Silver, White
+color0  = #0a0200
+color8  = #22262e
+color7  = #cccccc
+color15 = #cccccc
 
-# green
-color2 =  #c3e88d
-color10 = #ddffa7
+# Red
+color1  = #cf5252
+color9  = #cf5252
 
-# yellow
-color3 =  #ffcb6b
-color11 = #ffe585
+# Green
+color2  = #92ad4a
+color10 = #92ad4a
 
-# blue
-color4 =  #82aaff
-color12 = #9cc4ff
+# Yellow
+color3  = #c9895b
+color11 = #c9895b
 
-# magenta
-color5  = #c792ea
-color13 = #e1acff
+# Blue
+color4  = #6f97b8
+color12 = #6f97b8
 
-# cyan
-color6  = #89ddff
-color14 = #a3f7ff
+# Purple
+color5  = #ab6ba6
+color13 = #ab6ba6
 
-# white
-color7  = #d0d0d0
-color15 = #ffffff
+# Teal
+color6  = #6fa69f
+color14 = #6fa69f
