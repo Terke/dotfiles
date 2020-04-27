@@ -46,40 +46,48 @@ urgent_on_bell = true
 
 [colors]
 
-foreground          = #B8B9B4
-foreground_bold     = #B8B9B4
-cursor              = #AFB0AB
-cursor_foreground   = #AFB0AB
-background          = #171717
+foreground          = #E5E9F0
+foreground_bold     = #ECEFF4
+cursor              = #ECEFF4
+cursor_foreground   = #2E3440
+background          = rgba(46, 52, 64, 0.9)
 
 # 16 color space
 
-# black, gray, silver, white
-color0  = #292927
-color8  = #2E2E2C
-color7  = #696966
-color15 = #AFB0AB
+# Black, Gray, Silver, White
+color0  = #2E3440
+color8  = #4C566A
+color7  = #E5E9F0
+color15 = #D8DEE9
 
-# red
-color1  = #939490
-color9  = #989995
+# Red
+color1  = #BF616A
+color9  = #BF616A
 
-# green
-color2  = #5E5E5C
-color10 = #636361
+# Green
+color2  = #A3BE8C
+color10 = #A3BE8C
 
-# yellow
-color3  = #B6B8B3
-color11 = #BBBDB8
+# Yellow
+color3  = #EBCB8B
+color11 = #EBCB8B
 
-# blue
-color4  = #727370
-color12 = #777875
+# Blue
+color4  = #5E81AC
+color12 = #5E81AC
 
-# magenta
-color5  = #D1D1CB
-color13 = #D6D6D0
+# Purple
+color5  = #B48EAD
+color13 = #B48EAD
 
-# cyan
-color6  = #636361
-color14 = #696966
+# Teal
+color6  = #8FBCBB
+color14 = #8FBCBB
+
+# Extra colors
+color16 = #81A1C1
+color17 = #B48EAD
+color18 = #3B4252
+color19 = #434C5E
+color20 = #D8DEE9
+color21 = #ECEFF4

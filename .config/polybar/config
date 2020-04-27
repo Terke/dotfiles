@@ -117,7 +117,7 @@ padding-left = 1
 padding-right = 1
 
 module-margin-left = 0
-module-margin-right = 0
+module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Cascadia code:size=9;1"
@@ -128,7 +128,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
 
 modules-left = i3 xwindow
 modules-center = mpd
-modules-right = cpu2 memory2 networkspeeddown networkspeedup date
+modules-right = cpu2 memory2 networkspeeddown networkspeedup pavolume date
 
 separator =
 
@@ -573,11 +573,11 @@ date = " %a %b %d, %Y"
 date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
-format-prefix = "  "
+format-prefix = " "
 format-prefix-foreground = #88C0D0
 format-foreground = #88C0D0
 format-background = ${colors.background}
-label = "%date% %time% "
+label = "%date%   %time% "
 
 #################################################################
 
@@ -901,8 +901,8 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-format-foreground = ${colors.background}
-format-background = #FFE585
+format-foreground = #B48EAD
+format-background = ${colors.background}
 
 ################################################################################
 
