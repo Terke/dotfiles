@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+echo "Adding configs from the dotfiles repo..."
+
+cd ~/DOTFILES/dotfiles
+cp .vimrc .zshrc ~/ &>/dev/null
+
+cd ~/DOTFILES/dotfiles
+cp -r .ncmpcpp .scripts ~/ &>/dev/null
+
+cd ~/DOTFILES/dotfiles/.config/
+cp -r alacritty bspwm dunst i3 picom polybar polybar-bspwm ranger rofi sxhkd termite wallpapers zathura emoji ~/.config/ &>/dev/null
+
+echo "Done."
