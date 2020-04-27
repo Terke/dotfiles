@@ -33,7 +33,7 @@ POWERLEVEL9K_DISABLE_RPROMPT=true
 
 # OS segment
 POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
+POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{cyan} Arch %F{white}Linux%f'
 
 # User with skull
 user_with_skull() {
