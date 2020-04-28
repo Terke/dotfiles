@@ -5,13 +5,6 @@ echo "Adding configs from the dotfiles repo..."
 cd ~/DOTFILES/dotfiles
 cp -r .vimrc .zshrc .ncmpcpp .scripts ~/ &>/dev/null
 
-# Delete old configs
-cd ~/.config/
-rm -r alacritty bspwm dunst i3 picom ranger rofi sxhkd termite wallpapers zathura emoji
-# Delete all files but not directories and sub-directories
-find polybar -type f -delete
-
-# Add new configs
 cd ~/DOTFILES/dotfiles/.config/
 
 if [ "$GDMSESSION" = "bspwm" ]; then
