@@ -1,15 +1,12 @@
-**B**tw. **I** **u**se **A**rch
-
 ## i3wm [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
 ![ScreenShot](https://i.imgur.com/2NTO46a.png)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VI.png)
 
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VII.png)
 
 ## Cool stuff
 
-- **OS :** [Arch Linux](https://www.archlinux.org/)
+- **OS :** [**B**tw. **I** **u**se **A**rch](https://www.archlinux.org/)
 - **Desktop Environment :** [Xfce](https://www.xfce.org/)
 - **Window Manager :** [i3-gaps](https://github.com/Airblader/i3) , [bspwm](https://github.com/baskerville/bspwm)
 - **Bar :** [polybar](https://github.com/polybar/polybar)

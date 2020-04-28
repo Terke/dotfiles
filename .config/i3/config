@@ -492,16 +492,13 @@ bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
 
 
 # Dmenu script for launching system monitoring programs.
-bindsym control+mod1+m exec ~/.scripts/dmenu-sysmon.sh
+bindsym control+mod1+m exec ~/.scripts/dmenu-sysmon
 
 # Dmenu script for editing config files.
-bindsym control+mod1+c exec ~/.scripts/dmenu-configs.sh
-
-# Dmenu script for taking screenshots.
-bindsym control+mod1+s exec ~/.scripts/dmenu-scrot.sh
+bindsym control+mod1+c exec ~/.scripts/dmenu-configs
 
 # Rofi script for taking screenshots.
-bindsym control+mod1+z exec ~/.scripts/rofi-screenshot
+bindsym control+mod1+s exec ~/.scripts/rofi-screenshot
 
 
 #####################################################################################################################
