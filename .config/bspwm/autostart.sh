@@ -15,7 +15,8 @@ function run {
 
 $HOME/.config/polybar/launch.sh &
 run sxhkd -c ~/.config/sxhkd/sxhkdrc &
-xsetroot -cursor_name left_ptr &
+setxkbmap -option grp:alt_shift_toggle us,gr &
 nitrogen --restore &
 picom --config $HOME/.config/bspwm/picom.conf &
+xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
