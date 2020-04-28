@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# Step 1: Installing oh-my-zsh from GitHub
+wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+
+# Step 2: Installing plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+# Step 3: Installing powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+
+# Step 4: Adding my .zshrc
+cd ~/DOTFILES/dotfiles/
+cp .zshrc ~/
+
+echo "Now change to zsh and log off"
+echo "Type in the terminal"
+echo
+echo " sudo chsh yourloginname -s /bin/zsh"

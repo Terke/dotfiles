@@ -10,6 +10,7 @@
 ## Cool stuff
 
 - **OS :** [Arch Linux](https://www.archlinux.org/)
+- **Desktop Environment :** [Xfce](https://www.xfce.org/)
 - **Window Manager :** [i3-gaps](https://github.com/Airblader/i3) , [bspwm](https://github.com/baskerville/bspwm)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
 - **Program Launcher :** [rofi](https://github.com/davatorium/rofi) , [dmenu](https://tools.suckless.org/dmenu/)
@@ -32,7 +33,7 @@
 - **Color Scheme :** [Nord](https://github.com/arcticicestudio/nord)
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** [Custom-Gruvbox-Icons](https://github.com/jkehler/gruvbox-icons)
-- **GTK Cursors :** Breeze `yay -S xcursor-breeze`
+- **GTK Cursors :** [Bibata_Cursor](https://github.com/KaizIqbal/Bibata_Cursor)
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: Muse
 
 ## License
