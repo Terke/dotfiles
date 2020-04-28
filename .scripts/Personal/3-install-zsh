@@ -14,7 +14,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 cd ~/DOTFILES/dotfiles/
 cp .zshrc ~/
 
+echo "################################################################"
 echo "Now change to zsh and log off"
 echo "Type in the terminal"
-echo
-echo " sudo chsh yourloginname -s /bin/zsh"
+echo "sudo chsh your_username -s /bin/zsh"
+echo "################################################################"

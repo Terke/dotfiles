@@ -142,13 +142,10 @@ super + {o,i}
 
 # Edit common config files
 alt + ctrl + c
-   $HOME/.scripts/dmenu-configs.sh
-# Common system montoring programs
+   $HOME/.scripts/dmenu-configs
+# Common system monitoring programs
 alt + ctrl + m
-   $HOME/.scripts/dmenu-sysmon.sh
-# dmenu-screenshot
-alt + ctrl + s
-   $HOME/.scripts/dmenu-scrot.sh
+   $HOME/.scripts/dmenu-sysmon
 # rofi-screenshot
-alt + ctrl + z
+alt + ctrl + s
    $HOME/.scripts/rofi-screenshot
