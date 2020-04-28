@@ -30,4 +30,7 @@ cd ~/DOTFILES/dotfiles/.config/
 
 cp -r alacritty bspwm dunst i3 picom ranger rofi sxhkd termite wallpapers zathura emoji ~/.config/ &>/dev/null
 
+cd ~/DOTFILES/dotfiles/.scripts/Personal
+./bookmarks.sh
+
 echo "Done."
