@@ -12,13 +12,13 @@
 - **OS :** [Arch Linux](https://www.archlinux.org/)
 - **Window Manager :** [i3-gaps](https://github.com/Airblader/i3) , [bspwm](https://github.com/baskerville/bspwm)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
-- **Program Launcher :** [rofi](https://github.com/davatorium/rofi) or [dmenu](https://tools.suckless.org/dmenu/)
+- **Program Launcher :** [rofi](https://github.com/davatorium/rofi) , [dmenu](https://tools.suckless.org/dmenu/)
 - **GUI File Manager :** [thunar](https://github.com/xfce-mirror/thunar)
 - **CLI File Manager :** [ranger](https://github.com/ranger/ranger)
 - **Image Viewer :** [feh](https://github.com/derf/feh)
-- **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot)
+- **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot) , [maim](https://github.com/naelstrof/maim)
 - **Web Browser :** [Chromium](https://github.com/chromium/chromium)
-- **Terminal :** [termite](https://github.com/thestinger/termite) or [alacritty](https://github.com/alacritty/alacritty)
+- **Terminal :** [termite](https://github.com/thestinger/termite) , [alacritty](https://github.com/alacritty/alacritty)
 - **Terminal Font :** [Mononoki](https://madmalik.github.io/mononoki/)
 - **CLI Text Editor :** [vim](https://github.com/vim/vim)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
@@ -33,7 +33,7 @@
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** [Custom-Gruvbox-Icons](https://github.com/jkehler/gruvbox-icons)
 - **GTK Cursors :** Breeze `yay -S xcursor-breeze`
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh my zsh](https://ohmyz.sh/) - Theme: Muse
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: Muse
 
 ## License
 
