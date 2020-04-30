@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle For Managing Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -17,13 +16,12 @@ Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
 Plugin 'scrooloose/nerdtree'						" added nerdtree
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'frazrepo/vim-rainbow'
 Plugin 'vim-python/python-syntax'
 Plugin 'jreybert/vimagit'
 Plugin 'severin-lemaignan/vim-minimap'
-Plugin 'vimwiki/vimwiki'                            " Vim wiki
 Plugin 'ap/vim-css-color'                           " Color previews for CSS
 Plugin 'tpope/vim-surround'                         " Change surrounding marks
-"Plugin 'klen/python-mode'                          " Python Mode
 
 call vundle#end()		" required, all plugins must appear before this line.
 
@@ -59,7 +57,7 @@ set laststatus=2
 set t_Co=256
 
 syntax enable   
-set relativenumber
+set number relativenumber
 let g:rehash256 = 1
 let g:Powerline_symbols='unicode'
 let g:Powerline_theme='long'
@@ -90,11 +88,12 @@ set tabstop=4
 " Uncomment to autostart the NERDTree
 " autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = '►'
+let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
+let g:NERDTreeWinSize=38
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors

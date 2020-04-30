@@ -132,14 +132,15 @@ alias ls='exa -l'
 # cd..
 alias ..='cd ..'
 
-# git status
+# git aliases
 alias gs='git status'
+alias gp='git pull'
 
 # Show my external ip address
-alias ip-ext="curl ipinfo.io/ip"
+alias pub-ip="curl ipinfo.io/ip"
 
 # Show my local ip address
-alias ip-local="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias local-ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
 # Clear the screen
 alias c="clear"

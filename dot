@@ -27,10 +27,10 @@ elif [ "$GDMSESSION" = "i3" ]; then
 fi
 
 cd ~/DOTFILES/dotfiles/.config/
-
 cp -r alacritty bspwm dunst i3 picom ranger rofi sxhkd termite wallpapers zathura emoji ~/.config/ &>/dev/null
 
+# Add bookmarks
 cd ~/DOTFILES/dotfiles/.scripts/Personal
 ./2-bookmarks
 
-echo "Done."
+echo "Done!"
