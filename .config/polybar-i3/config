@@ -36,8 +36,8 @@ compositing-underline = over
 compositing-border = over
 
 ; Define fallback values used by all module formats
-format-foreground = #FF0000
-format-background = #00FF00
+format-foreground = #DC322F
+format-background = #859900
 format-underline =
 format-overline =
 format-spacing =
@@ -46,34 +46,14 @@ format-margin =
 format-offset =
 
 [colors]
-; Nord theme ============
-background = #2E3440
-foreground = #E5E9F0
-alert = #BF616A
-volume-min = #a3be8c
-volume-med = #ebcb8b
-volume-max = #bf616a
+; Solarized ============
+background = #cc002B36
+foreground = #93A1A1
+alert = #DC322F
+volume-min = #859900
+volume-med = #B58900
+volume-max = #DC322F
 ; =======================
-
-; Gotham theme ==========
-; background = #0a0f14
-; foreground = #99d1ce
-; alert = #d26937
-; volume-min = #2aa889
-; volume-med = #edb443
-; volume-max = #c23127
-; =======================
-
-; INTRCPTR theme ============
-;background = ${xrdb:color0:#222}
-;background = #aa000000
-;background-alt = #444
-;foreground = ${xrdb:color7:#222}
-;foreground = #fff
-;foreground-alt = #555
-;primary = #ffb52a
-;secondary = #e60053
-;alert = #bd2c40
 
 ################################################################################
 ################################################################################
@@ -120,8 +100,8 @@ module-margin-left = 0
 module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Cascadia code:size=9;1"
-font-1 = "Cascadia code:size=9;1"
+font-0 = "Mononoki:size=9;1"
+font-1 = "Mononoki:size=9;1"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
@@ -256,7 +236,7 @@ label-mode-background = #FFBB00
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-underline = #88C0D0
+label-focused-underline = #2AA198
 label-focused-padding = 2
 
 ; Available tokens:
@@ -285,7 +265,7 @@ label-visible-padding = 2
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon% %name%
 label-urgent-background = ${self.label-focused-background}
-label-urgent-foreground = #BF616A
+label-urgent-foreground = #DC322F
 label-urgent-padding = 2
 
 format-foreground = ${colors.foreground}
@@ -539,10 +519,10 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = #EBCB8B
+format-foreground = #B58900
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #EBCB8B
+format-prefix-foreground = #B58900
 
 label-font = 1
 
@@ -574,8 +554,8 @@ date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
 format-prefix = " "
-format-prefix-foreground = #88C0D0
-format-foreground = #88C0D0
+format-prefix-foreground = #2AA198
+format-foreground = #2AA198
 format-background = ${colors.background}
 label = "%date%   %time% "
 
@@ -775,8 +755,8 @@ label = %percentage_used%%
 
 format = mem: <label>
 format-prefix = "  "
-format-prefix-foreground = #BF616A
-format-foreground = #BF616A
+format-prefix-foreground = #DC322F
+format-foreground = #DC322F
 format-background = ${colors.background}
 
 ################################################################################
@@ -840,8 +820,8 @@ interface = enp0s3
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "  "
-format-connected-prefix-foreground = #A3BE8C
-format-connected-foreground = #A3BE8C
+format-connected-prefix-foreground = #859900
+format-connected-foreground = #859900
 format-connected-background = ${colors.background}
 
 ################################################################################
@@ -856,8 +836,8 @@ interface = enp0s3
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "  "
-format-connected-prefix-foreground = #A3BE8C
-format-connected-foreground = #A3BE8C
+format-connected-prefix-foreground = #859900
+format-connected-foreground = #859900
 format-connected-background = ${colors.background}
 
 ################################################################################
@@ -901,7 +881,7 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-format-foreground = #B48EAD
+format-foreground = #6C71C4
 format-background = ${colors.background}
 
 ################################################################################
@@ -1229,7 +1209,7 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 
-format-foreground = #E5E9F0
+format-foreground = #93A1A1
 format-background = ${colors.background}
 
 ###############################################################################
