@@ -2,34 +2,32 @@
 
 echo "Adding configs from the dotfiles repo..."
 
+cd ~/
+rm -r .vimrc .zshrc .ncmpcpp .scripts
 cd ~/DOTFILES/dotfiles
 cp -r .vimrc .zshrc .ncmpcpp .scripts ~/ &>/dev/null
 
-# Delete old configs
 cd ~/.config/
 rm -r alacritty bspwm dunst i3 picom ranger rofi sxhkd termite wallpapers zathura emoji
-# Delete all files but not directories and sub-directories
 find polybar -type f -delete
 
-# Add new configs
 cd ~/DOTFILES/dotfiles/.config/
 
 if [ "$GDMSESSION" = "bspwm" ]; then
 	cd polybar-bspwm
 	cp config ~/.config/polybar/
 	cp launch.sh ~/.config/polybar/
-	cp -r scripts ~/.config/polybar/	
+	cp -r scripts ~/.config/polybar/
 elif [ "$GDMSESSION" = "i3" ]; then
 	cd polybar-i3
 	cp config ~/.config/polybar/
 	cp launch.sh ~/.config/polybar/
-	cp -r scripts ~/.config/polybar/	
+	cp -r scripts ~/.config/polybar/
 fi
 
 cd ~/DOTFILES/dotfiles/.config/
 cp -r alacritty bspwm dunst i3 picom ranger rofi sxhkd termite wallpapers zathura emoji ~/.config/ &>/dev/null
 
-# Add bookmarks
 cd ~/DOTFILES/dotfiles/.scripts/Personal
 ./2-bookmarks
 
