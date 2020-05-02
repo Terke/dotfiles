@@ -420,3 +420,12 @@ format-foreground = #bbc5ff
 format-background = ${colors.background}
 
 ################################################################################
+
+[module/bitcoin]
+type = custom/script
+exec = ~/.config/polybar/scripts/bitcoin
+interval = 600
+format-foreground = #a3f7ff
+format-background = ${colors.background}
+
+################################################################################
