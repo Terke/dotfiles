@@ -16,7 +16,7 @@
 - **Image Viewer :** [feh](https://github.com/derf/feh)
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot) , [maim](https://github.com/naelstrof/maim)
 - **Web Browser :** [Chromium](https://github.com/chromium/chromium)
-- **Terminal :** [termite](https://github.com/thestinger/termite) , [alacritty](https://github.com/alacritty/alacritty)
+- **Terminal :** [termite](https://github.com/thestinger/termite)
 - **Terminal Font :** [Mononoki](https://madmalik.github.io/mononoki/)
 - **CLI Text Editor :** [vim](https://github.com/vim/vim)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)

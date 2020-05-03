@@ -100,15 +100,15 @@ module-margin-left = 0
 module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Mononoki:size=9;1"
-font-1 = "Mononoki:size=9;1"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;1"
-font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
+font-0 = "Monaco:size=9;2"
+font-1 = "Monaco:size=9;2"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
+font-4 = "Font Awesome 5 Brands:pixelsize=9;2"
 
 modules-left = i3 xwindow
 modules-center = mpd
-modules-right = cpu2 memory2 networkspeeddown networkspeedup pavolume date
+modules-right = cpu2 memory2 networkspeeddown networkspeedup volume date
 
 separator =
 
@@ -1038,18 +1038,18 @@ click-left = variety --selector
 type = internal/volume
 format-volume = "<label-volume>  <bar-volume>"
 
-label-volume = " "
-label-volume-foreground = #40ad4b
+label-volume = " "
+label-volume-foreground = #6c71c4
 label-muted = muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #40ad4b
-bar-volume-foreground-1 = #40ad4b
-bar-volume-foreground-2 = #40ad4b
-bar-volume-foreground-3 = #40ad4b
-bar-volume-foreground-4 = #40ad4b
-bar-volume-foreground-5 = #40ad4b
-bar-volume-foreground-6 = #40ad4b
+bar-volume-foreground-0 = #6c71c4
+bar-volume-foreground-1 = #6c71c4
+bar-volume-foreground-2 = #6c71c4
+bar-volume-foreground-3 = #6c71c4
+bar-volume-foreground-4 = #6c71c4
+bar-volume-foreground-5 = #6c71c4
+bar-volume-foreground-6 = #6c71c4
 bar-volume-gradient = false
 bar-volume-indicator = 
 bar-volume-indicator-font = 2
@@ -1061,7 +1061,7 @@ bar-volume-empty-foreground = ${colors.foreground}
 format-volume-foreground = ${colors.foreground}
 format-volume-background = ${colors.background}
 format-muted-prefix = "  "
-format-muted-prefix-foreground = "#ff0000"
+format-muted-prefix-foreground = "#dc322f"
 format-muted-foreground = ${colors.foreground}
 format-muted-background = ${colors.background}
 
