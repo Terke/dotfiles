@@ -1,54 +1,16 @@
-#  _____    _
-# |__  /___| |__  _ __ ___
+#  _____    _              
+# |__  /___| |__  _ __ ___ 
 #   / // __| '_ \| '__/ __|
-#  / /_\__ \ | | | | | (__
+#  / /_\__ \ | | | | | (__ 
 # /____|___/_| |_|_|  \___|
 
 export ZSH="/home/$USER/.oh-my-zsh"
 
+ZSH_THEME="muse"
+
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 source $ZSH/oh-my-zsh.sh
-
-# Show OS info when opening a new terminal
-neofetch
-
-# Font mode for powerlevel9k
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-# Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon custom_user dir vcs)
-POWERLEVEL9K_DISABLE_RPROMPT=true
-
-# OS segment
-POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{cyan} Arch %F{white}Linux%f'
-
-# User with skull
-user_with_skull() {
-    echo -n " Terke"
-}
-POWERLEVEL9K_CUSTOM_USER="user_with_skull"
-
-# Dir colors
-POWERLEVEL9K_DIR_HOME_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='blue'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='blue'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_DIR_SHORTEN_LENGTH=2
-POWERLEVEL9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
-
-# VCS colors
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='white'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='red'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
 
 # ex = EXtractor for all kinds of archives
 # usage: ex <file>
@@ -76,6 +38,7 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
 
 # Bash insulter ;)
 if [ -f /etc/bash.command-not-found ]; then
@@ -117,3 +80,5 @@ alias ss="sudo shutdown now"
 alias sr="sudo reboot"
 alias q="exit"
 alias fuck='sudo !!'
+
+neofetch
