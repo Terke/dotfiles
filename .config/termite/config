@@ -55,7 +55,7 @@ cursor          = #bbc5ff
 cursor_foreground   = #292d3e
 
 # black
-color0 =  #101010  !! originally #292d3e
+color0 =  #292d3e
 color8 =  #434758
 
 # red
