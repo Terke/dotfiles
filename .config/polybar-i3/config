@@ -1038,7 +1038,7 @@ click-left = variety --selector
 type = internal/volume
 format-volume = "<label-volume>  <bar-volume>"
 
-label-volume = " "
+label-volume = " Vol:"
 label-volume-foreground = #6c71c4
 label-muted = muted
 
