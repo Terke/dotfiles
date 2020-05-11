@@ -31,4 +31,7 @@ cp -r bspwm dunst i3 neofetch picom ranger rofi sxhkd termite wallpapers zathura
 cd ~/DOTFILES/dotfiles/.scripts/Personal
 ./2-bookmarks
 
+cd ~/DOTFILES/dotfiles/.config/dmenu
+sudo make clean install
+
 echo "Done!"
