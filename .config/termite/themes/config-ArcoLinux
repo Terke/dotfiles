@@ -8,8 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Ubuntu Mono Nerd Font 13
-#font = Hack Bold 10
+font = Monospace 12
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -45,39 +44,45 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
+# https://critical.ch/xterm/
+#dracula theme adapted by Erik Dubois
+background = rgba(40, 42, 54, 0.8)
 
-foreground          = #E5E9F0
-foreground_bold     = #ECEFF4
-cursor              = #ECEFF4
-cursor_foreground   = #2E3440
-background          = rgba(46, 52, 64, 0.9)
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+cursor_foreground = #282a36
+#background      = #282a36
 
-# Black, Gray, Silver, White
-color0  = #2E3440
-color8  = #4C566A
-color7  = #E5E9F0
-color15 = #D8DEE9
+# black
+color0  = #000000
+color8  = #79A9FF
 
-# Red
-color1  = #BF616A
-color9  = #BF616A
+# red
+color1  = #ff5555
+color9  = #ff6e67
 
-# Green
-color2  = #A3BE8C
-color10 = #A3BE8C
+# green
+color2  = #50fa7b
+color10 = #5af78e
 
-# Yellow
-color3  = #EBCB8B
-color11 = #EBCB8B
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
 
-# Blue
-color4  = #5E81AC
-color12 = #5E81AC
+# blue
+color4  = #6790EB
+color12 = #79A9FF
 
-# Purple
-color5  = #B48EAD
-color13 = #B48EAD
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
 
-# Teal
-color6  = #8FBCBB
-color14 = #8FBCBB
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
+
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6
