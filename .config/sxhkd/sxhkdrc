@@ -20,7 +20,7 @@ super + F1
 
 # dmenu
 super + shift + d
-	dmenu_run -i -nb '#292d3e' -nf '#9cc4ff' -sb '#9cc4ff' -sf '#292d3e' -fn 'Ubuntu Mono Nerd Font:bold:pixelsize=16'
+	dmenu_run
 
 # Rofi
 super + F12
