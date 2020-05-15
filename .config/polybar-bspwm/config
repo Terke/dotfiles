@@ -23,8 +23,8 @@ compositing-underline = over
 compositing-border = over
 
 ; Define fallback values used by all module formats
-format-foreground = #BF616A
-format-background = #A3BE8C
+format-foreground = #f07178
+format-background = #c3e88d
 format-underline =
 format-overline =
 format-spacing =
@@ -33,12 +33,12 @@ format-margin =
 format-offset =
 
 [colors]
-background = #2E3440
-foreground = #D8DEE9
-alert = #BF616A
-volume-min = #A3BE8C
-volume-med = #EBCB8B
-volume-max = #BF616A
+background = #292d3e
+foreground = #bbc5ff
+alert = #f07178
+volume-min = #c3e88d
+volume-med = #ffcb6b
+volume-max = #f07178
 
 ################################################################################
 ################################################################################
@@ -62,7 +62,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 2
-line-color = #f00
+line-color = #f07178
 
 wm-restack = bspwm
 override-redirect = true
@@ -76,7 +76,7 @@ border-size = 0
 ;border-right-size = 25
 ;border-top-size = 0
 ;border-bottom-size = 25
-border-color = #00000000
+border-color = #434758
 
 padding-left = 1
 padding-right = 1
@@ -126,14 +126,15 @@ ws-icon-9 = 10;MISC
 format = <label-state> <label-mode>
 
 label-focused = %icon%
-label-focused-background = ${colors.background}
-label-focused-underline= #81A1C1
+label-focused-background = #9cc4ff
+label-focused-underline= #9cc4ff
 label-focused-padding = 2
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.background}
 
 label-occupied = %icon%
 label-occupied-padding = 2
-label-occupied-foreground = #BF616A
+label-occupied-foreground = ${colors.background}
+label-occupied-background = #ff8b92
 
 label-urgent = %icon%
 label-urgent-padding = 2
@@ -162,7 +163,7 @@ label-private-foreground = ${colors.foreground}
 ; Separator in between workspaces
 ;label-separator = |
 ;label-separator-padding = 10
-;label-separator-foreground = #EBCB8B
+;label-separator-foreground = #e2a478
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -178,48 +179,48 @@ format-background = ${colors.background}
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #A3BE8C
-content-background = #2E3440
+content-foreground = #ddffa7
+content-background = #292d3e
 
 [module/arrow2]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #5E81AC
-content-background = #A3BE8C
+content-foreground = #9cc4ff
+content-background = #ddffa7
 
 [module/arrow3]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #B48EAD
-content-background = #5E81AC
+content-foreground = #e1acff
+content-background = #9cc4ff
 
 [module/arrow4]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #EBCB8B
-content-background = #B48EAD
+content-foreground = #ffe585
+content-background = #e1acff
 
 [module/arrow5]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #BF616A
-content-background = #EBCB8B
+content-foreground = #ff8b92
+content-background = #ffe585
 
 [module/arrow6]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #2E3440
-content-background = #BF616A
+content-foreground = #292d3e
+content-background = #ff8b92
 
 ################################################################################
 ################################################################################
@@ -233,7 +234,7 @@ exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 label = Updates: %output%
 format-foreground = ${colors.background}
-format-background = #D08770
+format-background = #ff8b92
 format-prefix = "   "
 format-prefix-foreground = ${colors.background}
 
@@ -259,25 +260,9 @@ exec = pacman -Qu | wc -l
 interval = 1000
 label = Updates: %output%
 format-foreground = ${colors.background}
-format-background = #BF616A
+format-background = #ff8b92
 format-prefix = "   "
 format-prefix-foreground = ${colors.background}
-
-################################################################################
-
-[module/pamac-manager]
-type = custom/script
-exec = pamac checkupdates -q | wc -l
-interval = 1000
-label = Pamac : %output%
-tail = true
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix-foreground = #738adb
-format-underline = #738adb
-click-right = pamac-manager &
-click-left = pamac-manager &
-format-prefix = " "
 
 ################################################################################
 
@@ -288,7 +273,7 @@ type = internal/cpu
 ; Default: 1
 interval = 1
 format-foreground = ${colors.background}
-format-background = #B48EAD
+format-background = #e1acff
 format-prefix = "   "
 format-prefix-foreground = ${colors.background}
 
@@ -322,8 +307,8 @@ date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
 format-prefix = "  "
-format-prefix-foreground = #BF616A
-format-foreground = #BF616A
+format-prefix-foreground = #ff8b92
+format-foreground = #ff8b92
 format-background = ${colors.background}
 label = "%date%   %time% "
 
@@ -348,7 +333,7 @@ format = Mem <label>
 format-prefix = "   "
 format-prefix-foreground = ${colors.background}
 format-foreground = ${colors.background}
-format-background = #5E81AC
+format-background = #9cc4ff
 
 ################################################################################
 
@@ -387,7 +372,7 @@ click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = ${colors.background}
-format-background = #EBCB8B
+format-background = #ffe585
 
 ################################################################################
 
@@ -397,9 +382,9 @@ interval = 10
 format = <label>
 format-prefix = "   "
 format-prefix-foreground = ${colors.background}
-format-underline = #A3BE8C
+format-underline = #ddffa7
 format-foreground = ${colors.background}
-format-background = #A3BE8C
+format-background = #ddffa7
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
 
@@ -415,7 +400,7 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 
-format-foreground = #D8DEE9
+format-foreground = #bbc5ff
 format-background = ${colors.background}
 
 ################################################################################
@@ -424,7 +409,7 @@ format-background = ${colors.background}
 type = custom/script
 exec = ~/.config/polybar/scripts/bitcoin
 interval = 600
-format-foreground = #88C0D0
+format-foreground = #a3f7ff
 format-background = ${colors.background}
 
 ################################################################################

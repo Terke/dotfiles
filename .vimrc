@@ -49,7 +49,7 @@ filetype plugin indent on    " required
 " => Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'darcula',
       \ }
 
 " Always show statusline
