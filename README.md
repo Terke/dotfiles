@@ -2,7 +2,7 @@
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VIII.png)
 
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VII.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/IX.png)
 
 ## Cool stuff
 
@@ -27,11 +27,10 @@
 - **Notify Daemon :** [dunst](https://github.com/dunst-project/dunst)
 - **ASCII Generator :** [figlet](http://www.figlet.org/)
 - **Compositor :** [picom](https://github.com/yshui/picom)
-- **Color Scheme :** [Nord](https://github.com/arcticicestudio/nord)
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** [Custom-Gruvbox-Icons](https://github.com/jkehler/gruvbox-icons)
 - **GTK Cursors :** [Bibata_Cursor](https://github.com/KaizIqbal/Bibata_Cursor)
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: Muse
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: risto
 
 ## License
 
