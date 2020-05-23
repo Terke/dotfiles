@@ -1,8 +1,8 @@
 ## i3wm [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/VIII.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/009.png)
 
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/IX.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/010.png)
 
 ## Cool stuff
 
