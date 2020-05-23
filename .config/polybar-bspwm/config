@@ -87,15 +87,15 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Cascadia Code:size=9;1"
-font-1 = "Cascadia Code:size=9;1"
+font-0 = "Mononoki:size=9;1"
+font-1 = "Mononoki:size=9;1"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
 
-modules-left = bspwm xwindow
+modules-left = bspwm-alt xwindow
 modules-center =
-modules-right = ice-left weather memory cpu pavolume arch-aur-updates date ice-right
+modules-right = ice-right weather memory cpu pavolume arch-aur-updates date ice-right
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -168,6 +168,31 @@ label-private-foreground = ${colors.foreground}
 ;label-separator-foreground = #D08770
 
 format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+################################################################################
+
+[module/bspwm-alt]
+type = internal/bspwm
+
+enable-click = true
+pin-workspaces = true
+
+format = <label-state>
+
+label-focused = 
+label-focused-padding = 2
+
+label-occupied = 
+label-occupied-padding = 2
+
+label-urgent = 
+label-urgent-padding = 2
+
+label-empty = •
+label-empty-padding = 2
+
+format-foreground = #D08770
 format-background = ${colors.background}
 
 ################################################################################
