@@ -16,7 +16,7 @@
 
 # Default Browser
 super + F1
-	brave
+	vivaldi-stable
 
 # dmenu
 super + shift + d
