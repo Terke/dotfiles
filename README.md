@@ -28,8 +28,8 @@
 - **ASCII Generator :** [figlet](http://www.figlet.org/)
 - **Compositor :** [picom](https://github.com/yshui/picom)
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
-- **GTK Icons :** [Custom-Gruvbox-Icons](https://github.com/jkehler/gruvbox-icons)
-- **GTK Cursors :** [Bibata_Cursor](https://github.com/KaizIqbal/Bibata_Cursor)
+- **GTK Icons :** Sardi Mono Colora
+- **GTK Cursors :** xcursor-breeze
 - **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: risto
 
 ## License
