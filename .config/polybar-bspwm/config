@@ -95,7 +95,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = weather memory cpu pavolume arch-aur-updates date
+modules-right = ice-left weather memory cpu pavolume arch-aur-updates date ice-right
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -237,7 +237,7 @@ interval = 1000
 label = Updates: %output%
 format-foreground = #B48EAD
 format-background = ${colors.background}
-format-prefix = "    "
+format-prefix = "    "
 format-prefix-foreground = #B48EAD
 
 ################################################################################
@@ -293,7 +293,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = Cpu %percentage:3%%
+label = Cpu:%percentage:3%%
 
 ################################################################################
 
@@ -331,7 +331,7 @@ interval = 1
 ;   %mb_total%
 label = %percentage_used%%
 
-format = Mem <label>
+format = Mem: <label>
 format-prefix = "    "
 format-prefix-foreground = #81A1C1
 format-foreground = #81A1C1
@@ -413,5 +413,22 @@ exec = ~/.config/polybar/scripts/bitcoin
 interval = 600
 format-foreground = #8FBCBB
 format-background = ${colors.background}
+
+################################################################################
+
+;===========;
+; Separator ;
+;===========;
+[module/ice-left]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = #8FBCBB
+content = "%{T4}█▓▒░%{T-}"
+
+[module/ice-right]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = #88C0D0
+content = "%{T4}░▒▓█%{T-}"
 
 ################################################################################
