@@ -95,7 +95,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
 
 modules-left = bspwm-alt xwindow
 modules-center =
-modules-right = ice-right weather memory cpu pavolume arch-aur-updates date ice-right
+modules-right = ice-left weather memory cpu pavolume arch-aur-updates date ice-right
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -441,13 +441,10 @@ format-background = ${colors.background}
 
 ################################################################################
 
-;===========;
-; Separator ;
-;===========;
 [module/ice-left]
 type = custom/text
 content-background = ${colors.background}
-content-foreground = #8FBCBB
+content-foreground = #A3BE8C
 content = "%{T4}█▓▒░%{T-}"
 
 [module/ice-right]
