@@ -52,7 +52,7 @@ volume-max = #BF616A
 monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
 width = 100%
-height = 25
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -87,11 +87,11 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Mononoki:size=9;1"
-font-1 = "Mononoki:size=9;1"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;1"
-font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=9;1"
+font-0 = "Mononoki:size=9;2"
+font-1 = "Mononoki:size=9;2"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
+font-4 = "Font Awesome 5 Brands:pixelsize=9;2"
 
 modules-left = bspwm-alt xwindow
 modules-center =
