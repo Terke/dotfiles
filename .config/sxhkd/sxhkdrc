@@ -62,6 +62,14 @@ super + Escape
 super + shift + x
 	bspc quit
 
+# Alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+#################################################################
+# STATE/FLAGS
+#################################################################
+
 # Set the window state
 super + {t,shift + t,p,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -69,10 +77,6 @@ super + {t,shift + t,p,f}
 # Set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
-
-# Alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
 
 #################################################################
 # PRESELECT
