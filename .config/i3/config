@@ -645,8 +645,8 @@ popup_during_fullscreen smart
 
 
 for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+gaps inner 20
+gaps outer 20
 #smart_gaps on
 #smart_borders on
 
