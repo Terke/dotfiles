@@ -6,7 +6,13 @@
 
 export ZSH="/home/$USER/.oh-my-zsh"
 
-ZSH_THEME="risto"
+ZSH_THEME="simple"
+
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{purple}%}.)$USER"
+  fi
+}
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
