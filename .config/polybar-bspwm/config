@@ -95,7 +95,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=9;2"
 
 modules-left = bspwm-alt xwindow
 modules-center = mpd
-modules-right = kernel weather memory cpu pavolume arch-aur-updates date
+modules-right = bitcoin kernel weather memory cpu pavolume arch-aur-updates date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -280,19 +280,6 @@ format-underline = #FFBB00
 
 ################################################################################
 
-[module/pacman-updates]
-type = custom/script
-exec = pacman -Qu | wc -l
-; exec = checkupdates | wc -l
-interval = 1000
-label = Updates: %output%
-format-foreground = ${colors.background}
-format-background = #8d62a9
-format-prefix = "   "
-format-prefix-foreground = ${colors.background}
-
-################################################################################
-
 [module/cpu]
 ;https://github.com/jaagr/polybar/wiki/Module:-cpu
 type = internal/cpu
@@ -436,53 +423,8 @@ format-background = ${colors.background}
 type = custom/script
 exec = ~/.config/polybar/scripts/bitcoin
 interval = 600
-format-foreground = #8FBCBB
-format-background = ${colors.background}
-
-################################################################################
-
-[module/kernel]
-type = custom/script
-exec = uname -r
-tail = false
-interval = 1024
-
 format-foreground = #D08770
 format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #D08770
-
-################################################################################
-
-[module/wired-network]
-;https://github.com/jaagr/polybar/wiki/Module:-network
-type = internal/network
-interface = enp0s3
-;interface = enp14s0
-interval = 3.0
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-; Default: %ifname% %local_ip%
-label-connected =  %downspeed%
-label-disconnected = %ifname% disconnected
-
-format-connected-foreground = #A3BE8C
-format-connected-background = ${colors.background}
-format-connected-prefix = "   "
-format-connected-prefix-foreground = #A3BE8C
-format-connected-prefix-background = ${colors.background}
-
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.alert}
-label-disconnected-foreground = ${colors.foreground}
-
 
 ################################################################################
 
