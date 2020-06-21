@@ -89,6 +89,6 @@ alias ss="sudo shutdown now"
 alias sr="sudo reboot"
 alias q="exit"
 alias fuck='sudo !!'
-alias weather="curl http://wttr.in/napier"
+alias weather="curl http://wttr.in"
 
 neofetch

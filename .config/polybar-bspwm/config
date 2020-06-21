@@ -401,6 +401,7 @@ format-foreground = #A3BE8C
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
+click-left = vivaldi-stable https://openweathermap.org/city/264371
 
 ################################################################################
 
@@ -425,6 +426,7 @@ exec = ~/.config/polybar/scripts/bitcoin
 interval = 600
 format-foreground = #D08770
 format-background = ${colors.background}
+click-left = vivaldi-stable https://coinmarketcap.com/ &
 
 ################################################################################
 
