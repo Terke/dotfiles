@@ -401,7 +401,7 @@ format-foreground = #A3BE8C
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
-click-left = vivaldi-stable https://openweathermap.org/city/264371
+click-left = vivaldi-stable https://openweathermap.org/city/264371 &
 
 ################################################################################
 
