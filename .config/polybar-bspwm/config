@@ -87,15 +87,15 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "xos4 terminus:size=9;2"
-font-1 = "xos4 terminus:size=9;2"
+font-0 = "Mononoki:size=9;2"
+font-1 = "Mononoki:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
-font-4 = "Font Awesome 5 Brands:pixelsize=9;2"
+font-4 = "Weather Icons:size=9;2"
 
 modules-left = bspwm-alt xwindow
 modules-center = mpd
-modules-right = bitcoin kernel weather memory cpu pavolume arch-aur-updates date
+modules-right = weather wired-network memory cpu pavolume arch-aur-updates date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -104,72 +104,6 @@ scroll-down = bspwm-deskprev
 ################################################################################
 ############                       MODULE BSPWM                     ############
 ################################################################################
-################################################################################
-
-[module/bspwm]
-type = internal/bspwm
-
-enable-click = true
-enable-scroll = true
-reverse-scroll = true
-pin-workspaces = true
-
-ws-icon-0 = 1;www
-ws-icon-1 = 2;fm
-ws-icon-2 = 3;doc
-ws-icon-3 = 4;mus
-ws-icon-4 = 5;vid
-ws-icon-5 = 6;img
-ws-icon-6 = 7;mail
-ws-icon-7 = 8;dev
-ws-icon-8 = 9;sys
-ws-icon-9 = 10;misc
-
-format = <label-state> <label-mode>
-
-label-focused = %icon%
-label-focused-background = #8FBCBB
-label-focused-underline= #8FBCBB
-label-focused-padding = 2
-label-focused-foreground = ${colors.background}
-
-label-occupied = %icon%
-label-occupied-padding = 2
-label-occupied-foreground = ${colors.background}
-label-occupied-background = #BF616A
-
-label-urgent = %icon%
-label-urgent-padding = 2
-
-label-empty = %icon%
-label-empty-foreground = ${colors.foreground}
-label-empty-padding = 2
-label-empty-background = ${colors.background}
-label-monocle = "  "
-label-monocle-foreground = ${colors.foreground}
-label-tiled = "  "
-label-tiled-foreground = ${colors.foreground}
-label-fullscreen = "  "
-label-fullscreen-foreground = ${colors.foreground}
-label-floating = "   "
-label-floating-foreground = ${colors.foreground}
-label-pseudotiled = "   "
-label-pseudotiled-foreground = ${colors.foreground}
-label-locked = "  "
-label-locked-foreground = ${colors.foreground}
-label-sticky = "  "
-label-sticky-foreground = ${colors.foreground}
-label-private =  "     "
-label-private-foreground = ${colors.foreground}
-
-; Separator in between workspaces
-;label-separator = |
-;label-separator-padding = 10
-;label-separator-foreground = #D08770
-
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-
 ################################################################################
 
 [module/bspwm-alt]
@@ -194,60 +128,6 @@ label-empty-padding = 2
 
 format-foreground = #D08770
 format-background = ${colors.background}
-
-################################################################################
-################################################################################
-############                       MODULES ARROWS                     ##########
-################################################################################
-################################################################################
-
-[module/arrow1]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #8d62a9
-content-background = #282a36
-
-[module/arrow2]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #668bd7
-content-background = #8d62a9
-
-[module/arrow3]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #8d62a9
-content-background = #668bd7
-
-[module/arrow4]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #668bd7
-content-background = #8d62a9
-
-[module/arrow5]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #8d62a9
-content-background = #668bd7
-
-[module/arrow6]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #668bd7
-content-background = #8d62a9
 
 ################################################################################
 ################################################################################
@@ -371,7 +251,7 @@ bar-progress-empty = 
 bar-progress-fill-foreground = #88C0D0
 bar-progress-fill-background = ${colors.background}
 bar-progress-indicator-foreground = ${colors.foreground}
-format-online-foreground = ${colors.foreground}
+format-online-foreground = #8FBCBB
 format-online-background = ${colors.background}
 
 ################################################################################
@@ -392,16 +272,43 @@ format-background = ${colors.background}
 
 [module/weather]
 type = custom/script
-interval = 10
-format = <label>
-format-prefix = "   "
-format-prefix-foreground = #A3BE8C
-format-underline = ${colors.background}
+exec = ~/.config/polybar/scripts/weather
+interval = 600
+label-font = 5
+click-left = vivaldi-stable https://openweathermap.org/city/264371 &
 format-foreground = #A3BE8C
 format-background = ${colors.background}
-exec = python -u ~/.config/polybar/scripts/weather.py
-tail = true
-click-left = vivaldi-stable https://openweathermap.org/city/264371 &
+
+################################################################################
+
+[module/wired-network]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = enp0s3
+;interface = enp14s0
+interval = 3.0
+
+; Available tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+; Default: %ifname% %local_ip%
+label-connected =  %local_ip%
+label-disconnected = %ifname% disconnected
+
+format-connected-foreground = #D08770
+format-connected-background = ${colors.background}
+format-connected-prefix = "   "
+format-connected-prefix-foreground = #D08770
+format-connected-prefix-background = ${colors.background}
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected-foreground = ${colors.foreground}
 
 ################################################################################
 
@@ -417,16 +324,6 @@ label-maxlen = 50
 
 format-foreground = #D8DEE9
 format-background = ${colors.background}
-
-################################################################################
-
-[module/bitcoin]
-type = custom/script
-exec = ~/.config/polybar/scripts/bitcoin
-interval = 600
-format-foreground = #D08770
-format-background = ${colors.background}
-click-left = vivaldi-stable https://coinmarketcap.com/ &
 
 ################################################################################
 

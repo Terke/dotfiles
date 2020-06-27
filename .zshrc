@@ -91,4 +91,4 @@ alias q="exit"
 alias fuck='sudo !!'
 alias weather="curl http://wttr.in"
 
-neofetch
+pfetch
