@@ -1,0 +1,255 @@
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+format-foreground = #BF616A
+format-background = #A3BE8C
+format-underline =
+format-overline =
+format-spacing =
+format-padding =
+format-margin =
+format-offset =
+
+[colors]
+background = #292927
+foreground = #777875
+alert = #BF616A
+volume-min = #A3BE8C
+volume-med = #EBCB8B
+volume-max = #BF616A
+
+[bar/top_bar]
+monitor = ${env:MONITOR}
+width = 32%
+height = 26
+offset-x = 32%
+offset-y = 12
+radius = 0.0
+fixed-center = true
+bottom = false
+separator =
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #BF616A
+
+wm-restack = bspwm
+override-redirect = false
+
+enable-ipc = true
+
+border-size = 0
+border-color = #4C566A
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "LiberationMono:size=9;2"
+font-1 = "LiberationMono:size=9;2"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
+
+modules-left = bspwm
+modules-center =
+modules-right = eth volume date menu0
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+[bar/bottom_bar]
+monitor = ${env:MONITOR}
+width = 32%
+height = 26
+offset-x = 32%
+offset-y = 12
+radius = 0.0
+fixed-center = true
+bottom = true
+separator =
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #BF616A
+
+wm-restack = bspwm
+override-redirect = false
+
+enable-ipc = true
+
+border-size = 0
+border-color = #4C566A
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "LiberationMono:size=9;2"
+font-1 = "LiberationMono:size=9;2"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
+
+modules-left =
+modules-center = mpd volume2
+modules-right =
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+[module/bspwm]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+pin-workspaces = true
+
+ws-icon-0 = 1;I
+ws-icon-1 = 2;II
+ws-icon-2 = 3;III
+ws-icon-3 = 4;IV
+ws-icon-4 = 5;V
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-background = ${colors.foreground}
+label-focused-padding = 2
+label-focused-foreground = ${colors.background}
+
+label-occupied = %icon%
+label-occupied-padding = 2
+label-occupied-foreground = ${colors.foreground}
+
+label-urgent = %icon%
+label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 2
+label-empty-background = ${colors.background}
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+[module/date]
+type = internal/date
+interval = 5
+date = " %a %d %b"
+date-alt = " %a %b %d, %Y"
+time = %l:%M%p
+time-alt = %l:%M%p
+format-prefix = "   "
+format-prefix-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+label = "%date%   %time% "
+
+[module/volume]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/scripts/pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
+scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+[module/eth]
+type = internal/network
+interface = enp0s3
+interval = 3.0
+
+label-connected =  %downspeed%
+label-disconnected = %ifname% disconnected
+
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.background}
+format-connected-prefix = "   "
+format-connected-prefix-foreground = ${colors.foreground}
+format-connected-prefix-background = ${colors.background}
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected-foreground = ${colors.foreground}
+
+[module/mpd]
+type = internal/mpd
+format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+label-song-maxlen = 40
+label-song-ellipsis = true
+format-online-foreground = ${colors.foreground}
+format-online-background = ${colors.background}
+
+[module/volume2]
+type = internal/volume
+format-volume = "<label-volume>  <bar-volume>"
+
+label-volume = " "
+label-volume-foreground = #6c71c4
+label-muted =  sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.foreground}
+bar-volume-foreground-1 = ${colors.foreground}
+bar-volume-foreground-2 = ${colors.foreground}
+bar-volume-foreground-3 = ${colors.foreground}
+bar-volume-foreground-4 = ${colors.foreground}
+bar-volume-foreground-5 = ${colors.foreground}
+bar-volume-foreground-6 = ${colors.foreground}
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 4
+bar-volume-fill = 
+bar-volume-fill-font = 4
+bar-volume-empty = 
+bar-volume-empty-font = 4
+bar-volume-empty-foreground = ${colors.foreground}
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.background}
+format-muted-prefix = "  "
+format-muted-prefix-foreground = "#dc322f"
+format-muted-foreground = ${colors.foreground}
+format-muted-background = ${colors.background}
+
+[module/menu0]
+type = custom/menu
+
+format = <label-toggle> <menu>
+format-underline = ${colors.foreground}
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 1
+
+menu-0-0 =  " "
+menu-0-0-exec = shutdown now
+
+label-open =  
+label-close =
