@@ -23,28 +23,27 @@ format-margin =
 format-offset =
 
 [colors]
-background = #292927
-foreground = #777875
+background = #171717
+foreground = #B8B9B4
 alert = #BF616A
 volume-min = #A3BE8C
 volume-med = #EBCB8B
 volume-max = #BF616A
 
 [bar/top_bar]
-monitor = ${env:MONITOR}
-width = 32%
-height = 26
-offset-x = 32%
-offset-y = 12
-radius = 0.0
-fixed-center = true
 bottom = false
-separator =
+width = 370
+;width = 100%
+height = 30
+offset-x = 770
+offset-y = 8
+margin-left = 8
+margin-right = 8
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 0
+;line-size = 0
 line-color = #BF616A
 
 wm-restack = bspwm
@@ -74,15 +73,14 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
 [bar/bottom_bar]
-monitor = ${env:MONITOR}
-width = 32%
-height = 26
-offset-x = 32%
-offset-y = 12
-radius = 0.0
-fixed-center = true
 bottom = true
-separator =
+width = 1900
+;width = 100%
+height = 30
+offset-x = 8
+offset-y = 8
+margin-left = 8
+margin-right = 8
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -109,9 +107,9 @@ font-1 = "LiberationMono:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 
-modules-left =
+modules-left = weather
 modules-center = mpd volume2
-modules-right =
+modules-right = eth date menu0
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -120,36 +118,23 @@ scroll-down = bspwm-deskprev
 type = internal/bspwm
 
 enable-click = true
-enable-scroll = true
-reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;I
-ws-icon-1 = 2;II
-ws-icon-2 = 3;III
-ws-icon-3 = 4;IV
-ws-icon-4 = 5;V
+format = <label-state>
 
-format = <label-state> <label-mode>
-
-label-focused = %icon%
-label-focused-background = ${colors.foreground}
+label-focused = 
 label-focused-padding = 2
-label-focused-foreground = ${colors.background}
 
-label-occupied = %icon%
+label-occupied = 
 label-occupied-padding = 2
-label-occupied-foreground = ${colors.foreground}
 
-label-urgent = %icon%
+label-urgent = 
 label-urgent-padding = 2
 
-label-empty = %icon%
-label-empty-foreground = ${colors.foreground}
+label-empty = •
 label-empty-padding = 2
-label-empty-background = ${colors.background}
 
-format-foreground = ${colors.foreground}
+format-foreground = #d17b49
 format-background = ${colors.background}
 
 [module/date]
@@ -217,13 +202,13 @@ label-volume-foreground = #6c71c4
 label-muted =  sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.foreground}
-bar-volume-foreground-1 = ${colors.foreground}
-bar-volume-foreground-2 = ${colors.foreground}
-bar-volume-foreground-3 = ${colors.foreground}
-bar-volume-foreground-4 = ${colors.foreground}
-bar-volume-foreground-5 = ${colors.foreground}
-bar-volume-foreground-6 = ${colors.foreground}
+bar-volume-foreground-0 = #7b8748
+bar-volume-foreground-1 = #7b8748
+bar-volume-foreground-2 = #7b8748
+bar-volume-foreground-3 = #7b8748
+bar-volume-foreground-4 = #7b8748
+bar-volume-foreground-5 = #af865a
+bar-volume-foreground-6 = #d17b49
 bar-volume-gradient = false
 bar-volume-indicator = 
 bar-volume-indicator-font = 4
@@ -248,8 +233,25 @@ format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-padding = 1
 
-menu-0-0 =  " "
+menu-0-0 =  " shutdown  "
 menu-0-0-exec = shutdown now
+menu-0-1 =  " reboot  "
+menu-0-1-exec = shutdown -r now
+;menu-0-2 =  " logout  "
+;menu-0-2-exec = logout
+menu-0-2 =   cancel
 
 label-open =  
 label-close =
+
+[module/weather]
+type = custom/script
+interval = 10
+format = <label>
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+#format-underline = ${colors.background}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+exec = python -u ~/.config/polybar/scripts/weather.py
+tail = true
