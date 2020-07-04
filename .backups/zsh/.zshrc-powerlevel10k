@@ -86,6 +86,9 @@ fi
 
 alias update='sudo pacman -Syyu'
 alias upall="yay -Syu --noconfirm"
+alias remove='sudo pacman -Rsn'
+alias search='pacman -Ss'
+alias search-local='pacman -Qs'
 alias mirror="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias yt-flac="youtube-dl --extract-audio --audio-format flac --audio-quality 0 "
 alias yt-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "
@@ -117,3 +120,4 @@ alias ss="sudo shutdown now"
 alias sr="sudo reboot"
 alias q="exit"
 alias fuck='sudo !!'
+alias weather="curl http://wttr.in"

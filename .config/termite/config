@@ -8,7 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Mononoki 12
+font = Ubuntu Mono Nerd Font 13
 #font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
@@ -46,11 +46,11 @@ urgent_on_bell = true
 
 [colors]
 
-# special
-foreground      = #c0b18b
-foreground_bold = #c0b18b
-cursor          = #c0b18b
-background      = rgba(31, 31, 31, 0.9)
+foreground          = #c0b18b
+foreground_bold     = #c0b18b
+cursor              = #c0b18b
+cursor_foreground   = #1F1F1F
+background          = rgba(31, 31, 31, 0.9)
 
 # black
 color0  = #4a3637
