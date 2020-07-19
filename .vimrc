@@ -12,20 +12,14 @@ call vundle#begin()		" required, all plugins must appear after this line.
 
 Plugin 'gmarik/Vundle.vim'							" Vundle
 Plugin 'itchyny/lightline.vim'                      " Lightline statusbar
-Plugin 'suan/vim-instant-markdown'
-Plugin 'frazrepo/vim-rainbow'
 Plugin 'vifm/vifm.vim'
 Plugin 'vimwiki/vimwiki'                            " Vim wiki
 Plugin 'scrooloose/nerdtree'						" added nerdtree
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'frazrepo/vim-rainbow'
 Plugin 'vim-python/python-syntax'
-Plugin 'PotatoesMaster/i3-vim-syntax'
-Plugin 'kovetskiy/sxhkd-vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim' 
 Plugin 'jreybert/vimagit'
-Plugin 'junegunn/vim-emoji'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'ap/vim-css-color'                           " Color previews for CSS
 Plugin 'tpope/vim-surround'                         " Change surrounding marks

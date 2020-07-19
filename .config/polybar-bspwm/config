@@ -142,7 +142,7 @@ interval = 1000
 label = Updates: %output%
 format-foreground = #B48EAD
 format-background = ${colors.background}
-format-prefix = "    "
+format-prefix = "    "
 format-prefix-foreground = #B48EAD
 
 ################################################################################
@@ -297,7 +297,7 @@ interval = 3.0
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 ; Default: %ifname% %local_ip%
-label-connected =  %local_ip%
+label-connected =  %downspeed%
 label-disconnected = %ifname% disconnected
 
 format-connected-foreground = #D08770
