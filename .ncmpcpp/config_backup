@@ -1,0 +1,276 @@
+##############################################################
+## This is the example configuration file. Copy it to       ##
+## $HOME/.ncmpcpp/config or $XDG_CONFIG_HOME/ncmpcpp/config ##
+## and set up your preferences.                             ##
+##############################################################
+#
+##### directories ######
+##
+## Directory for storing ncmpcpp related files.
+## Changing it is useful if you want to store
+## everything somewhere else and provide command
+## line setting for alternative location to config
+## file which defines that while launching ncmpcpp.
+##
+#
+ncmpcpp_directory = ~/.ncmpcpp
+#
+##
+## Directory for storing downloaded lyrics. It
+## defaults to ~/.lyrics since other MPD clients
+## (eg. ncmpc) also use that location.
+##
+lyrics_directory = ~/.lyrics
+#
+##### connection settings #####
+#
+mpd_host = localhost
+mpd_port = 6600
+mpd_connection_timeout = 5
+#
+## Needed for tag editor and file operations to work.
+##
+mpd_music_dir = ~/Muzyka
+mpd_crossfade_time = 5
+#
+##### music visualizer #####
+##
+## Note: In order to make music visualizer work you'll
+## need to use mpd fifo output, whose format parameter
+## has to be set to 44100:16:1 for mono visualization
+## or 44100:16:2 for stereo visualization. Example
+## configuration (it has to be put into mpd.conf):
+audio_output {
+       type            "fifo"
+       name            "Visualizer feed"
+       path            "/tmp/mpd.fifo"
+       format          "44100:16:2"
+}
+
+visualizer_fifo_path = /tmp/mpd.fifo
+#
+##
+## Note: Below parameter is needed for ncmpcpp to determine which output
+## provides data for visualizer and thus allow syncing between visualization and
+## sound as currently there are some problems with it.
+##
+#
+visualizer_output_name = Visualizer feed
+#
+##
+## If you set format to 44100:16:2, make it 'yes'.
+##
+visualizer_in_stereo = yes
+#
+##
+## Note: Below parameter defines how often ncmpcpp has to "synchronize"
+## visualizer and audio outputs.  30 seconds is optimal value, but if you
+## experience synchronization problems, set it to lower value.  Keep in mind
+## that sane values start with >=10.
+##
+#
+visualizer_sync_interval = 30
+#
+##
+## Note: To enable spectrum frequency visualization you need to compile ncmpcpp
+## with fftw3 support.
+##
+#
+## Available values: spectrum, wave, wave_filled, ellipse.
+##
+visualizer_type = wave
+#
+visualizer_look = ●▮
+#
+visualizer_color = blue, cyan, green, yellow, magenta, red
+#
+## Alternative subset of 256 colors for terminals that support it.
+##
+#visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
+
+
+############## Interface ####################
+## Enable mouse support (if enabled at compile time).
+enable-mouse = yes
+
+## A list of screens to cycle through when using
+## the previous/next screen commands (tab and shift+tab).
+## names: playlist browse help artist search song keydef lyrics outputs chat
+#screen-list = playlist browse
+
+## Default search mode for the search screen. The mode is an
+## integer index, with  0  for title, 1 for artist, 2 for album,
+## 3 for filename, and 4 for artist+title.
+#search-mode = 0
+
+## Auto center (center the playing track in the playlist)
+autocenter_mode = yes
+
+## Show the most recent query when using find.
+#find-show-last = no
+
+## Wrapped find mode.
+#find-wrap = yes
+
+## Wrapped cursor movement.
+#wrap-around = no
+
+## Ring bell when find wraps around.
+#bell-on-wrap = yes
+
+## Sound audible bell on alerts.
+audible-bell = no
+
+## Enable visible bell on alerts.
+#visible-bell = no
+
+## Default crossfade time in seconds.
+#crossfade-time = 10
+
+## Seek forward/backward by NUM seconds.
+#seek-time = 1
+
+## Get lyrics for currently playing song
+follow_now_playing_lyrics = yes
+
+############## Display ######################
+## User interface at startup (classic/alternative)
+user_interface = classic
+
+## Show a list of the screens in the top line on startup.
+#welcome-screen-list = yes
+
+## Make the cursor as wide as the screen.
+#wide-cursor = yes
+
+## Use the terminal's hardware cursor instead of inverse colors
+#hardware-cursor = yes
+
+## Hide playlist cursor after x seconds (0 disables this feature).
+#hide-cursor = 5
+
+## Scroll the title if it is too long for the screen.
+header_text_scrolling = no
+
+## Hide header on classic
+header_visibility = no
+
+## Hide status bar
+statusbar_visibility = no
+
+## The separator to show at the end of the scrolling title.
+#scroll-sep = " *** "
+
+## list-format
+## The format used to display songs in the main window.
+#list-format = "%name%|[%artist% - ]%title%|%file%"
+
+## The format used to display songs in the search window.
+#search-format = "%name%|[%artist% - ]%title%|%file%"
+
+## The format used to display songs on the status line.
+song_status_format = {{%A - }{%t}}|{%f}
+
+## The time, in seconds, for which status messages will be displayed.
+#status-message-time = 3
+
+## Display the time in the status bar when idle.
+#display-time = yes
+
+## Sets whether to display remaining or elapsed time in
+## the status window. Default is elapsed.
+#timedisplay-type = elapsed
+
+## Show the bitrate in the status bar when playing a stream.
+#visible-bitrate = no
+
+## Change the XTerm title (ncmpc will not restore the title).
+#set-xterm-title = no
+
+## The format used to for the xterm title when ncmpc is playing.
+#xterm-title-format = "ncmpc: [ %name%|[%artist% - ]%title%|%file%]"
+
+## Automatically save the lyrics after receiving them.
+lyrics-autosave = no
+
+## The text editor used for editing lyrics.
+#text-editor = vim
+
+## Ask before starting an editor.
+#text-editor-ask = yes
+
+## The prefix of chat messages
+#chat-prefix = "<user> "
+
+## Display song length in second column
+#second-column = no
+
+# Format for playlist columns
+song_columns_list_format = (25)[]{A|f:Artist} (45)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+
+## Custom progress bar. Must be 2 or 3 chars long exactly
+#progressbar_look = =>- 
+progressbar_look = ──
+
+## Cyclic scrolling
+cyclic_scrolling = yes
+
+## Lines scrolled
+lines_scrolled = 1
+
+############## Colors #######################
+## colors: none, black, red, green, yellow, blue, magenta, cyan, white
+## attributes: standout, underline, reverse, blink, dim, bold
+##
+## Colors can also be given as an integer representing a terminal specific
+## color code. The special color, none, represents the terminals default color.
+
+## Enable/disable colors.
+enable-colors = yes
+
+## Set the background color.
+#color background = black
+
+## Set the text color for the title row.
+#color title = yellow
+
+## Set the text color for the title row (the bold part).
+#color title-bold = yellow,bold
+
+## Set the color of the line on the second row.
+#color line = white
+
+## Set the text color used to indicate mpd flags on the second row.
+#color line-flags = white,bold
+
+## Set the text color in the main area of ncmpc.
+#color list = green
+
+## Set the bold text color in the main area of ncmpc.
+#color list-bold = green,bold
+
+## Sets the text color of directories in the browser
+#color browser-directory = yellow
+
+## Sets the text color of playlists in the browser
+#color browser-playlist = red
+
+## Set the color of the progress indicator.
+color progressbar = blue
+
+## Set the text color used to display mpd status in the status window.
+#color status-state = yellow,bold
+
+## Set the text color used to display song names in the status window.
+#color status-song  = yellow
+
+## Set the text color used to display time the status window.
+#color status-time  = red
+
+## Text color used to display alerts in the status window.
+#color alert = red,bold
+
+## Redefine any of the base colors.
+## The RGB values must be an integer value between 0 and 1000.
+## Note: Only some terminals allow redefinitions of colors!
+#colordef yellow = 255, 140, 0

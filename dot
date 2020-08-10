@@ -26,7 +26,7 @@ elif [ "$GDMSESSION" = "i3" ]; then
 fi
 
 cd ~/DOTFILES/dotfiles/.config/
-cp -r bspwm dunst i3 neofetch picom ranger rofi sxhkd termite wallpapers zathura emoji ~/.config/ &>/dev/null
+cp -r bspwm dunst i3 neofetch nvim picom ranger rofi sxhkd termite wallpapers zathura emoji ~/.config/ &>/dev/null
 
 cd ~/DOTFILES/dotfiles/.scripts/Personal
 ./2-bookmarks

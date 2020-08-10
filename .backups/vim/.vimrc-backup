@@ -47,14 +47,14 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-<<<<<<< HEAD
+" <<<<<<< HEAD
 let g:lightline = {
       \ 'colorscheme': 'darcula',
       \ }
-=======
+" =======
 " Powerline
 set rtp+=/usr/share/powerline/bindings/vim/
->>>>>>> 67374f69db8063c9b37cbb320dd3018db18dba9a
+" ">>>>>>> 67374f69db8063c9b37cbb320dd3018db18dba9a
 
 " Always show statusline
 set laststatus=2
