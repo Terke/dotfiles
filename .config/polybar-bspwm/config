@@ -87,8 +87,8 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Mononoki:size=9;2"
-font-1 = "Mononoki:size=9;2"
+font-0 = "xos4 Terminus:size=9;2"
+font-1 = "xos4 Terminus:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 font-4 = "Weather Icons:size=9;2"
@@ -142,7 +142,7 @@ interval = 1000
 label = Updates: %output%
 format-foreground = #B48EAD
 format-background = ${colors.background}
-format-prefix = "    "
+format-prefix = "    "
 format-prefix-foreground = #B48EAD
 
 ################################################################################

@@ -1,4 +1,4 @@
-<?xml encoding="UTF-8" version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
 	<icon>utilities-terminal</icon>
@@ -12,20 +12,29 @@
 </action>
 <action>
 	<icon>checkbox</icon>
-	<name>Check md5sum</name>
-	<unique-id>1526736788575383-2</unique-id>
-	<command>zenity --info --title=&quot;Check md5 for %n&quot; --text=&quot;$(md5sum %f)&quot;</command>
-	<description>Check md5sum</description>
-	<patterns>*.iso;*.ISO;*.tar.gz;*.TAR.GZ;*.zip;*.ZIP</patterns>
-	<other-files/>
-</action>
-<action>
-	<icon>checkbox</icon>
 	<name>Check sha1sum</name>
 	<unique-id>1526633271260079-26</unique-id>
 	<command>zenity --info --title=&quot;Check sha1 for %n&quot; --text=&quot;$(sha1sum %f)&quot;</command>
 	<description>Check sha1sum</description>
 	<patterns>*.iso;*.ISO</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>checkbox</icon>
+	<name>Check sha256sum</name>
+	<unique-id>1577688162350307-1</unique-id>
+	<command>zenity --info --title=&quot;Check sha256 for %n&quot; --text=&quot;$(sha256sum %f)&quot;</command>
+	<description>Check sha256sum</description>
+	<patterns>*.iso;*.ISO</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>checkbox</icon>
+	<name>Check md5sum</name>
+	<unique-id>1526736788575383-2</unique-id>
+	<command>zenity --info --title=&quot;Check md5 for %n&quot; --text=&quot;$(md5sum %f)&quot;</command>
+	<description>Check md5sum</description>
+	<patterns>*.iso;*.ISO;*.tar.gz;*.TAR.GZ;*.zip;*.ZIP</patterns>
 	<other-files/>
 </action>
 <action>
@@ -174,5 +183,14 @@
 	<other-files/>
 	<text-files/>
 	<video-files/>
+</action>
+<action>
+	<icon>gitahead</icon>
+	<name>Open with gitahead</name>
+	<unique-id>1587287434852027-1</unique-id>
+	<command>gitahead %F</command>
+	<description>Open with gitahead</description>
+	<patterns>*</patterns>
+	<directories/>
 </action>
 </actions>
