@@ -2,7 +2,7 @@
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/009.png)
 
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/010.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/bspwm-scrot.png)
 
 ## Cool stuff
 
