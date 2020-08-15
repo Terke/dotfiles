@@ -94,7 +94,7 @@ font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 font-4 = "Weather Icons:size=9;2"
 
 modules-left = bspwm-alt xwindow
-modules-center = mpd
+modules-center = protonmail
 modules-right = weather wired-network memory cpu pavolume arch-aur-updates date
 
 scroll-up = bspwm-desknext
@@ -327,16 +327,13 @@ format-background = ${colors.background}
 
 ################################################################################
 
-[module/ice-left]
-type = custom/text
-content-background = ${colors.background}
-content-foreground = #A3BE8C
-content = "%{T4}█▓▒░%{T-}"
-
-[module/ice-right]
-type = custom/text
-content-background = ${colors.background}
-content-foreground = #88C0D0
-content = "%{T4}░▒▓█%{T-}"
+[module/protonmail]
+type = custom/script
+exec = ~/.config/polybar/bar-protonmail/bar_protonmail.py -p
+interval = 10
+click-left = xdg-open https://mail.protonmail.com/inbox
+format-foreground = #B48EAD
+format-background = ${colors.background}
+format-prefix = "  Mail  "
 
 ################################################################################
