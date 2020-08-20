@@ -1,7 +1,7 @@
-#  _____    _              
-# |__  /___| |__  _ __ ___ 
+#  _____    _
+# |__  /___| |__  _ __ ___
 #   / // __| '_ \| '__/ __|
-#  / /_\__ \ | | | | | (__ 
+#  / /_\__ \ | | | | | (__
 # /____|___/_| |_|_|  \___|
 
 export ZSH="/home/$USER/.oh-my-zsh"
@@ -53,42 +53,76 @@ fi
 
 ## ALIASES ##
 
+# pacman and yay
 alias update='sudo pacman -Syyu'
 alias upall="yay -Syu --noconfirm"
 alias remove='sudo pacman -Rsn'
 alias search='pacman -Ss'
 alias search-local='pacman -Qs'
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+
+# get fastest mirrors
 alias mirror="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+
+# youtube-dl and ytmdl
 alias yt-flac="youtube-dl --extract-audio --audio-format flac --audio-quality 0 "
 alias yt-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "
+alias yt-opus="youtube-dl --extract-audio --audio-format opus --audio-quality 0 "
+alias yt-wav="youtube-dl --extract-audio --audio-format wav --audio-quality 0 "
+alias yt-best="youtube-dl -f bestvideo+bestaudio "
 alias yt="ytmdl"
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-alias music="ncmpcpp"
-alias r="ranger"
-alias ls='exa -l'
-alias ..='cd ..'
-alias gs='git status'
-alias gp='git pull'
-alias pub-ip="curl ipinfo.io/ip"
-alias local-ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
-alias c="clear"
-alias wget="wget -c "
-alias speed='speedtest-cli --simple'
-alias v="nvim"
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-alias unlock="sudo rm /var/lib/pacman/db.lck"
+
+# Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias free="free -mt"
-alias merge="xrdb -merge ~/.Xresources"
-alias hw="hwinfo --short"
+
+# shutdown or reboot
 alias ss="sudo shutdown now"
 alias sr="sudo reboot"
-alias q="exit"
-alias fuck='sudo !!'
+
+# switch between shells
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+# git
+alias gs='git status'
+alias gp='git pull origin'
+
+# Merge Xresources
+alias merge="xrdb -merge ~/.Xresources"
+
+# navigation
+alias ..='cd ..'
+
+# Changing "ls" to "exa"
+alias ls='exa -l'
+
+# continue download
+alias wget="wget -c "
+
+# Recent Installed Packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+
+# tools
+alias pub-ip="curl ipinfo.io/ip"
+alias local-ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias speed='speedtest-cli --simple'
+alias free="free -mt"
+alias hw="hwinfo --short"
 alias weather="curl http://wttr.in"
+
+# lazy
+alias music="ncmpcpp"
+alias r="ranger"
+alias c="clear"
+alias q="exit"
+alias vim="nvim"
+
 
 neofetch

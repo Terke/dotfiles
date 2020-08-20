@@ -87,15 +87,15 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "xos4 Terminus:size=9;2"
-font-1 = "xos4 Terminus:size=9;2"
+font-0 = "JetBrains Mono:size=9;2"
+font-1 = "JetBrains Mono:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 font-4 = "Weather Icons:size=9;2"
 
 modules-left = bspwm-alt xwindow
 modules-center = protonmail
-modules-right = weather wired-network memory cpu pavolume arch-aur-updates date
+modules-right = weather eth memory cpu pavolume arch-aur-updates date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -131,32 +131,98 @@ format-background = ${colors.background}
 
 ################################################################################
 ################################################################################
-############                       MODULES A-Z                      ############
+############                      MODULES                      #################
 ################################################################################
 ################################################################################
 
-[module/arch-aur-updates]
+[module/xwindow]
+;https://github.com/jaagr/polybar/wiki/Module:-xwindow
+type = internal/xwindow
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+format-foreground = #D8DEE9
+format-background = ${colors.background}
+
+################################################################################
+
+[module/protonmail]
 type = custom/script
-exec = ~/.config/polybar/scripts/check-all-updates.sh
-interval = 1000
-label = Updates: %output%
+exec = ~/.config/polybar/bar-protonmail/bar_protonmail.py -p
+interval = 10
+click-left = xdg-open https://mail.protonmail.com/inbox
 format-foreground = #B48EAD
 format-background = ${colors.background}
-format-prefix = "    "
-format-prefix-foreground = #B48EAD
+format-prefix = "  Mail  "
 
 ################################################################################
 
-[module/aur-updates]
+[module/weather]
 type = custom/script
-exec = cower -u | wc -l
-interval = 1000
-label = Aur: %output%
-format-foreground = ${colors.foreground}
+exec = ~/.config/polybar/scripts/weather
+interval = 600
+label-font = 5
+click-left = xdg-open https://openweathermap.org/city/264371 &
+format-foreground = #A3BE8C
 format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-format-underline = #FFBB00
+
+################################################################################
+
+[module/eth]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+type = internal/network
+interface = enp0s3
+;interface = enp14s0
+interval = 3.0
+
+; Available tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+; Default: %ifname% %local_ip%
+label-connected =  %downspeed%
+label-disconnected = %ifname% disconnected
+
+format-connected-foreground = #D08770
+format-connected-background = ${colors.background}
+format-connected-prefix = "   "
+format-connected-prefix-foreground = #D08770
+format-connected-prefix-background = ${colors.background}
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected-foreground = ${colors.foreground}
+
+################################################################################
+
+[module/memory]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+label = %percentage_used%%
+
+format = Mem: <label>
+format-prefix = "    "
+format-prefix-foreground = #81A1C1
+format-foreground = #81A1C1
+format-background = ${colors.background}
 
 ################################################################################
 
@@ -189,6 +255,32 @@ label = Cpu:%percentage:3%%
 
 ################################################################################
 
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/scripts/pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
+scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+format-foreground = #EBCB8B
+format-background = ${colors.background}
+
+################################################################################
+
+[module/arch-aur-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-all-updates.sh
+interval = 1000
+label = Updates: %output%
+format-foreground = #B48EAD
+format-background = ${colors.background}
+format-prefix = "    "
+format-prefix-foreground = #B48EAD
+
+################################################################################
+
 [module/date]
 ;https://github.com/jaagr/polybar/wiki/Module:-date
 type = internal/date
@@ -205,135 +297,3 @@ format-prefix-foreground = #88C0D0
 format-foreground = #88C0D0
 format-background = ${colors.background}
 label = "%date%   %time% "
-
-################################################################################
-
-[module/memory]
-;https://github.com/jaagr/polybar/wiki/Module:-memory
-type = internal/memory
-interval = 1
-; Available tokens:
-;   %percentage_used% (default)
-;   %percentage_free%
-;   %gb_used%
-;   %gb_free%
-;   %gb_total%
-;   %mb_used%
-;   %mb_free%
-;   %mb_total%
-label = %percentage_used%%
-
-format = Mem: <label>
-format-prefix = "    "
-format-prefix-foreground = #81A1C1
-format-foreground = #81A1C1
-format-background = ${colors.background}
-
-################################################################################
-
-[module/mpd]
-;https://github.com/jaagr/polybar/wiki/Module:-mpd
-type = internal/mpd
-;format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
-format-online =  "<label-song>  <bar-progress>"
-;format-online =  "<label-song>  <bar-progress> <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-label-song-maxlen = 40
-label-song-ellipsis = true
-bar-progress-width = 10
-bar-progress-indicator = 
-bar-progress-fill = 
-bar-progress-empty = 
-bar-progress-fill-foreground = #88C0D0
-bar-progress-fill-background = ${colors.background}
-bar-progress-indicator-foreground = ${colors.foreground}
-format-online-foreground = #8FBCBB
-format-online-background = ${colors.background}
-
-################################################################################
-
-[module/pavolume]
-type = custom/script
-tail = true
-label = %output%
-exec = ~/.config/polybar/scripts/pavolume.sh --listen
-click-right = exec pavucontrol
-click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-format-foreground = #EBCB8B
-format-background = ${colors.background}
-
-################################################################################
-
-[module/weather]
-type = custom/script
-exec = ~/.config/polybar/scripts/weather
-interval = 600
-label-font = 5
-click-left = vivaldi-stable https://openweathermap.org/city/264371 &
-format-foreground = #A3BE8C
-format-background = ${colors.background}
-
-################################################################################
-
-[module/wired-network]
-;https://github.com/jaagr/polybar/wiki/Module:-network
-type = internal/network
-interface = enp0s3
-;interface = enp14s0
-interval = 3.0
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-; Default: %ifname% %local_ip%
-label-connected =  %downspeed%
-label-disconnected = %ifname% disconnected
-
-format-connected-foreground = #D08770
-format-connected-background = ${colors.background}
-format-connected-prefix = "   "
-format-connected-prefix-foreground = #D08770
-format-connected-prefix-background = ${colors.background}
-
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.alert}
-label-disconnected-foreground = ${colors.foreground}
-
-################################################################################
-
-[module/xwindow]
-;https://github.com/jaagr/polybar/wiki/Module:-xwindow
-type = internal/xwindow
-
-; Available tokens:
-;   %title%
-; Default: %title%
-label = %title%
-label-maxlen = 50
-
-format-foreground = #D8DEE9
-format-background = ${colors.background}
-
-################################################################################
-
-[module/protonmail]
-type = custom/script
-exec = ~/.config/polybar/bar-protonmail/bar_protonmail.py -p
-interval = 10
-click-left = xdg-open https://mail.protonmail.com/inbox
-format-foreground = #B48EAD
-format-background = ${colors.background}
-format-prefix = "  Mail  "
-
-################################################################################
