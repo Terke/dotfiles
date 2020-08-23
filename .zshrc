@@ -69,11 +69,12 @@ alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # youtube-dl and ytmdl
-alias yt-flac="youtube-dl --extract-audio --audio-format flac --audio-quality 0 "
-alias yt-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "
-alias yt-opus="youtube-dl --extract-audio --audio-format opus --audio-quality 0 "
-alias yt-wav="youtube-dl --extract-audio --audio-format wav --audio-quality 0 "
-alias yt-best="youtube-dl -f bestvideo+bestaudio "
+alias yt-flac="youtube-dl -f bestaudio --extract-audio --audio-format flac --audio-quality 0 "
+alias yt-mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
+alias yt-opus="youtube-dl -f bestaudio --extract-audio --audio-format opus --audio-quality 0 "
+alias yt-wav="youtube-dl -f bestaudio --extract-audio --audio-format wav --audio-quality 0 "
+alias yta-best="youtube-dl --extract-audio --audio-format best"
+alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 alias yt="ytmdl"
 
 # Colorize grep output (good for log files)
@@ -82,7 +83,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # shutdown or reboot
-alias ss="sudo shutdown now"
+alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
 # switch between shells
@@ -116,6 +117,7 @@ alias speed='speedtest-cli --simple'
 alias free="free -mt"
 alias hw="hwinfo --short"
 alias weather="curl http://wttr.in"
+alias df="df -h"
 
 # lazy
 alias music="ncmpcpp"
