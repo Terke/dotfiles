@@ -45,51 +45,39 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-# Base16 Gruvbox dark, medium
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-foreground      = #d5c4a1
-foreground_bold = #ebdbb2
-cursor          = #ebdbb2
-cursor_foreground   = #282828
-background      = rgba(40, 40, 40, 0.9)
-
-# 16 color space
+foreground          = #E5E9F0
+foreground_bold     = #ECEFF4
+cursor              = #ECEFF4
+cursor_foreground   = #2E3440
+background          = rgba(46, 52, 64, 0.8)
 
 # Black, Gray, Silver, White
-color0  = #282828
-color8  = #665c54
-color7  = #d5c4a1
-color15 = #fbf1c7
+color0  = #2E3440
+color8  = #4C566A
+color7  = #E5E9F0
+color15 = #D8DEE9
 
 # Red
-color1  = #fb4934
-color9  = #fb4934
+color1  = #BF616A
+color9  = #BF616A
 
 # Green
-color2  = #b8bb26
-color10 = #b8bb26
+color2  = #A3BE8C
+color10 = #A3BE8C
 
 # Yellow
-color3  = #fabd2f
-color11 = #fabd2f
+color3  = #EBCB8B
+color11 = #EBCB8B
 
 # Blue
-color4  = #83a598
-color12 = #83a598
+color4  = #5E81AC
+color12 = #5E81AC
 
 # Purple
-color5  = #d3869b
-color13 = #d3869b
+color5  = #B48EAD
+color13 = #B48EAD
 
 # Teal
-color6  = #8ec07c
-color14 = #8ec07c
-
-# Extra colors
-color16 = #fe8019
-color17 = #d65d0e
-color18 = #3c3836
-color19 = #504945
-color20 = #bdae93
-color21 = #ebdbb2
+color6  = #8FBCBB
+color14 = #8FBCBB

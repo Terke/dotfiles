@@ -8,7 +8,7 @@ cd ~/DOTFILES/dotfiles
 cp -r .vimrc .zshrc .ncmpcpp .scripts ~/ &>/dev/null
 
 cd ~/.config/
-rm -r bspwm dunst i3 neofetch picom ranger rofi sxhkd termite wallpapers zathura emoji
+rm -r bspwm dmenu dunst i3 neofetch nvim picom ranger rofi sxhkd termite Thunar wallpapers zathura emoji
 find polybar -type f -delete
 
 cd ~/DOTFILES/dotfiles/.config/
@@ -26,7 +26,7 @@ elif [ "$GDMSESSION" = "i3" ]; then
 fi
 
 cd ~/DOTFILES/dotfiles/.config/
-cp -r bspwm dunst i3 neofetch nvim picom ranger rofi sxhkd termite wallpapers zathura emoji ~/.config/ &>/dev/null
+cp -r bspwm dmenu dunst i3 neofetch nvim picom ranger rofi sxhkd termite Thunar wallpapers zathura emoji ~/.config/ &>/dev/null
 
 cd ~/DOTFILES/dotfiles/.scripts/Personal
 ./2-bookmarks
