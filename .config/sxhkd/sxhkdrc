@@ -16,7 +16,7 @@
 
 # Browser
 super + w
-	vivaldi-stable
+	firefox
 
 # dmenu
 super + shift + d
