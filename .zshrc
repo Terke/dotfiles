@@ -94,6 +94,13 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 # git
 alias gs='git status'
 alias gp='git pull origin'
+alias ga='git add .'
+alias gc='git clone'
+alias gb='git branch'
+alias gsm='git commit -m'
+alias gf='git fetch'
+alias gch='git checkout'
+alias gpo='git push origin master'
 
 # Merge Xresources
 alias merge="xrdb -merge ~/.Xresources"
