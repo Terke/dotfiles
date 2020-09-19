@@ -16,7 +16,7 @@
 
 # Browser
 super + w
-	firefox
+	librewolf
 
 # dmenu
 super + shift + d

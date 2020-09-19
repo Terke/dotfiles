@@ -15,7 +15,7 @@
 - **CLI File Manager :** [ranger](https://github.com/ranger/ranger)
 - **Image Viewer :** [feh](https://github.com/derf/feh)
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot) , [maim](https://github.com/naelstrof/maim)
-- **Web Browser :** [Chromium](https://github.com/chromium/chromium)
+- **Web Browser :** [LibreWolf](https://librewolf-community.gitlab.io/)
 - **Terminal :** [termite](https://github.com/thestinger/termite)
 - **Terminal Font :** [Mononoki](https://madmalik.github.io/mononoki/)
 - **CLI Text Editor :** [vim](https://github.com/vim/vim)
