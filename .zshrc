@@ -54,6 +54,7 @@ fi
 ## ALIASES ##
 
 # pacman and yay
+alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 alias upall="yay -Syu --noconfirm"
 alias remove='sudo pacman -Rsn'
@@ -90,6 +91,19 @@ alias sr="sudo reboot"
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+# gpg
+# verify signature for isos
+alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+# receive the key of a developer
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+
+# grub update
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+# maintenance
+alias big="expac -H M '%m\t%n' | sort -h | nl"
+alias downgrada="downgrade --ala-url 'https://bike.seedhost.eu/arcolinux/'"
 
 # git
 alias gs='git status'

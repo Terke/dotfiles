@@ -95,7 +95,7 @@ font-4 = "Weather Icons:size=9;2"
 
 modules-left = bspwm-alt xwindow
 modules-center =
-modules-right = weather memory networkspeeddown networkspeedup cpu pavolume arch-aur-updates date
+modules-right = weather memory networkspeeddown networkspeedup cpu pavolume arch-updates aur-updates date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -187,7 +187,7 @@ interval = 1
 ;   %mb_total%
 label = %percentage_used%%
 
-format = Mem: <label>
+format = mem: <label>
 format-prefix = "    "
 format-prefix-foreground = #61afef
 format-foreground = #61afef
@@ -244,7 +244,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = Cpu:%percentage:3%%
+label = cpu:%percentage:3%%
 
 ################################################################################
 
@@ -262,11 +262,11 @@ format-background = ${colors.background}
 
 ################################################################################
 
-[module/arch-aur-updates]
+[module/arch-updates]
 type = custom/script
-exec = ~/.config/polybar/scripts/check-all-updates.sh
+exec = ~/.config/polybar/scripts/check-arch-updates.sh
 interval = 1000
-label = Updates: %output%
+label = arch: %output%
 format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "    "
@@ -274,14 +274,13 @@ format-prefix-foreground = #c678dd
 
 [module/aur-updates]
 type = custom/script
-exec = cower -u | wc -l
+exec = ~/.config/polybar/scripts/check-aur-updates.sh
 interval = 1000
-label = Aur: %output%
-format-foreground = ${colors.foreground}
+label = aur: %output%
+format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "  "
 format-prefix-foreground = #c678dd
-format-underline = #c678dd
 
 ################################################################################
 
