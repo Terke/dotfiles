@@ -140,6 +140,12 @@ alias hw="hwinfo --short"
 alias weather="curl http://wttr.in"
 alias df="df -h"
 
+# configs
+alias polyconf="nvim ~/.config/polybar/config"
+alias bspconf="nvim ~/.config/bspwm/bspwmrc"
+alias vimconf="nvim ~/.config/nvim/init.vim"
+alias termconf="nvim ~/.config/termite/config"
+
 # lazy
 alias music="ncmpcpp"
 alias r="ranger"

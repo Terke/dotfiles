@@ -126,7 +126,7 @@ label-urgent-padding = 2
 label-empty = •
 label-empty-padding = 2
 
-format-foreground = #e06c75
+format-foreground = #c678dd
 format-background = ${colors.background}
 
 ################################################################################
@@ -187,7 +187,7 @@ interval = 1
 ;   %mb_total%
 label = %percentage_used%%
 
-format = mem: <label>
+format = Mem: <label>
 format-prefix = "    "
 format-prefix-foreground = #61afef
 format-foreground = #61afef
@@ -244,7 +244,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = cpu:%percentage:3%%
+label = Cpu:%percentage:3%%
 
 ################################################################################
 
@@ -266,7 +266,7 @@ format-background = ${colors.background}
 type = custom/script
 exec = ~/.config/polybar/scripts/check-arch-updates.sh
 interval = 1000
-label = arch: %output%
+label = Arch: %output%
 format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "    "
@@ -276,7 +276,7 @@ format-prefix-foreground = #c678dd
 type = custom/script
 exec = ~/.config/polybar/scripts/check-aur-updates.sh
 interval = 1000
-label = aur: %output%
+label = Aur: %output%
 format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "  "
