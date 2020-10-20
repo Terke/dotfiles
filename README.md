@@ -1,13 +1,10 @@
-## i3wm [![i3wm](https://img.shields.io/badge/I3-WM-yellow?style=flat-square)](https://i3wm.org)
-
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/scrot.png)
 
 ## Cool stuff
 
 - **OS :** [**B**tw. **I** **u**se **A**rch](https://www.archlinux.org/)
-- **Desktop Environment :** [Xfce](https://www.xfce.org/)
-- **Window Manager :** [i3-gaps](https://github.com/Airblader/i3) , [bspwm](https://github.com/baskerville/bspwm)
+- **Window Manager :** [bspwm](https://github.com/baskerville/bspwm)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
 - **Program Launcher :** [rofi](https://github.com/davatorium/rofi) , [dmenu](https://tools.suckless.org/dmenu/)
 - **GUI File Manager :** [thunar](https://github.com/xfce-mirror/thunar)
