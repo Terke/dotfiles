@@ -105,6 +105,9 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias big="expac -H M '%m\t%n' | sort -h | nl"
 alias downgrada="downgrade --ala-url 'https://bike.seedhost.eu/arcolinux/'"
 
+# systeminfo
+alias probe="sudo -E hw-probe -all -upload"
+
 # git
 alias gs='git status'
 alias gp='git pull origin'
