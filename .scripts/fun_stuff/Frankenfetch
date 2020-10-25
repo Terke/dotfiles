@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+
+# extremely simple system info script.
+# originally written by Nathaniel Maia, 2017-2018.  Destroyed by Matthew Dobson, March 2020.
+
+# fallback
+FB="unknown"
+
+# colours
+RESET=$'\e[0m'
+for n in {0..7}; do
+	printf -v FG${n} "%b" "\e[3${n}m"
+	printf -v BG${n} "%b" "\e[4${n}m"
+done
+
+# source whichever distro release file is available
+if [[ -e /etc/os-release ]] && . /etc/os-release 2>/dev/null; then
+	DIST="${ID,,}"
+elif [[ -e /etc/lsb-release ]] && . /etc/lsb-release 2>/dev/null; then
+	DIST="${DISTRIB_ID,,}"
+fi
+
+# system uptime
+UPT="$(uptime -p)"
+UPT="${UPT/up /}"
+UPT="${UPT/ day?/d}"
+UPT="${UPT/ hour?/h}"
+UPT="${UPT/ minute?/m}"
+
+# check if root user
+(( UID == 0 )) && USR="${FG1}root" || USR="${FG4}${USER}"
+
+# install date
+if [[ -e /var/log/pacman.log ]]; then
+	INST="$(head -n1 /var/log/pacman.log)"
+	INST="${INST/ */}"
+	INST="${INST/\[/}"
+	INST="${INST//\-/ }"
+fi
+
+# gtk settings
+if [[ -e ~/.config/gtk-3.0/settings.ini ]]; then
+	THEME="$(awk -F'=' '/gtk-theme-name/ {print $2}' ~/.config/gtk-3.0/settings.ini)"
+	ICONS="$(awk -F'=' '/gtk-icon-theme-name/ {print $2}' ~/.config/gtk-3.0/settings.ini)"
+elif [[ -e ~/.gtkrc-2.0 ]]; then
+	THEME="$(awk -F'"' '/gtk-theme-name/ {print $2}' ~/.gtkrc-2.0)"
+	ICONS="$(awk -F'"' '/gtk-icon-theme-name/ {print $2}' ~/.gtkrc-2.0)"
+fi
+
+# login shell
+SHLL="${SHELL##*/}"
+
+# terminal name
+TRM="${TERM/-256color/}"        # many terminals use a -256color suffix, remove it
+TRM="${TRM/-unicode/}"          # rxvt can be rxvt-unicode, remove the -unicode suffix
+TRM="${TRM/*-termite*/termite}" # termite is xterm-termite, truncate to just termite
+
+# hostname
+HOST="${HOST:-$(hostname 2>/dev/null)}"
+
+# fortune
+fortune -a /home/terke/.oh-my-zsh/plugins/chucknorris/fortunes/chucknorris
+
+# kernel version
+KERN="${KERN:-$(uname -sr)}"
+KERN="${KERN/-*/}"
+KERN="${KERN,,}"
+
+# MEM = used / total
+FREE="$(free --mega)"
+MB=$(awk 'NR==2 {print $3}' <<< "$FREE")
+GB=$(awk 'NR==2 {print $3 / 1000}' <<< "$FREE")
+TOT=$(awk 'NR==2 {print $2 / 1000}' <<< "$FREE")
+(( MB > 1000 )) && MEM="${GB:0:5}gb used / ${TOT/\.*}gb total" || MEM="${MB}mb used / ${TOT/\.*}gb total"
+
+# C = number of cores
+THREADS=$(grep -c '^processor' /proc/cpuinfo)
+CORES=$(grep '^core' /proc/cpuinfo | sort -r | awk -F':' 'NR == 1 {print $2 + 1}')
+CORES=${CORES:-1}
+
+# CPU = usage / threads
+CPU=$(ps aux | awk 'BEGIN {sum = 0} {sum += $3}; END {print sum}')
+CPU=${CPU/\.*}
+
+# CPU needs to be divided by number of threads to get an average
+if (( (CPU /= THREADS) > 100 )); then
+	CPU="$CORES cores $THREADS threads @ 100% avg"
+else
+	CPU="$CORES cores $THREADS threads @ $CPU% avg"
+fi
+
+rep_char() {
+	local char="${1:-=}"
+	local num="${2:-$((${#USR} + 3 + ${#HOST}))}"
+	local str="$(printf "%${num}s")"
+	echo "${str// /$char}"
+}
+
+pkg_count() {
+	pacman -Qq 2>/dev/null | wc -l || echo "$FB"
+}
+
+cur_wm() {
+	if [[ -z $WM && $DISPLAY ]] && hash xprop >/dev/null 2>&1; then
+		ID="$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)"
+		WM="$(xprop -id "${ID##* }" -notype -len 100 -f _NET_WM_NAME 8t)"
+		WM="${WM/*WM_NAME = }" WM="${WM/\"}" WM="${WM/\"*}" WM="${WM,,}"
+		echo "${WM:-$FB}"
+	else
+		echo "${WM:-tty$XDG_VTNR}"
+	fi
+}
+BLOCKS="$BG1    $BG2    $BG3    $BG4    $BG5    $BG6    $BG7    ${RESET}"
+
+red="\e[31m"
+grn="\e[32m"
+ylw="\e[33m"
+cyn="\e[36m"
+blu="\e[34m"
+prp="\e[35m"
+bprp="\e[35;1m"
+rst="\e[0m"
+
+
+echo
+echo
+echo -e " \e[H\e[2J "
+echo -e "           \e[0;36m."  
+echo -e "          \e[0;36m/ \ "
+echo -e "         \e[0;36m/   \      \e[0;37m               #     \e[0;35m| * "
+echo -e "        \e[0;36m/^.   \     \e[0;37maa##e #%@ a#@e 6##%  \e[0;35m| | |-^-. |   | \ / "
+echo -e "       \e[0;36m/  .-.  \    \e[0;37m.oOo# #   #    #  #  \e[0;35m| | |   | |   |  X "
+echo -e "      \e[0;36m/  (   ) _\   \e[0;37m%OoO# #   %#ee #  #  \e[0;35m| | |   | ^._.| / \ \e[0;36mTM "
+echo -e "     \e[1;36m/ _.~   ~._^\ "
+echo -e "    \e[1;36m/.^         ^.\  "
+echo
+echo
+echo -e "  ${cyn}    user   ${rst}"  " ${USR} @ ${HOST:-$FB}"
+echo -e "  ${grn}    distro ${rst}"  " ${DIST:-$FB}"
+echo -e "  ${red}    shell  ${rst}"  " ${SHLL:-$FB}"
+echo -e "  ${prp}    wm     ${rst}"  " $(cur_wm)"
+echo -e "  ${blu}    term   ${rst}"  " ${TRM:-$FB}"
+echo -e "  ${cyn}    uptime ${rst}"  " ${UPT:-$FB}"
+echo -e "  ${grn}    kernel ${rst}"  " ${KERN:-$FB}"
+echo -e "  ${red}    pkgs   ${rst}"  " $(pkg_count)"
+echo
+echo 	"      $BLOCKS"
+echo
+echo -e "      $(fortune -a /home/terke/.oh-my-zsh/plugins/chucknorris/fortunes/chucknorris)"
+echo
