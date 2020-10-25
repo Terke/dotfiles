@@ -59,7 +59,7 @@ TRM="${TRM/*-termite*/termite}" # termite is xterm-termite, truncate to just ter
 HOST="${HOST:-$(hostname 2>/dev/null)}"
 
 # fortune
-fortune -a /home/terke/.oh-my-zsh/plugins/chucknorris/fortunes/chucknorris
+# fortune -a /home/terke/.oh-my-zsh/plugins/chucknorris/fortunes/chucknorris
 
 # kernel version
 KERN="${KERN:-$(uname -sr)}"
