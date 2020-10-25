@@ -14,7 +14,7 @@ prompt_context() {
   fi
 }
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git chucknorris zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -156,5 +156,5 @@ alias c="clear"
 alias q="exit"
 alias vim="nvim"
 
+/home/terke/.scripts/fun_stuff/Frankenfetch
 
-neofetch
