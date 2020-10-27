@@ -2,7 +2,7 @@
 set clipboard=unnamedplus
 
 " Maintain undo history between sessions
-set undofile 
+set undofile
 
 " Enable Mouse
 set mouse=a
@@ -39,7 +39,7 @@ set colorcolumn=80,120
 "set nowrap
 
 " highlight current line
-" set cursorline 
+" set cursorline
 
 " minimum of 5 lines between cursor and screen end
 " set so=5
@@ -80,7 +80,8 @@ nnoremap <leader>e :exe getline(line('.'))<cr>
 
 " Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'ryanoasis/vim-devicons'
@@ -108,10 +109,10 @@ augroup numbertoggle
     "Display relative numbers when we gain focus
     " Display relative numbers when we leave insert mode
     autocmd FocusGained,WinEnter,InsertLeave * if &number==1 | setlocal relativenumber | endif
-    
+
     " Disable numbers for buffers with matching filetypes
     autocmd TermOpen,FileType term://*,defx setlocal nonumber
-    
+
     " Disable relative numbers for buffers with matching filetypes
     autocmd TermOpen,FileType term://*,defx,qf setlocal norelativenumber
 augroup END
@@ -120,28 +121,28 @@ augroup END
 "               QUICK-SCOPE
 " ------------------------------------------------
 
-" use gruvbox bg colors to distinguish marked characters
+" use onedark bg colors to distinguish marked characters
 augroup qs_colors
   autocmd!
-  autocmd ColorScheme * highlight QuickScopePrimary guibg='#7c6f64'
-  autocmd ColorScheme * highlight QuickScopeSecondary guibg='#504945' 
+  autocmd ColorScheme * highlight QuickScopePrimary guibg='#5c6370'
+  autocmd ColorScheme * highlight QuickScopeSecondary guibg='#5c6370'
 augroup END
 
 " Trigger a highlight in the appropriate direction when pressing these keys
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " ------------------------------------------------
-"               GRUVBOX
+"               ONEDARK
 " ------------------------------------------------
 
 " True Colors
 set termguicolors
 
 " Choose and configure a theme for vim
-let g:gruvbox_contrast_dark='medium'
+let g:onedark_contrast_dark='medium'
 set background=dark
-let g:gruvbox_italic=1
-colorscheme gruvbox
+let g:onedark_terminal_italics=1
+colorscheme onedark
 
 " ------------------------------------------------
 "               HEX-COLORIZER
@@ -173,7 +174,7 @@ function! DevFileformat()
 endfunction
 
 let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
+    \ 'colorscheme': 'onedark',
 	\ 'component': {
 	\   'lineinfo': ' %3l:%-2v',
 	\ },
@@ -219,7 +220,7 @@ let g:lightline#bufferline#enable_devicons=1
 let g:lightline#bufferline#min_buffer_count=2
 
 " use TAB to navigate buffers
-noremap <silent> <Tab> :bnext<CR>  
+noremap <silent> <Tab> :bnext<CR>
 noremap <silent> <S-Tab> :bprev<CR>
 
 " close a buffer
