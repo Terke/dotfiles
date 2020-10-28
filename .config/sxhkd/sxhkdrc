@@ -32,6 +32,10 @@ super + F12
 super + Return
     termite
 
+# xfce4-terminal dropdown
+F12
+    xfce4-terminal --hide-menubar --hide-borders --drop-down
+
 # ArcoLinux-logout
 super + x
     arcolinux-logout
