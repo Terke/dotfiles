@@ -16,7 +16,9 @@
 
 # Browser
 super + w
-	librewolf
+	firefox
+super + v
+	vivaldi-stable
 
 # dmenu
 super + shift + d
