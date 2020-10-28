@@ -8,25 +8,20 @@ cd ~/DOTFILES/dotfiles
 cp -r .vimrc .zshrc .ncmpcpp .scripts ~/ &>/dev/null
 
 cd ~/.config/
-rm -r bspwm dmenu dunst i3 neofetch nvim picom ranger rofi sxhkd termite Thunar wallpapers zathura emoji
+rm -r bspwm dmenu dunst i3 neofetch nvim picom rofi sxhkd termite Thunar wallpapers zathura emoji
 find polybar -type f -delete
 
 cd ~/DOTFILES/dotfiles/.config/
 
 if [ "$GDMSESSION" = "bspwm" ]; then
-	cd polybar-bspwm
-	cp config ~/.config/polybar/
-	cp launch.sh ~/.config/polybar/
-	cp -r scripts ~/.config/polybar/
-elif [ "$GDMSESSION" = "i3" ]; then
-	cd polybar-i3
+	cd polybar
 	cp config ~/.config/polybar/
 	cp launch.sh ~/.config/polybar/
 	cp -r scripts ~/.config/polybar/
 fi
 
 cd ~/DOTFILES/dotfiles/.config/
-cp -r bspwm dmenu dunst i3 neofetch nvim picom ranger rofi sxhkd termite Thunar wallpapers zathura emoji ~/.config/ &>/dev/null
+cp -r bspwm dmenu dunst i3 neofetch nvim picom rofi sxhkd termite Thunar wallpapers zathura emoji ~/.config/ &>/dev/null
 
 cd ~/DOTFILES/dotfiles/.scripts/Personal
 ./2-bookmarks
