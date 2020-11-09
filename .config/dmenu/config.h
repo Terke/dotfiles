@@ -5,18 +5,18 @@ static int centered = 0;                    /* -c option; centers dmenu on scree
 static int min_width = 600;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Mononoki:pixelsize=14:antialias=true:autohint=true",
-	"Mononoki:pixelsize=14:antialias=true:autohint=true"
+"xos4 Terminus:pixelsize=13:antialias=true:autohint=true",
+"xos4 Terminus:pixelsize=9:antialias=true:autohint=true"
 };
 static const char *prompt      = NULL;      /* -p option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#d8dee9", "#2e3440" },
-	[SchemeSel] = { "#eceff4", "#81A1C1" },
-	[SchemeSelHighlight] = { "#d7d7d7", "#81A1C1" },
-	[SchemeNormHighlight] = { "#e78481", "#2e3440" },
+	[SchemeNorm] = { "#abb2bf", "#282c34" },
+	[SchemeSel] = { "#eceff4", "#c678dd" },
+	[SchemeSelHighlight] = { "#282c34", "#c678dd" },
+	[SchemeNormHighlight] = { "#c678dd", "#282c34" },
 	[SchemeOut] = { "#d8dee9", "#00ffff" },
-	[SchemeMid] = { "#d7d7d7", "#2e3440" },
+	[SchemeMid] = { "#abb2bf", "#282c34" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
