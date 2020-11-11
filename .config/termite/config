@@ -8,8 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Mononoki Nerd Font 11
-#font = Hack Bold 10
+font = UbuntuMono Nerd Font 12
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -22,65 +21,33 @@ size_hints = false
 search_wrap = true
 urgent_on_bell = true
 
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 10
-#roundness = 2.0
-
-############################################################
-#### You can change the color coding to your liking
-#### There is a folder themes in ~/config/termite/themes
-#### Copy/paste the colors from one of the 79+ templates to this one
-#### A backup of the original config termite is present
-############################################################
-#### Use websites to make the terminal your own
-#### https://terminal.sexy
-#### https://critical.ch/xterm/
-############################################################
-
 [colors]
-background = #282c34
+background          = rgba(22, 24, 33, 0.95)
+foreground          = #c6c8d1
+foreground_bold     = #c6c8d1
+cursor              = #c6c8d1
+cursor_foreground   = #161821
 
-# special
-foreground      = #abb2bf
-foreground_bold = #abb2bf
-cursor          = #abb2bf
-cursor_foreground   = #282c34
+color0 =  #22262e
+color8 =  #6b7089
 
-# black
-color0 =  #282c34
-color8 =  #5c6370
+color1 =  #e27878
+color9 =  #e98989
 
-# red
-color1 =  #e06c75
-color9 =  #e06c75
+color2  = #b4be82
+color10 = #c0ca8e
 
-# green
-color2 =  #98c379
-color10 = #98c379
+color3  = #e2a478
+color11 = #e9b189
 
-# yellow
-color3 =  #e5c07b
-color11 = #e5c07b
+color4  = #84a0c6
+color12 = #91acd1
 
-# blue
-color4 =  #61afef
-color12 = #61afef
+color5  = #a093c7
+color13 = #ada0d3
 
-# magenta
-color5  = #c678dd
-color13 = #c678dd
+color6  = #89b8c2
+color14 = #95c4ce
 
-# cyan
-color6  = #56b6c2
-color14 = #56b6c2
-
-# white
-color7  = #abb2bf
-color15 = #abb2bf
+color7  = #c6c8d1
+color15 = #d2d4de

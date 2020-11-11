@@ -14,7 +14,7 @@
 - **Web Browser :** [qutebrowser](https://qutebrowser.org/index.html)
 - **Terminal :** [termite](https://github.com/thestinger/termite)
 - **Terminal Font :** [Mononoki](https://madmalik.github.io/mononoki/)
-- **CLI Text Editor :** [vim](https://github.com/vim/vim)
+- **CLI Text Editor :** [neovim](https://neovim.io/)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
 - **Music Daemon :** [mpd](https://www.musicpd.org/)
 - **CLI Music Player :** [ncmpcpp](https://github.com/arybczak/ncmpcpp)
