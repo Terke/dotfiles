@@ -1,5 +1,4 @@
-let g:python3_host_prog = expand("<path to python with pynvim installed>")
-let g:python3_host_prog = expand("~/.miniconda/envs/neovim/bin/python3.8") " <- example
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python'
 
-let g:node_host_prog = expand("<path to node with neovim installed>")
-let g:node_host_prog = expand("~/.nvm/versions/node/v12.16.1/bin/node") " <- example
+let g:node_host_prog = '/usr/bin/neovim-node-host'
