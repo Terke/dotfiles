@@ -5,4 +5,4 @@ rofi.m: 0
 rofi.lines:  20
 rofi.width:  30
 rofi.terminal: termite
-rofi.theme: /home/terke/.config/rofi/iceberg.rasi
+rofi.theme: /home/terke/.config/rofi/nord.rasi
