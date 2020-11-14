@@ -92,19 +92,82 @@ font-1 = "xos4 Terminus:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 font-4 = "Weather Icons:size=9;2"
+font-5 = "UbuntuMono Nerd Font:size=10;2"
 
-modules-left = bspwm-alt xwindow
+modules-left = bspwm xwindow
 modules-center =
 modules-right = weather memory networkspeeddown networkspeedup cpu pavolume arch-updates aur-updates date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
+
 ################################################################################
 ################################################################################
 ############                       MODULE BSPWM                     ############
 ################################################################################
 ################################################################################
+
+[module/bspwm]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+pin-workspaces = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2; 
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = ""
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-background = ${colors.background}
+label-focused-underline= #c678dd
+label-focused-padding = 2
+label-focused-foreground = #c678dd
+
+label-occupied = %icon%
+label-occupied-padding = 2
+label-occupied-background = ${colors.background}
+label-occupied-foreground = #61afef
+
+label-urgent = %icon%
+label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 2
+label-empty-background = ${colors.background}
+label-monocle = "   "
+label-monocle-foreground = ${colors.foreground}
+label-tiled = "   "
+label-tiled-foreground = ${colors.foreground}
+label-fullscreen = "   "
+label-fullscreen-foreground = ${colors.foreground}
+label-floating = "   "
+label-floating-foreground = ${colors.foreground}
+label-pseudotiled = "   "
+label-pseudotiled-foreground = ${colors.foreground}
+label-locked = "   "
+label-locked-foreground = ${colors.foreground}
+label-sticky = "   "
+label-sticky-foreground = ${colors.foreground}
+label-private =  "      "
+label-private-foreground = ${colors.foreground}
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-font = 6
 
 [module/bspwm-alt]
 type = internal/bspwm
@@ -200,7 +263,7 @@ type = internal/network
 interface = enp0s3
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = "   "
+format-connected-prefix = "   "
 format-connected-prefix-foreground = #98c379
 format-connected-foreground = #98c379
 format-connected-background = ${colors.background}
@@ -212,7 +275,7 @@ type = internal/network
 interface = enp0s3
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = "   "
+format-connected-prefix = "   "
 format-connected-prefix-foreground = #98c379
 format-connected-foreground = #98c379
 format-connected-background = ${colors.background}
@@ -266,10 +329,10 @@ format-background = ${colors.background}
 type = custom/script
 exec = ~/.config/polybar/scripts/check-arch-updates.sh
 interval = 1000
-label = arch: %output% - 
+label = arch: %output% -
 format-foreground = #c678dd
 format-background = ${colors.background}
-format-prefix = "    "
+format-prefix = "    "
 format-prefix-foreground = #c678dd
 
 [module/aur-updates]
@@ -279,7 +342,7 @@ interval = 1000
 label = aur: %output%
 format-foreground = #c678dd
 format-background = ${colors.background}
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = #c678dd
 
 ################################################################################

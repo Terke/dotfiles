@@ -75,21 +75,27 @@ bspc rule -a Xfce4-terminal state=floating
 bspc rule -a Firefox desktop='^1' follow=on
 bspc rule -a Brave-browser desktop='^1' follow=on
 bspc rule -a Chromium desktop='^1'  follow=on
+bspc rule -a Vivaldi-stable desktop='^1' follow=on
+bspc rule -a Thunar desktop='^2' follow=on
+bspc rule -a Pcmanfm desktop='^2' follow=on
 bspc rule -a Subl3 desktop='^3' follow=on
 bspc rule -a Atom desktop='^3' follow=on
-bspc rule -a Meld desktop='^8' follow=on
+bspc rule -a Spotify desktop='^4' follow=on
+bspc rule -a Spotify Free desktop='^4' follow=on
 bspc rule -a vlc desktop='^5'  follow=on
 bspc rule -a mpv desktop='^5'  follow=on
-bspc rule -a Vivaldi-stable desktop='^1' follow=on
-bspc rule -a Gpick desktop='^9' follow=on
-#bspc rule -a Transmission-gtk desktop='^7' follow=on
-bspc rule -a Thunar desktop='^2' follow=on
+bspc rule -a feh desktop='^6' follow=on
 bspc rule -a Nitrogen desktop='^6' follow=on
-bspc rule -a Spotify desktop='^4' follow=on
+bspc rule -a Inkscape desktop='^6' follow=on
+bspc rule -a Thunderbird desktop='^7' follow=on
+bspc rule -a Meld desktop='^8' follow=on
+bspc rule -a Gpick desktop='^9' follow=on
+bspc rule -a Transmission-gtk desktop='^10' follow=on
+bspc rule -a qBittorrent desktop='^10' follow=on
 
-# Spotify fix  --move desktop 10
+# Spotify fix  --move desktop 4
 #sleep 1
-#wmctrl -r Spotify -t 10
+#wmctrl -r Spotify -t 4
 #exit
 
 # Polybar hidden when fullscreen for vlc, youtube, mpv ...

@@ -26,7 +26,7 @@ super + shift + d
 
 # Rofi
 super + F12
-    rofi -modi run,drun -show drun -line-padding 4 -columns 2 -width 40 -padding 30 -hide-scrollbar -show-icons -drun-icon-theme "Papirus" -theme iceberg
+    rofi -modi run,drun -show drun -line-padding 4 -columns 2 -width 40 -padding 30 -hide-scrollbar -show-icons -drun-icon-theme "Papirus" -theme nord
 
 # Terminal
 super + Return
@@ -152,10 +152,13 @@ super + {o,i}
 
 # Edit common config files
 alt + ctrl + c
-   $HOME/.scripts/dmenu-configs
+   	$HOME/.scripts/dmenu-configs
 # Common system monitoring programs
-alt + ctrl + m
-   $HOME/.scripts/dmenu-sysmon
+alt + ctrl + h
+   	$HOME/.scripts/dmenu-sysmon
 # rofi-screenshot
 alt + ctrl + s
-   $HOME/.scripts/rofi-screenshot
+   	$HOME/.scripts/rofi-screenshot
+# Run ncmpcpp
+alt + ctrl + m
+	$HOME/.scripts/music
