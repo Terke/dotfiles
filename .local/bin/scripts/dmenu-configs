@@ -9,19 +9,24 @@ polybar
 bspwm
 sxhkd
 neofetch
+dunst
 dwm
 st
 dmenu
-surf
+qutebrowser
 termite
-vim
+neovim
 ncmpcpp
+alacritty
+fish
+rofi
+ranger
 xresources
 zsh
 zathura
 quit")
 
-choice=$(echo -e "${options[@]}" | dmenu -i -p 'Edit config file: ')
+choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ')
 
 case "$choice" in
 	quit)
@@ -31,7 +36,7 @@ case "$choice" in
 		choice="$HOME/.bashrc"
 	;;
 	picom)
-		choice="$HOME/.config/i3/picom.conf"
+		choice="$HOME/.config/picom/picom.conf"
 	;;
 	i3)
 		choice="$HOME/.config/i3/config"
@@ -48,6 +53,9 @@ case "$choice" in
 	neofetch)
 		choice="$HOME/.config/neofetch/config.conf"
 	;;
+	dunst)
+		choice="$HOME/.config/dunst/dunstrc"
+	;;
 	dwm)
 		choice="$HOME/.config/dwm/config.h"
 	;;
@@ -57,17 +65,29 @@ case "$choice" in
 	dmenu)
 		choice="$HOME/.config/dmenu/config.h"
 	;;
-	surf)
-		choice="$HOME/.config/surf/config.h"
+	qutebrowser)
+		choice="$HOME/.config/qutebrowser/config.py"
 	;;
 	termite)
 		choice="$HOME/.config/termite/config"
 	;;
-	vim)
-		choice="$HOME/.vimrc"
+	neovim)
+		choice="$HOME/.config/nvim/init.vim"
 	;;
 	ncmpcpp)
 		choice="$HOME/.ncmpcpp/config"
+	;;
+	alacritty)
+		choice="$HOME/.config/alacritty/alacritty.yml"
+	;;
+	fish)
+		choice="$HOME/.config/fish/config.fish"
+	;;
+	rofi)
+		choice="$HOME/.config/rofi/config"
+	;;
+	ranger)
+		choice="$HOME/.config/ranger/rc.conf"
 	;;
 	xresources)
 		choice="$HOME/.Xresources"

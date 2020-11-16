@@ -156,5 +156,5 @@ alias c="clear"
 alias q="exit"
 alias vim="nvim"
 
-/home/terke/.scripts/fun_stuff/Frankenfetch
+/home/terke/.local/bin/scripts/fun/Frankenfetch
 

@@ -17,16 +17,16 @@
 # Browser
 super + w
 	firefox
-super + v
-	vivaldi-stable
+super + b
+	brave
 
 # dmenu
 super + shift + d
-	dmenu_run
+	dmenu_run -p 'Run: '
 
 # Rofi
 super + F12
-    rofi -modi run,drun -show drun -line-padding 4 -columns 2 -width 40 -padding 30 -hide-scrollbar -show-icons -drun-icon-theme "Papirus" -theme nord
+    rofi -modi run,drun -show drun -line-padding 4 -columns 2 -width 40 -padding 30 -hide-scrollbar -show-icons -drun-icon-theme "Papirus" -theme iceberg
 
 # Terminal
 super + Return
@@ -152,13 +152,13 @@ super + {o,i}
 
 # Edit common config files
 alt + ctrl + c
-   	$HOME/.scripts/dmenu-configs
+   	$HOME/.local/bin/scripts/dmenu-configs
 # Common system monitoring programs
-alt + ctrl + h
-   	$HOME/.scripts/dmenu-sysmon
-# rofi-screenshot
 alt + ctrl + s
-   	$HOME/.scripts/rofi-screenshot
+   	$HOME/.local/bin/scripts/dmenu-sysmon
+# rofi-screenshot
+Print
+   	$HOME/.local/bin/scripts/rofi-screenshot
 # Run ncmpcpp
 alt + ctrl + m
-	$HOME/.scripts/music
+	$HOME/.local/bin/scripts/music

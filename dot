@@ -2,15 +2,19 @@
 
 echo "Adding configs from the dotfiles repo..."
 
+# Delete old configs
 cd ~/
-rm -r .vimrc .zshrc .ncmpcpp .scripts
+rm -r .vimrc .zshrc .ncmpcpp
+# Add new configs
 cd ~/DOTFILES/dotfiles
-cp -r .vimrc .zshrc .ncmpcpp .scripts ~/ &>/dev/null
+cp -r .vimrc .zshrc .ncmpcpp ~/ &>/dev/null
 
+# Delete old configs
 cd ~/.config/
-rm -r bspwm dmenu dunst i3 neofetch nvim picom rofi sxhkd termite Thunar wallpapers zathura emoji
+rm -r bspwm dmenu dunst fish gtk-3.0 i3 neofetch nvim picom qutebrowser rofi sxhkd termite Thunar wallpapers xfce4 zathura emoji
 find polybar -type f -delete
 
+# Add the polybar config
 cd ~/DOTFILES/dotfiles/.config/
 
 if [ "$GDMSESSION" = "bspwm" ]; then
@@ -20,10 +24,12 @@ if [ "$GDMSESSION" = "bspwm" ]; then
 	cp -r scripts ~/.config/polybar/
 fi
 
+# Add new configs
 cd ~/DOTFILES/dotfiles/.config/
-cp -r bspwm dmenu dunst i3 neofetch nvim picom rofi sxhkd termite Thunar wallpapers zathura emoji ~/.config/ &>/dev/null
+cp -r bspwm dmenu dunst fish gtk-3.0 i3 neofetch nvim picom qutebrowser rofi sxhkd termite Thunar wallpapers xfce4 zathura emoji ~/.config/ &>/dev/null
 
-cd ~/DOTFILES/dotfiles/.scripts/Personal
+# Copy bookmarks
+cd ~/DOTFILES/dotfiles/.local/bin/.scripts/personal
 ./2-bookmarks
 
 echo "Done!"

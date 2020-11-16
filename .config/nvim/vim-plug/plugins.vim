@@ -40,5 +40,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim'
     Plug 'rhysd/git-messenger.vim'
     " The fancy start screen for vim
-    Plug 'mhinz/vim-startify'   
+    Plug 'mhinz/vim-startify'
+    Plug 'liuchengxu/vim-which-key'
     call plug#end()
