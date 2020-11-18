@@ -92,7 +92,7 @@ font-1 = "xos4 Terminus:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 font-4 = "Weather Icons:size=9;2"
-font-5 = "UbuntuMono Nerd Font:size=10;2"
+font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
 modules-center =
@@ -124,8 +124,8 @@ ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 ws-icon-default = ""
 
 format = <label-state> <label-mode>
@@ -332,7 +332,7 @@ interval = 1000
 label = arch: %output% -
 format-foreground = #c678dd
 format-background = ${colors.background}
-format-prefix = "    "
+format-prefix = "    "
 format-prefix-foreground = #c678dd
 
 [module/aur-updates]

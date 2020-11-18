@@ -147,6 +147,18 @@ super + {o,i}
 	bspc wm -h on
 
 #################################################################
+# VARIETY KEYS WITH PYWAL
+#################################################################
+
+# Wallpaper next
+super + shift + n
+    variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+# Wallpaper previous
+super + shift + p
+    variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#################################################################
 # SCRIPTS
 #################################################################
 
