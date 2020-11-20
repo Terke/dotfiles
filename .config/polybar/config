@@ -334,6 +334,7 @@ format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "    "
 format-prefix-foreground = #c678dd
+click-left = pamac-manager &
 
 [module/aur-updates]
 type = custom/script
@@ -344,6 +345,7 @@ format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "  "
 format-prefix-foreground = #c678dd
+click-left = pamac-manager &
 
 ################################################################################
 
