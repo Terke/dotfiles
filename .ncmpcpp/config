@@ -108,7 +108,9 @@ state_line_color = "black"
 state_flags_color = "blue"
 main_window_color = "blue" 
 header_window_color = "white"
-main_window_highlight_color = "blue"
+#main_window_highlight_color = "blue"
+current_item_prefix = "$(blue)$r"
+current_item_suffix = "$/r$(end)"
 
 
 # Misc ..   
