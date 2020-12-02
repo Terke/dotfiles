@@ -95,8 +95,8 @@ font-4 = "Weather Icons:size=9;2"
 font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
-modules-center =
-modules-right = weather memory networkspeeddown networkspeedup cpu pavolume arch-updates aur-updates date
+modules-center = 
+modules-right = weather memory netdown netup cpu pavolume arch-updates aur-updates date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -258,7 +258,7 @@ format-background = ${colors.background}
 
 ################################################################################
 
-[module/networkspeeddown]
+[module/netdown]
 type = internal/network
 interface = enp0s3
 label-connected = "%downspeed:7%"
@@ -270,7 +270,7 @@ format-connected-background = ${colors.background}
 
 ################################################################################
 
-[module/networkspeedup]
+[module/netup]
 type = internal/network
 interface = enp0s3
 label-connected = "%upspeed:7%"
@@ -315,11 +315,11 @@ label = Cpu:%percentage:3%%
 type = custom/script
 tail = true
 label = %output%
-exec = ~/.config/polybar/scripts/pavolume.sh --listen
+exec = ~/.config/polybar/scripts/pavolume --listen
 click-right = exec pavucontrol
-click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+click-left = ~/.config/polybar/scripts/pavolume --togmute
+scroll-up = ~/.config/polybar/scripts/pavolume --up
+scroll-down = ~/.config/polybar/scripts/pavolume --down
 format-foreground = #e5c07b
 format-background = ${colors.background}
 
@@ -327,7 +327,7 @@ format-background = ${colors.background}
 
 [module/arch-updates]
 type = custom/script
-exec = ~/.config/polybar/scripts/check-arch-updates.sh
+exec = ~/.config/polybar/scripts/check-arch-updates
 interval = 1000
 label = arch: %output% -
 format-foreground = #c678dd
@@ -338,7 +338,7 @@ click-left = pamac-manager &
 
 [module/aur-updates]
 type = custom/script
-exec = ~/.config/polybar/scripts/check-aur-updates.sh
+exec = ~/.config/polybar/scripts/check-aur-updates
 interval = 1000
 label = aur: %output%
 format-foreground = #c678dd
@@ -356,7 +356,7 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %a %b %d, %Y"
+date = " %d %b (%a), %Y"
 date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p

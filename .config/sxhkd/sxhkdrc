@@ -32,6 +32,18 @@ super + F12
 super + Return
     termite
 
+# Htop
+super + h
+	termite 'htop task manager' -e htop
+
+# Hide polybar
+super + y
+    polybar-msg cmd toggle
+
+# Pavucontrol
+super + v
+    pavucontrol
+
 # xfce4-terminal dropdown
 F12
     xfce4-terminal --hide-menubar --hide-borders --drop-down
@@ -76,20 +88,28 @@ super + shift + x
 super + {t,shift + t,p,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+# Manage layouts
+alt + {t,r,w,q,e,h,v,d,m}
+	bsp-layout set {tall -- --master-size 0.5,rtall -- --master-size 0.5,wide,rwide,even,grid,rgrid,tiled,monocle}
+
 # Alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
 
-# Manage layouts
-alt + {t,r,w,q,e,d,m}
-	bsp-layout set {tall,rtall,wide,rwide,even,tiled,monocle}
+# Increase/decrease window gap on focused desktop
+super + bracket{left,right}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
+
+# Focus selected desktop
+super + Tab
+	bspc desktop -f '^{1-9,10}'
 
 # Set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 #################################################################
-# PRESELECT
+# PRESELECT (Super + Ctrl)
 #################################################################
 
 # Preselect the direction
@@ -103,10 +123,6 @@ super + ctrl + {1-9}
 # Cancel the preselection for the focused node
 super + ctrl + space
 	bspc node -p cancel
-
-# Cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #################################################################
 # FOCUS/SWAP
@@ -136,20 +152,6 @@ ctrl +alt + Up
 ctrl + alt + Down
 	bspc node --focus south
 
-# Focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
-# Focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-
-# Focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
-
 #################################################################
 # VARIETY KEYS WITH PYWAL
 #################################################################
@@ -178,3 +180,44 @@ Print
 # Run ncmpcpp
 alt + ctrl + m
 	$HOME/.local/bin/scripts/music
+# Picom Toggle
+ctrl + alt + p
+    ~/.config/bspwm/scripts/picom-toggle
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+# Lowers volume
+F9
+    amixer set Master 10%-
+
+# Raises volume
+F10
+    amixer set Master 10%+
+
+# Mute
+F11
+    amixer -D pulse set Master 1+ toggle
+
+# mpc (works for ncmpcpp)
+
+# Stop
+F4
+    mpc play
+
+# Stop
+F5
+    mpc stop
+
+# Previous
+F6
+    mpc prev
+
+# Toggle
+F7
+    mpc toggle
+
+# Next
+F8
+    mpc next

@@ -1,11 +1,11 @@
-#███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗ ██████╗ ██████╗ 
+#███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗ ██████╗ ██████╗
 #████╗  ██║██╔════╝████╗ ████║██╔══██╗██╔════╝ ██╔══██╗██╔══██╗
 #██╔██╗ ██║██║     ██╔████╔██║██████╔╝██║      ██████╔╝██████╔╝
-#██║╚██╗██║██║     ██║╚██╔╝██║██╔═══╝ ██║      ██╔═══╝ ██╔═══╝ 
-#██║ ╚████║╚██████╗██║ ╚═╝ ██║██║     ╚███████╗██║     ██║     
-#╚═╝  ╚═══╝ ╚═════╝╚═╝     ╚═╝╚═╝       ╚═════╝╚═╝     ╚═╝       
+#██║╚██╗██║██║     ██║╚██╔╝██║██╔═══╝ ██║      ██╔═══╝ ██╔═══╝
+#██║ ╚████║╚██████╗██║ ╚═╝ ██║██║     ╚███████╗██║     ██║
+#╚═╝  ╚═══╝ ╚═════╝╚═╝     ╚═╝╚═╝       ╚═════╝╚═╝     ╚═╝
 
-# MPD Settings .. 
+# MPD Settings ..
 mpd_music_dir = "/home/terke/Music"
 
 #execute_on_song_change = ~/.config/ncmpcpp/mpdnotify
@@ -78,7 +78,7 @@ search_engine_display_mode = "columns" (classic/columns)
 browser_playlist_prefix = "$2 ♥ $5 "
 
 
-# Delays .. 
+# Delays ..
 
 playlist_disable_highlight_delay = "1"
 #playlist_disable_highlight_delay = "0"
@@ -87,16 +87,16 @@ message_delay_time= "1"
 
 # Progress Bar ..
 
-progressbar_look = "─╼"
-#progressbar_look ="─⊙┄"
+#progressbar_look = "─╼"
+progressbar_look ="─⊙┄"
 #progressbar_look = "┅┅┄"
 #progressbar_look = "─➞─"
 #progressbar_look = "─┅─"
 #progressbar_look = "▁▁▁"
 #progressbar_look = "≈►·"
 #progressbar_look = "→→"
-progressbar_color = "blue"
-progressbar_elapsed_color = "white"
+progressbar_color = "cyan"
+progressbar_elapsed_color = "magenta"
 
 
 # Colors ..
@@ -106,21 +106,21 @@ empty_tag_color = "red"
 statusbar_color = "blue"
 state_line_color = "black"
 state_flags_color = "blue"
-main_window_color = "blue" 
+main_window_color = "blue"
 header_window_color = "white"
 #main_window_highlight_color = "blue"
 current_item_prefix = "$(blue)$r"
 current_item_suffix = "$/r$(end)"
 
 
-# Misc ..   
+# Misc ..
 
 display_bitrate = "yes"
 autocenter_mode = "yes"
 centered_cursor = "yes"
 titles_visibility = "no"
 statusbar_visibility = "yes"
-#empty_tag_marker=" -- ‼ -- " 
+#empty_tag_marker=" -- ‼ -- "
 empty_tag_marker=""
 mouse_support = "yes"
 header_visibility = "no"
