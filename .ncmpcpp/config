@@ -87,16 +87,16 @@ message_delay_time= "1"
 
 # Progress Bar ..
 
-#progressbar_look = "─╼"
-progressbar_look ="─⊙┄"
+progressbar_look = "─╼"
+#progressbar_look ="─⊙┄"
 #progressbar_look = "┅┅┄"
 #progressbar_look = "─➞─"
 #progressbar_look = "─┅─"
 #progressbar_look = "▁▁▁"
 #progressbar_look = "≈►·"
 #progressbar_look = "→→"
-progressbar_color = "cyan"
-progressbar_elapsed_color = "magenta"
+progressbar_color = "white"
+progressbar_elapsed_color = "cyan"
 
 
 # Colors ..
