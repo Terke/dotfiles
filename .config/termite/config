@@ -1,5 +1,4 @@
 [options]
-#https://github.com/thestinger/termite/blob/master/config
 allow_bold = true
 audible_bell = false
 browser = xdg-open
@@ -8,7 +7,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = UbuntuMono Nerd Font 12
+font = SauceCodePro Nerd Font 11
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -22,32 +21,42 @@ search_wrap = true
 urgent_on_bell = true
 
 [colors]
-background          = rgba(22, 24, 33, 0.95)
-foreground          = #c6c8d1
-foreground_bold     = #c6c8d1
-cursor              = #c6c8d1
-cursor_foreground   = #161821
+background = rgba(40, 44, 52, 1.0)
 
-color0 =  #22262e
-color8 =  #6b7089
+# special
+foreground      = #abb2bf
+foreground_bold = #abb2bf
+cursor          = #abb2bf
+cursor_foreground   = #282c34
 
-color1 =  #e27878
-color9 =  #e98989
+# black
+color0 =  #282c34
+color8 =  #5c6370
 
-color2  = #b4be82
-color10 = #c0ca8e
+# red
+color1 =  #e06c75
+color9 =  #e06c75
 
-color3  = #e2a478
-color11 = #e9b189
+# green
+color2 =  #98c379
+color10 = #98c379
 
-color4  = #84a0c6
-color12 = #91acd1
+# yellow
+color3 =  #e5c07b
+color11 = #e5c07b
 
-color5  = #a093c7
-color13 = #ada0d3
+# blue
+color4 =  #61afef
+color12 = #61afef
 
-color6  = #89b8c2
-color14 = #95c4ce
+# magenta
+color5  = #c678dd
+color13 = #c678dd
 
-color7  = #c6c8d1
-color15 = #d2d4de
+# cyan
+color6  = #56b6c2
+color14 = #56b6c2
+
+# white
+color7  = #abb2bf
+color15 = #abb2bf
