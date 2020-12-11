@@ -1,8 +1,1 @@
-rofi.modi: window,drun,combi
-rofi.font: Ubuntu 14
-rofi.show-icons: true
-rofi.m: 0
-rofi.lines:  20
-rofi.width:  30
-rofi.terminal: termite
-rofi.theme: /home/terke/.config/rofi/nord.rasi
+rofi.theme: ~/.config/rofi/themes/center.rasi
