@@ -4,13 +4,15 @@ file:///home/terke/Music Music
 file:///home/terke/Pictures Pictures
 file:///home/terke/Videos Videos
 file:///etc/skel /etc/skel
+file:///home/terke/.config .config
+file:///home/terke/.local
+file:///home/terke/Dropbox Dropbox
 file:///home/terke/DOTFILES DOTFILES
 file:///home/terke/DATA DATA
+file:///home/terke/Applications
 file:///home/terke/ARCOLINUX ARCOLINUX
 file:///home/terke/ARCOLINUXD ARCOLINUXD
 file:///home/terke/ARCOLINUXB ARCOLINUXB
-file:///home/terke/Dropbox Dropbox
-file:///home/terke/.config .config
 file:///home/terke/.config/i3 i3
 file:///home/terke/.config/bspwm bspwm
 file:///home/terke/.config/sxhkd sxhkd
@@ -20,4 +22,6 @@ file:///home/terke/.config/nvim nvim
 file:///usr/share/applications applications
 file:///opt /opt
 file:///usr/share/icons icons
+file:///home/terke/.icons
 file:///usr/share/themes themes
+file:///home/terke/.themes
