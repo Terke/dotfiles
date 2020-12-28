@@ -96,11 +96,10 @@ font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
 modules-center = 
-modules-right = weather memory netdown netup cpu pavolume arch-updates aur-updates vpn date powermenu
+modules-right = weather memory netdown netup cpu pavolume arch-updates aur-updates date powermenu
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
-
 
 ################################################################################
 ################################################################################
@@ -349,7 +348,6 @@ click-left = pamac-manager &
 
 ################################################################################
 
-[module/vpn]
 [module/vpn]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/vpn_module.sh

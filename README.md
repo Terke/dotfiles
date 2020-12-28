@@ -13,7 +13,7 @@
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot) , [maim](https://github.com/naelstrof/maim)
 - **Web Browser :** [qutebrowser](https://qutebrowser.org/index.html)
 - **Terminal :** [termite](https://github.com/thestinger/termite)
-- **Terminal Font :** [Mononoki](https://madmalik.github.io/mononoki/)
+- **Terminal Font :** [Sauce Code Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 - **CLI Text Editor :** [neovim](https://neovim.io/)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
 - **Music Daemon :** [mpd](https://www.musicpd.org/)
@@ -24,9 +24,9 @@
 - **ASCII Generator :** [figlet](http://www.figlet.org/)
 - **Compositor :** [picom](https://github.com/yshui/picom)
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
-- **GTK Icons :** Sardi Mono Colora
-- **GTK Cursors :** xcursor-breeze
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: simple
+- **GTK Icons :** [Sardi Arc](https://github.com/erikdubois/Sardi)
+- **GTK Cursors :** [xcursor-breeze](https://aur.archlinux.org/packages/xcursor-breeze/)
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: [starship](https://starship.rs/)
 
 ## License
 
