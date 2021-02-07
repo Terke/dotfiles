@@ -109,7 +109,7 @@
 	<icon>system-file-manager-root</icon>
 	<name>Open folder as root</name>
 	<unique-id>1493475601060449-3</unique-id>
-	<command>pkexec thunar %f</command>
+	<command>gksudo thunar %f</command>
 	<description></description>
 	<patterns>*</patterns>
 	<directories/>
