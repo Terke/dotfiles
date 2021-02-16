@@ -1,4 +1,5 @@
 [options]
+#https://github.com/thestinger/termite/blob/master/config
 allow_bold = true
 audible_bell = false
 browser = xdg-open
@@ -7,7 +8,8 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = SauceCodePro Nerd Font 11
+font = Cascadia Code 10
+#font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -20,43 +22,65 @@ size_hints = false
 search_wrap = true
 urgent_on_bell = true
 
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 25
+#border = #3f3f3f
+#border_width = 10
+#roundness = 2.0
+
+############################################################
+#### You can change the color coding to your liking
+#### There is a folder themes in ~/config/termite/themes
+#### Copy/paste the colors from one of the 79+ templates to this one
+#### A backup of the original config termite is present
+############################################################
+#### Use websites to make the terminal your own
+#### https://terminal.sexy
+#### https://critical.ch/xterm/
+############################################################
+
 [colors]
-background = rgba(40, 44, 52, 1.0)
+background = rgba(40, 44, 52, 0.9)
 
 # special
-foreground      = #abb2bf
-foreground_bold = #abb2bf
-cursor          = #abb2bf
+foreground      = #bbc2cf
+foreground_bold = #bbc2cf
+cursor          = #bbc2cf
 cursor_foreground   = #282c34
 
 # black
-color0 =  #282c34
-color8 =  #5c6370
+color0 =  #1B2229
+color8 =  #5B6268
 
 # red
-color1 =  #e06c75
-color9 =  #e06c75
+color1 =  #ff6c6b
+color9 =  #da8548
 
 # green
-color2 =  #98c379
-color10 = #98c379
+color2 =  #98be65
+color10 = #4db5bd
 
 # yellow
-color3 =  #e5c07b
+color3 =  #da8548
 color11 = #e5c07b
 
 # blue
-color4 =  #61afef
-color12 = #61afef
+color4 =  #51afef
+color12 = #3071db
 
 # magenta
 color5  = #c678dd
-color13 = #c678dd
+color13 = #a9a1e1
 
 # cyan
-color6  = #56b6c2
-color14 = #56b6c2
+color6  = #5699af
+color14 = #46d9ff
 
 # white
-color7  = #abb2bf
-color15 = #abb2bf
+color7  = #bbc2cf
+color15 = #dfdfdf
