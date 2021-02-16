@@ -51,6 +51,9 @@ if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 
+# ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
 ## ALIASES ##
 
 # pacman and yay
@@ -65,9 +68,12 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"
 
 # get fastest mirrors
 alias mirror="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
+# our experimental - best option for the moment
+alias mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
+alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 
 # youtube-dl and ytmdl
 alias yt-flac="youtube-dl -f bestaudio --extract-audio --audio-format flac --audio-quality 0 "
@@ -137,6 +143,7 @@ alias wget="wget -c "
 
 # Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
 # tools
 alias pub-ip="curl ipinfo.io/ip"
@@ -147,11 +154,14 @@ alias hw="hwinfo --short"
 alias weather="curl http://wttr.in"
 alias df="df -h"
 
-# configs
+# edit configs
 alias polyconf="nvim ~/.config/polybar/config"
 alias bspconf="nvim ~/.config/bspwm/bspwmrc"
 alias vimconf="nvim ~/.config/nvim/init.vim"
 alias termconf="nvim ~/.config/termite/config"
+alias pacmanconf="sudo nvim /etc/pacman.conf"
+alias lightdmconf="sudo nvim /etc/lightdm/lightdm.conf"
+alias mirrorconf="sudo nvim /etc/pacman.d/mirrorlist"
 
 # lazy
 alias music="ncmpcpp"
