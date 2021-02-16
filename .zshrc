@@ -51,9 +51,6 @@ if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 
-# ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
-
 ## ALIASES ##
 
 # pacman and yay
@@ -169,5 +166,9 @@ alias r="ranger"
 alias c="clear"
 alias q="exit"
 alias vim="nvim"
+
+# ~/.zshrc
+
+eval "$(starship init zsh)"
 
 neofetch
