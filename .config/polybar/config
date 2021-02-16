@@ -59,6 +59,8 @@ radius = 0.0
 fixed-center = true
 bottom = false
 separator =
+tray-position = right
+tray-background = ${colors.background}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -95,8 +97,8 @@ font-4 = "Weather Icons:size=9;2"
 font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
-modules-center = 
-modules-right = weather memory netdown netup cpu pavolume arch-updates aur-updates date powermenu
+modules-center =
+modules-right = weather cpu memory netdown netup arch-updates aur-updates date
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -116,7 +118,7 @@ reverse-scroll = true
 pin-workspaces = true
 
 ws-icon-0 = 1;
-ws-icon-1 = 2; 
+ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
@@ -131,20 +133,20 @@ format = <label-state> <label-mode>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-underline= #c678dd
+#label-focused-underline= #61afef
 label-focused-padding = 2
-label-focused-foreground = #c678dd
+label-focused-foreground = #61afef
 
 label-occupied = %icon%
 label-occupied-padding = 2
 label-occupied-background = ${colors.background}
-label-occupied-foreground = #61afef
+label-occupied-foreground = #abb2bf
 
 label-urgent = %icon%
 label-urgent-padding = 2
 
 label-empty = %icon%
-label-empty-foreground = ${colors.foreground}
+label-empty-foreground = #5c6370
 label-empty-padding = 2
 label-empty-background = ${colors.background}
 label-monocle = "   "
@@ -229,7 +231,7 @@ exec = ~/.config/polybar/scripts/weather
 interval = 600
 label-font = 5
 click-left = xdg-open https://openweathermap.org/city/264371 &
-format-foreground = #d19a66
+format-foreground = #e5c07b
 format-background = ${colors.background}
 
 ################################################################################

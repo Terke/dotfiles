@@ -87,16 +87,16 @@ message_delay_time= "1"
 
 # Progress Bar ..
 
-progressbar_look = "─╼"
-#progressbar_look ="─⊙┄"
+#progressbar_look = "─╼"
+progressbar_look ="─⊙┄"
 #progressbar_look = "┅┅┄"
 #progressbar_look = "─➞─"
 #progressbar_look = "─┅─"
 #progressbar_look = "▁▁▁"
 #progressbar_look = "≈►·"
 #progressbar_look = "→→"
-progressbar_color = "white"
-progressbar_elapsed_color = "cyan"
+progressbar_color = "black"
+progressbar_elapsed_color = "blue"
 
 
 # Colors ..
@@ -146,9 +146,9 @@ startup_screen = playlist
 
 #visualizer_in_stereo = "yes"
 visualizer_in_stereo = "yes"
-visualizer_sync_interval = "30"
+visualizer_sync_interval = "100000"
 visualizer_output_name = "Pipe"
-visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_data_source = "/tmp/mpd.fifo"
 
 #visualizer_type = ellipse
 #visualizer_type = "wave_filled"

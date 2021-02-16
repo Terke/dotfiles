@@ -1,26 +1,3 @@
-[options]
-#https://github.com/thestinger/termite/blob/master/config
-allow_bold = true
-audible_bell = false
-browser = xdg-open
-clickable_url = true
-cursor_blink = system
-cursor_shape = block
-dynamic_title = true
-filter_unmatched_urls = true
-font = UbuntuMono Nerd Font 12
-geometry = 900x650
-highlight = #2f2f2f
-icon_name = terminal
-modify_other_keys = false
-mouse_autohide = false
-scroll_on_output = false
-scroll_on_keystroke = true
-scrollback_lines = 15000
-size_hints = false
-search_wrap = true
-urgent_on_bell = true
-
 [colors]
 background          = rgba(22, 24, 33, 0.95)
 foreground          = #c6c8d1

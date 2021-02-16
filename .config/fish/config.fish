@@ -1,4 +1,5 @@
-set -U fish_user_paths $fish_user_paths $HOME/.local/bin/
+### EXPORT ###
+set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "nvim"
@@ -87,11 +88,11 @@ end
 ### END OF VI MODE ###
 
 ### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-# set fish_color_normal brcyan
-# set fish_color_autosuggestion '#7d7d7d'
-# set fish_color_command brcyan
-# set fish_color_error '#ff6c6b'
-# set fish_color_param brcyan
+set fish_color_normal brcyan
+set fish_color_autosuggestion '#7d7d7d'
+set fish_color_command brcyan
+set fish_color_error '#ff6c6b'
+set fish_color_param brcyan
 
 ### SPARK ###
 set -g spark_version 1.0.0
@@ -252,12 +253,9 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"
 
 # get fastest mirrors
 alias mirror="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
-# our experimental - best option for the moment
-alias mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
-alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # youtube-dl and ytmdl (The URL must be in quotes!!!)
 alias yt-flac="youtube-dl -f bestaudio --extract-audio --audio-format flac --audio-quality 0 "
@@ -313,7 +311,12 @@ alias gpo='git push origin master'
 alias merge="xrdb -merge ~/.Xresources"
 
 # navigation
-alias ..='cd ..'
+alias ..='cd ..' # i'm sometimes lazy
+alias ...='cd ../../../' # really lazy
+alias ....='cd ../../../../' # really really lazy
+alias .....='cd ../../../../../' # not kidding
+alias .4='cd ../../../../' # if you can script it
+alias .5='cd ../../../../..' # just script it
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
