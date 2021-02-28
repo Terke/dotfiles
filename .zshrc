@@ -76,6 +76,7 @@ alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --
 alias yt-flac="youtube-dl -f bestaudio --extract-audio --audio-format flac --audio-quality 0 "
 alias yt-mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
 alias yt-opus="youtube-dl -f bestaudio --extract-audio --audio-format opus --audio-quality 0 "
+alias yt-vorbis="youtube-dl -f bestaudio --extract-audio --audio-format vorbis --audio-quality 0 "
 alias yt-wav="youtube-dl -f bestaudio --extract-audio --audio-format wav --audio-quality 0 "
 alias yta-best="youtube-dl --extract-audio --audio-format best"
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
@@ -126,7 +127,11 @@ alias gpo='git push origin master'
 alias merge="xrdb -merge ~/.Xresources"
 
 # navigation
-alias ..='cd ..'
+alias ..='cd ..' 
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first'
