@@ -138,6 +138,7 @@ let g:NERDTreeWinSize=38
 " highlight htmlEndTag       ctermfg=114     ctermbg=none    cterm=none
 " highlight xmlEndTag        ctermfg=114     ctermbg=none    cterm=none
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vifm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -181,7 +182,73 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Removes pipes | that act as seperators on splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set fillchars+=vert:\ 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Trailing spaces
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+function! CleanExtraSpaces() "Function to clean unwanted spaces
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
+
+
+autocmd BufWritePre * :call CleanExtraSpaces()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Convert text to UTF-8
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+setglobal termencoding=utf-8 fileencodings=
+scriptencoding utf-8
+set encoding=utf-8
+
+autocmd BufNewFile,BufRead  *   try
+autocmd BufNewFile,BufRead  *   set encoding=utf-8
+autocmd BufNewFile,BufRead  *   endtry
+
+"Going over all of this would take too much time
+"This basically set everything in utf-8 in every circumtances
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Convert to UNIX fileformat (avoid CRLF)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set fileformat=unix
+"Set every files as Unix (LF) as Windows might set CRLF wich is not working
+"for unix
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Ignore 'useless' extensions for wildmenu
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set wildignore+=*.a,*.o,*.so,*.pyc,.git
+set wildignore+=*.jpg,*.png,*.gif,*.bmp,*.ico,*.pdf
+set wildignore+=*.tmp,*.swp
+
+"Tell NerdTree and Popup windows ignore thoses
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Set Vim Language
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let $LANG='en'
+"Setting env LANG var to english
+
+set langmenu=en
+"Setting menu language to en
+
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+"Sourcing evrything ("don't why but you need to do it)
+

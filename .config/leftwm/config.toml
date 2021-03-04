@@ -55,6 +55,36 @@ modifier = ["modkey", "Shift"]
 key = "x"
 
 [[keybind]]
+command = "Execute"
+value = "$HOME/.local/bin/scripts/dmenu-configs"
+modifier = ["Alt", "Control"]
+key = "c"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.local/bin/scripts/dmenu-sysmon"
+modifier = ["Alt", "Control"]
+key = "s"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.local/bin/scripts/rofi-screenshot"
+modifier = []
+key = "Print"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.local/bin/scripts/music"
+modifier = ["Alt", "Control"]
+key = "m"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/.local/bin/scripts/picom-toggle"
+modifier = ["Alt", "Control"]
+key = "p"
+
+[[keybind]]
 command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"

@@ -170,7 +170,7 @@ alias music="ncmpcpp"
 alias r="ranger"
 alias c="clear"
 alias q="exit"
-alias vim="nvim"
+# alias vim="nvim"
 
 # ~/.zshrc
 

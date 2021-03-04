@@ -8,7 +8,7 @@ cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Cascadia Code 10
+font = SauceCodePro Nerd Font 11
 #font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
@@ -45,42 +45,42 @@ urgent_on_bell = true
 ############################################################
 
 [colors]
-background = rgba(40, 44, 52, 0.9)
+background = #282c34
 
 # special
-foreground      = #bbc2cf
-foreground_bold = #bbc2cf
-cursor          = #bbc2cf
+foreground      = #abb2bf
+foreground_bold = #abb2bf
+cursor          = #abb2bf
 cursor_foreground   = #282c34
 
 # black
-color0 =  #1B2229
-color8 =  #5B6268
+color0 =  #282c34
+color8 =  #5c6370
 
 # red
-color1 =  #ff6c6b
-color9 =  #da8548
+color1 =  #e06c75
+color9 =  #e06c75
 
 # green
-color2 =  #98be65
-color10 = #4db5bd
+color2 =  #98c379
+color10 = #98c379
 
 # yellow
-color3 =  #da8548
+color3 =  #e5c07b
 color11 = #e5c07b
 
 # blue
-color4 =  #51afef
-color12 = #3071db
+color4 =  #61afef
+color12 = #61afef
 
 # magenta
 color5  = #c678dd
-color13 = #a9a1e1
+color13 = #c678dd
 
 # cyan
-color6  = #5699af
-color14 = #46d9ff
+color6  = #56b6c2
+color14 = #56b6c2
 
 # white
-color7  = #bbc2cf
-color15 = #dfdfdf
+color7  = #abb2bf
+color15 = #abb2bf
