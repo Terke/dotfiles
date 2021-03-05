@@ -4,7 +4,7 @@ tags = ["www", "fm", "dev", "mus", "vid", "img", "mail", "doc", "misc", "torrent
 
 [[keybind]]
 command = "Execute"
-value = "termite"
+value = "alacritty"
 modifier = ["modkey"]
 key = "Return"
 
