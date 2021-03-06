@@ -1,9 +1,0 @@
-#!/bin/bash
-set -e
-
-echo "Installing bookmarks"
-
-cd ~/DOTFILES/dotfiles/.local/bin/scripts/personal
-cp bookmarks ~/.config/gtk-3.0/
-
-echo "bookmarks installed"

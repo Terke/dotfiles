@@ -127,7 +127,7 @@ alias gpo='git push origin master'
 alias merge="xrdb -merge ~/.Xresources"
 
 # navigation
-alias ..='cd ..' 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
@@ -170,6 +170,10 @@ alias music="ncmpcpp"
 alias r="ranger"
 alias c="clear"
 alias q="exit"
+alias cat="bat"
+alias sz="source .zshrc"
+alias find="fd"
+alias ps="procs"
 # alias vim="nvim"
 
 # ~/.zshrc

@@ -4,13 +4,13 @@
 ## Cool stuff
 
 - **OS :** [**B**tw. **I** **u**se **A**rch](https://www.archlinux.org/)
-- **Window Manager :** [bspwm](https://github.com/baskerville/bspwm)
+- **Window Manager :** [bspwm](https://github.com/baskerville/bspwm), [leftwm](https://github.com/leftwm/leftwm)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
-- **Program Launcher :** [rofi](https://github.com/davatorium/rofi) , [dmenu](https://tools.suckless.org/dmenu/)
+- **Program Launcher :** [rofi](https://github.com/davatorium/rofi), [dmenu](https://tools.suckless.org/dmenu/)
 - **GUI File Manager :** [thunar](https://github.com/xfce-mirror/thunar)
 - **CLI File Manager :** [ranger](https://github.com/ranger/ranger)
 - **Image Viewer :** [feh](https://github.com/derf/feh)
-- **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot) , [maim](https://github.com/naelstrof/maim)
+- **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot), [maim](https://github.com/naelstrof/maim)
 - **Web Browser :** [qutebrowser](https://qutebrowser.org/index.html)
 - **Terminal :** [termite](https://github.com/thestinger/termite)
 - **Terminal Font :** [Sauce Code Nerd Font](https://github.com/ryanoasis/nerd-fonts)

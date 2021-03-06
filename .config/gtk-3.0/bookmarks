@@ -12,6 +12,7 @@ file:///home/terke/DATA DATA
 file:///home/terke/ARCO
 file:///home/terke/Applications
 file:///home/terke/.config/bspwm bspwm
+file:///home/terke/.config/leftwm
 file:///home/terke/.config/sxhkd sxhkd
 file:///home/terke/.config/polybar polybar
 file:///home/terke/.config/termite termite
