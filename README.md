@@ -1,6 +1,9 @@
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/scrot.png)
 
+## leftwm [![leftwm](https://img.shields.io/badge/LEFT-WM-red?style=flat-square)](https://github.com/leftwm/leftwm)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/leftwm.png)
+
 ## Cool stuff
 
 - **OS :** [**B**tw. **I** **u**se **A**rch](https://www.archlinux.org/)
