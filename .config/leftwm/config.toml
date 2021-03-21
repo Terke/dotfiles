@@ -1,10 +1,10 @@
 modkey = "Mod4"
 workspaces = []
-tags = ["www", "fm", "dev", "mus", "vid", "img", "mail", "doc", "misc", "torrent"]
+tags = ["www", "sys", "dev", "mus", "vid", "img", "mail", "doc", "misc", "torrent"]
 
 [[keybind]]
 command = "Execute"
-value = "alacritty"
+value = "termite"
 modifier = ["modkey"]
 key = "Return"
 
@@ -56,13 +56,37 @@ key = "x"
 
 [[keybind]]
 command = "Execute"
-value = "$HOME/.local/bin/scripts/dmenu-configs"
+value = "$HOME/dmenu_scripts/conf"
 modifier = ["Alt", "Control"]
 key = "c"
 
 [[keybind]]
 command = "Execute"
-value = "$HOME/.local/bin/scripts/dmenu-sysmon"
+value = "$HOME/dmenu_scripts/kill"
+modifier = ["Alt", "Control"]
+key = "k"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/dmenu_scripts/logout"
+modifier = ["Alt", "Control"]
+key = "l"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/dmenu_scripts/man"
+modifier = ["Alt", "Control"]
+key = "m"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/dmenu_scripts/reddit"
+modifier = ["Alt", "Control"]
+key = "r"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/dmenu_scripts/search"
 modifier = ["Alt", "Control"]
 key = "s"
 
@@ -75,7 +99,7 @@ key = "Print"
 [[keybind]]
 command = "Execute"
 value = "$HOME/.local/bin/scripts/music"
-modifier = ["Alt", "Control"]
+modifier = ["modkey"]
 key = "m"
 
 [[keybind]]
