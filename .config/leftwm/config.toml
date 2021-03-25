@@ -80,6 +80,12 @@ key = "m"
 
 [[keybind]]
 command = "Execute"
+value = "$HOME/dmenu_scripts/qute"
+modifier = ["Alt", "Control"]
+key = "q"
+
+[[keybind]]
+command = "Execute"
 value = "$HOME/dmenu_scripts/reddit"
 modifier = ["Alt", "Control"]
 key = "r"
