@@ -2,7 +2,7 @@
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/scrot.png)
 
 ## leftwm [![leftwm](https://img.shields.io/badge/LEFT-WM-red?style=flat-square)](https://github.com/leftwm/leftwm)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/leftwm.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/leftwm2.png)
 
 ## Cool stuff
 
