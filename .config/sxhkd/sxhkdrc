@@ -6,7 +6,7 @@
 #    ░░█████  ░░███  ░██░░░██░████   ██░░░██
 #     ░░░░░██  ██░██ ░██  ░██░██░██ ░██  ░██
 #     ██████  ██ ░░██░██  ░██░██░░██░░██████
-#    ░░░░░░  ░░   ░░ ░░   ░░ ░░  ░░  ░░░░░░ 
+#    ░░░░░░  ░░   ░░ ░░   ░░ ░░  ░░  ░░░░░░
 #
 #
 
@@ -170,16 +170,32 @@ super + shift + p
 
 # Edit common config files
 alt + ctrl + c
-   	$HOME/.local/bin/scripts/dmenu-configs
-# Common system monitoring programs
+   	$HOME/dmenu_scripts/conf
+
+# Search for a process to kill
+alt + ctrl + k
+	  $HOME/dmenu_scripts/kill
+
+# Music player using dmenu
+alt + ctrl + m
+		$HOME/dmenu_scripts/music
+
+# Search your qutebrowser bookmarks and quickmarks
+alt + ctrl + q
+		$HOME/dmenu_scripts/qute
+
+# dmenu as a reddit viewer using reddio
+alt + ctrl + r
+   	$HOME/dmenu_scripts/reddit
+
+# Search various search engines
 alt + ctrl + s
-   	$HOME/.local/bin/scripts/dmenu-sysmon
-# rofi-screenshot
+		$HOME/dmenu_scripts/search
+
+# Screenshot
 Print
    	$HOME/.local/bin/scripts/rofi-screenshot
-# Run ncmpcpp
-alt + ctrl + m
-	$HOME/.local/bin/scripts/music
+
 # Picom Toggle
 ctrl + alt + p
     ~/.config/bspwm/scripts/picom-toggle

@@ -4,7 +4,7 @@ tags = ["www", "sys", "dev", "mus", "vid", "img", "mail", "doc", "misc", "torren
 
 [[keybind]]
 command = "Execute"
-value = "termite"
+value = "alacritty"
 modifier = ["modkey"]
 key = "Return"
 
@@ -74,7 +74,7 @@ key = "l"
 
 [[keybind]]
 command = "Execute"
-value = "$HOME/dmenu_scripts/man"
+value = "$HOME/dmenu_scripts/music"
 modifier = ["Alt", "Control"]
 key = "m"
 
@@ -95,6 +95,12 @@ command = "Execute"
 value = "$HOME/dmenu_scripts/search"
 modifier = ["Alt", "Control"]
 key = "s"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/dmenu_scripts/wall"
+modifier = ["Alt", "Control"]
+key = "w"
 
 [[keybind]]
 command = "Execute"

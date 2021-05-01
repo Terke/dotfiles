@@ -21,7 +21,7 @@ config.load_autoconfig(False)
 c.aliases = {'q': 'quit', 'w': 'session-save', 'wq': 'quit --save'}
 
 # Setting dark mode
-config.set("colors.webpage.darkmode.enabled", True)
+#config.set("colors.webpage.darkmode.enabled", True)
 
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
@@ -164,7 +164,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications', True, 'https://www.reddit.com')
+config.set('content.notifications.enabled', True, 'https://www.reddit.com')
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -172,12 +172,12 @@ config.set('content.notifications', True, 'https://www.reddit.com')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications', True, 'https://www.youtube.com')
+config.set('content.notifications.enabled', True, 'https://www.youtube.com')
 
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
 # Type: Directory
-c.downloads.location.directory = '/home/terke/Downloads'
+c.downloads.location.directory = '~/Downloads'
 
 # When to show the tab bar.
 # Type: String
@@ -190,7 +190,7 @@ c.tabs.show = 'always'
 
 # Setting default page for when opening new tabs or new windows with
 # commands like :open -t and :open -w .
-c.url.default_page = 'file:///home/terke/Dropbox/Startpages/Homepage_2/html/homepage.html'
+c.url.default_page = 'file://~/.config/Startpage/html/homepage.html'
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
