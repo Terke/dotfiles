@@ -30,7 +30,7 @@ super + F12
 
 # Terminal
 super + Return
-    termite
+   alacritty 
 
 # Htop
 super + h

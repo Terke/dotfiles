@@ -15,7 +15,7 @@ file:///home/terke/.config/bspwm bspwm
 file:///home/terke/.config/leftwm
 file:///home/terke/.config/sxhkd sxhkd
 file:///home/terke/.config/polybar polybar
-file:///home/terke/.config/termite termite
+file:///home/terke/.config/alacritty alacritty
 file:///home/terke/.config/nvim nvim
 file:///usr/share/applications applications
 file:///opt /opt

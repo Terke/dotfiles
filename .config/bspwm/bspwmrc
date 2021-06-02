@@ -79,7 +79,7 @@ bspc rule -a Chromium desktop='^1'  follow=on
 bspc rule -a Vivaldi-stable desktop='^1' follow=on
 bspc rule -a Thunar desktop='^2' follow=on
 bspc rule -a Pcmanfm desktop='^2' follow=on
-bspc rule -a Subl3 desktop='^3' follow=on
+bspc rule -a Subl desktop='^3' follow=on
 bspc rule -a Atom desktop='^3' follow=on
 bspc rule -a Spotify desktop='^4' follow=on
 bspc rule -a vlc desktop='^5'  follow=on
