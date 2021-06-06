@@ -174,15 +174,19 @@ alt + ctrl + c
 
 # Search for a process to kill
 alt + ctrl + k
-	  $HOME/dmenu_scripts/kill
+	$HOME/dmenu_scripts/kill
 
 # Music player using dmenu
 alt + ctrl + m
-		$HOME/dmenu_scripts/music
+	$HOME/dmenu_scripts/music
+
+# Copy a color to clipboard using dmenu
+alt + ctrl + o        
+    $HOME/dmenu_scripts/colors
 
 # Search your qutebrowser bookmarks and quickmarks
 alt + ctrl + q
-		$HOME/dmenu_scripts/qute
+	$HOME/dmenu_scripts/qute
 
 # dmenu as a reddit viewer using reddio
 alt + ctrl + r
@@ -190,7 +194,7 @@ alt + ctrl + r
 
 # Search various search engines
 alt + ctrl + s
-		$HOME/dmenu_scripts/search
+	$HOME/dmenu_scripts/search
 
 # Screenshot
 Print
