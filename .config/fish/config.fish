@@ -208,14 +208,18 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"
 
 # get fastest mirrors
 alias mirror="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
+# our experimental - best option for the moment
+alias mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
+alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 
 # youtube-dl and ytmdl (The URL must be in quotes!!!)
 alias yt-flac="youtube-dl -f bestaudio --extract-audio --audio-format flac --audio-quality 0 "
 alias yt-mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "
 alias yt-opus="youtube-dl -f bestaudio --extract-audio --audio-format opus --audio-quality 0 "
+alias yt-vorbis="youtube-dl -f bestaudio --extract-audio --audio-format vorbis --audio-quality 0 "
 alias yt-wav="youtube-dl -f bestaudio --extract-audio --audio-format wav --audio-quality 0 "
 alias yta-best="youtube-dl --extract-audio --audio-format best"
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
@@ -274,16 +278,18 @@ alias .4='cd ../../../../' # if you can script it
 alias .5='cd ../../../../..' # just script it
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias ls='exa -al --color=always --group-directories-first'
+alias la='exa -a --color=always --group-directories-first'
+alias ll='exa -l --color=always --group-directories-first'
+alias lt='exa -aT --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
 
 # continue download
 alias wget="wget -c "
 
 # Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
 # tools
 alias pub-ip="curl ipinfo.io/ip"
@@ -294,18 +300,25 @@ alias hw="hwinfo --short"
 alias weather="curl http://wttr.in"
 alias df="df -h"
 
-# configs
+# edit configs
 alias polyconf="nvim ~/.config/polybar/config"
 alias bspconf="nvim ~/.config/bspwm/bspwmrc"
 alias vimconf="nvim ~/.config/nvim/init.vim"
 alias termconf="nvim ~/.config/termite/config"
+alias pacmanconf="sudo nvim /etc/pacman.conf"
+alias lightdmconf="sudo nvim /etc/lightdm/lightdm.conf"
+alias mirrorconf="sudo nvim /etc/pacman.d/mirrorlist"
 
 # lazy
 alias music="ncmpcpp"
 alias r="ranger"
 alias c='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 alias q="exit"
-alias vim="nvim"
+alias cat="bat"
+alias sz="source .zshrc"
+alias find="fd"
+alias ps="procs"
+# alias vim="nvim"
 
 neofetch
 

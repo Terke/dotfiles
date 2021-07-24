@@ -98,7 +98,7 @@ font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = weather cpu memory netdown netup arch-updates aur-updates date
+modules-right = weather cpu memory netdown netup arch-updates aur-updates date pavolume
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -321,7 +321,7 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume --up
 scroll-down = ~/.config/polybar/scripts/pavolume --down
-format-foreground = #e5c07b
+format-foreground = #abb2bf
 format-background = ${colors.background}
 
 ################################################################################
@@ -330,7 +330,7 @@ format-background = ${colors.background}
 type = custom/script
 exec = ~/.config/polybar/scripts/check-arch-updates
 interval = 1000
-label = arch: %output%
+label = %output%
 format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "    "

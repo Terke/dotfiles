@@ -1,3 +1,4 @@
+
 #███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗ ██████╗ ██████╗
 #████╗  ██║██╔════╝████╗ ████║██╔══██╗██╔════╝ ██╔══██╗██╔══██╗
 #██╔██╗ ██║██║     ██╔████╔██║██████╔╝██║      ██████╔╝██████╔╝
@@ -18,12 +19,15 @@ alternative_header_second_line_format = "$7{$b%a$/b}$9 - $5{%b}$9 $8{(%y)}"
 song_list_format = "♫   $2%n$(end) $9 $3%a$(end) $(245)-$9 $(246)%t$9 $R{ $5%y$9}$(end)     $(246)%lq$(end)"
 
 #song_columns_list_format ="(4)[red]{n} (20)[cyan]{a} (45)[blue]{t} (20)[white]{b} (5)[cyan]{y} (7)[magenta]{l}"
-song_columns_list_format ="(3f)[red]{n} (3f)[246]{} (35)[246]{t} (18)[blue]{a} (30)[green]{b} (5f)[yellow]{d} (5f)[red]{y} (7f)[246]{l}"
+song_columns_list_format ="(3f)[red]{n} (3f)[246]{} (35)[white]{t} (18)[blue]{a} (30)[green]{b} (5f)[yellow]{d} (5f)[red]{y} (7f)[magenta]{l}"
 
-song_status_format = "$b $8%A $5•$3• $3%t $3•$5• $5%b $5•$2• $2%y $2•$8• %g" (bold)
+song_status_format = "$b $8%A $8•$3• $3%t $3•$5• $5%b $5•$2• $2%y $2•$8• %g" (bold)
 #song_status_format = "$8%A $8•$3• $3%t $3•$5• $5%b $5•$2• $2%y $2•$8• $8•%g"   (regular)
+#song_status_format = "{$b$7# $2 $7$8 %b $7 $8}|{$b$7[$8      $7] $2 $7$8 %f $7 $8}"
 
 #song_list_format = "    $2%n $5%a $8%t $R$5%b $7%y $6%l"
+
+visualizer_color = blue, cyan, green, yellow, magenta, red
 
 #playlist_display_mode = "classic" (classic/columns)
 playlist_display_mode = "columns" (classic/columns)
@@ -92,7 +96,7 @@ progressbar_look ="─⊙┄"
 #progressbar_look = "┅┅┄"
 #progressbar_look = "─➞─"
 #progressbar_look = "─┅─"
-#progressbar_look = "▁▁▁"
+#progressbar_look = "━━━"
 #progressbar_look = "≈►·"
 #progressbar_look = "→→"
 progressbar_color = "black"
@@ -109,8 +113,9 @@ state_flags_color = "blue"
 main_window_color = "blue"
 header_window_color = "white"
 #main_window_highlight_color = "blue"
-current_item_prefix = "$(blue)$r"
-current_item_suffix = "$/r$(end)"
+alternative_ui_separator_color = "black"
+window_border_color = green
+active_window_border = red
 
 
 # Misc ..
@@ -119,6 +124,7 @@ display_bitrate = "yes"
 autocenter_mode = "yes"
 centered_cursor = "yes"
 titles_visibility = "no"
+enable_window_title = "yes"
 statusbar_visibility = "yes"
 #empty_tag_marker=" -- ‼ -- "
 empty_tag_marker=""
@@ -127,7 +133,9 @@ header_visibility = "no"
 display_remaining_time = "no"
 ask_before_clearing_playlists = "yes"
 discard_colors_if_item_is_selected = "yes"
-user_interface = "classic" (classic/alternative)
+
+user_interface = "alternative" (classic/alternative)
+
 default_find_mode = "wrapped"
 lyrics_directory = "~/.lyrics"
 follow_now_playing_lyrics = "yes"
@@ -137,29 +145,36 @@ lines_scrolled = 1
 mouse_list_scroll_whole_page = no
 show_hidden_files_in_local_browser = no
 startup_screen = playlist
-#execute_on_song_change="/usr/bin/mpd-popup"
+execute_on_song_change="~/Music/album_cover"
 #execute_on_song_change="/usr/bin/np"
 #execute_on_song_change="~/dotfiles/bin/scripts/tinynotify.sh"
 
 
+#current_item_prefix = "$/b$b[ $7$8 ]$/b "
+
+#now_playing_prefix = "$b$8      "
+#now_playing_suffix = "$/b$8 $b[ $3$8 ]$/b"
+
+
 # Visualizer ..
 
-#visualizer_in_stereo = "yes"
 visualizer_in_stereo = "yes"
-visualizer_sync_interval = "100000"
+#visualizer_sync_interval = "30"
+#buffer_time = "100000"
 visualizer_output_name = "Pipe"
-visualizer_data_source = "/tmp/mpd.fifo"
+#visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_data_source = /tmp/mpd.fifo
 
 #visualizer_type = ellipse
-#visualizer_type = "wave_filled"
-visualizer_type = "spectrum"
+visualizer_type = "wave_filled"
+#visualizer_type = "spectrum"
 
 #visualizer_look = ●▮
-#visualizer_look = "▉▋"
+visualizer_look = "▉▋"
 #visualizer_look = "▋▋"
 #visualizer_look = "◆▋"
 #visualizer_look = "◈░"
-visualizer_look = "││"
+#visualizer_look = "││"
 #visualizer_look = "▀▋"
 #visualizer_look = "▀○"
 #visualizer_look = "█▋"
@@ -174,5 +189,3 @@ visualizer_look = "││"
 #visualizer_look = "▋☰"
 #visualizer_look = "☰⛆"
 #visualizer_look = "☰▓"
-
-visualizer_color = blue, cyan, green, yellow, magenta, red
