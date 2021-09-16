@@ -1,8 +1,8 @@
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/scrot.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/bspwm.png)
 
 ## leftwm [![leftwm](https://img.shields.io/badge/LEFT-WM-red?style=flat-square)](https://github.com/leftwm/leftwm)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/leftwm2.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/leftwm.png)
 
 ## Cool stuff
 
