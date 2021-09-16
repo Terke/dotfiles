@@ -261,7 +261,7 @@ format-background = ${colors.background}
 
 [module/netdown]
 type = internal/network
-interface = enp0s3
+interface = enp1s0
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "   "
@@ -273,7 +273,7 @@ format-connected-background = ${colors.background}
 
 [module/netup]
 type = internal/network
-interface = enp0s3
+interface = enp1s0
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "   "
