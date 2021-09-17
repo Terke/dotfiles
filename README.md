@@ -4,7 +4,7 @@
 ## leftwm [![leftwm](https://img.shields.io/badge/LEFT-WM-red?style=flat-square)](https://github.com/leftwm/leftwm)
 ![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/leftwm.png)
 
-## Cool stuff
+## Cool Stuff
 
 - **OS :** [**B**tw. **I** **u**se **A**rch](https://www.archlinux.org/)
 - **Window Manager :** [bspwm](https://github.com/baskerville/bspwm), [leftwm](https://github.com/leftwm/leftwm)
@@ -29,7 +29,7 @@
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** [Sardi Arc](https://github.com/erikdubois/Sardi)
 - **GTK Cursors :** [xcursor-breeze](https://aur.archlinux.org/packages/xcursor-breeze/)
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Theme: [starship](https://starship.rs/)
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Zsh prompt: [starship](https://starship.rs/)
 
 ## License
 
