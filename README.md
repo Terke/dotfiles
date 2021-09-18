@@ -6,7 +6,7 @@
 
 ## Cool Stuff
 
-- **OS :** [**B**tw. **I** **u**se **A**rch](https://www.archlinux.org/)
+- **OS :** [**B**tw, **I** **u**se **A**rch](https://www.archlinux.org/)
 - **Window Manager :** [bspwm](https://github.com/baskerville/bspwm), [leftwm](https://github.com/leftwm/leftwm)
 - **Bar :** [polybar](https://github.com/polybar/polybar)
 - **Program Launcher :** [rofi](https://github.com/davatorium/rofi), [dmenu](https://tools.suckless.org/dmenu/)
@@ -15,7 +15,7 @@
 - **Image Viewer :** [feh](https://github.com/derf/feh)
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot), [maim](https://github.com/naelstrof/maim)
 - **Web Browser :** [qutebrowser](https://qutebrowser.org/index.html)
-- **Terminal :** [termite](https://github.com/thestinger/termite)
+- **Terminal :** [alacritty](https://github.com/alacritty/alacritty)
 - **Terminal Font :** [Sauce Code Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 - **CLI Text Editor :** [neovim](https://neovim.io/)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
