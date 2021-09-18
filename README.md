@@ -16,7 +16,7 @@
 - **Screenshooter :** [scrot](https://github.com/resurrecting-open-source-projects/scrot), [maim](https://github.com/naelstrof/maim)
 - **Web Browser :** [qutebrowser](https://qutebrowser.org/index.html)
 - **Terminal :** [alacritty](https://github.com/alacritty/alacritty)
-- **Terminal Font :** [Sauce Code Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+- **Terminal Font :** [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 - **CLI Text Editor :** [neovim](https://neovim.io/)
 - **GUI Text Editor :** [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
 - **Music Daemon :** [mpd](https://www.musicpd.org/)
@@ -29,7 +29,7 @@
 - **GTK Theme :** [Arc-Dark](https://github.com/horst3180/arc-theme)
 - **GTK Icons :** [Sardi Arc](https://github.com/erikdubois/Sardi)
 - **GTK Cursors :** [xcursor-breeze](https://aur.archlinux.org/packages/xcursor-breeze/)
-- **CLI Shell :** [zsh](http://zsh.sourceforge.net)/[oh-my-zsh](https://ohmyz.sh/) - Zsh prompt: [starship](https://starship.rs/)
+- **CLI Shell :** [zsh](http://zsh.sourceforge.net) / [oh-my-zsh](https://ohmyz.sh/) - Zsh prompt: [starship](https://starship.rs/)
 
 ## License
 
