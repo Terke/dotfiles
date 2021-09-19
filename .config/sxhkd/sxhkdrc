@@ -11,14 +11,111 @@
 #
 
 #################################################################
-# BSPWM HOTKEYS
+# GETTING STARTED ###############################################
+#################################################################
+
+# Terminal
+super + Return
+	alacritty
+
+# Close {or kill} currently focused node
+super + {_,shift + }q
+	bspc node -{c,k}
+
+# Xkill
+super + Escape
+	xkill
+
+# ArcoLinux-logout
+super + x
+	arcolinux-logout
+
+# Logout
+super + shift + x
+	bspc quit
+
+# Reload bspwm
+super + shift + b
+	~/.config/bspwm/bspwmrc
+
+# Reload sxhkd
+super + shift + s
+	pkill -USR1 -x sxhkd
+
+#################################################################
+# WINDOW MOTIONS ################################################
+#################################################################
+
+# Move focus in the given direction
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# Swap focused node with the one in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Set preselection (manual tiling) for next window
+# Cancel presel by inputting same command again
+super + alt + {h,j,k,l}
+	bspc node --presel-dir '~{west,south,north,east}'
+
+# Set the presel ratio, relative to the focused node
+super + alt + {1-9}
+	bspc node -o 0.{1-9}
+
+# Set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#################################################################
+# WINDOW AND DESKTOP ACTIONS ####################################
+#################################################################
+
+# Set the window state
+super + {t,shift + t,p,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+#################################################################
+# DESKTOP OPERATIONS ############################################
+#################################################################
+
+# Focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} focused:'^{1-9,10}'
+
+# focus {next,previous} desktop
+{super,alt} + {_,shift +} Tab
+	bspc {desktop,node} -f {next,prev}.local
+
+# Manage layouts
+alt + {q,w,e,r,t,y,u,i,o}
+	bsp-layout set {tall -- --master-size 0.5,rtall -- --master-size 0.5,wide,rwide,even,grid,rgrid,tiled,monocle}
+
+# Rotate all windows {counter-}clockwise by 90 degrees.
+super + {_,shift + }r
+		bspc node @/ --rotate {90,-90}
+
+# Incrementally decrease or increase the gaps between the tiled nodes
+super + shift + bracket{left,right}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
+
+# Gaps presets
+super + shift + {y,u,i,o,p}
+	bspc config window_gap {0 & bspc config top_padding 30, 10, 15, 25, 35}
+
+#################################################################
+# LAUNCHING PROGRAMS ############################################
 #################################################################
 
 # Browser
 super + w
 	firefox
 super + b
-	brave
+	chromium
 
 # dmenu
 super + shift + d
@@ -26,147 +123,27 @@ super + shift + d
 
 # Rofi
 super + F12
-    rofi -show run
-
-# Terminal
-super + Return
-   alacritty 
-
-# Htop
-super + h
-	termite 'htop task manager' -e htop
-
-# Hide polybar
-super + y
-    polybar-msg cmd toggle
-
-# Pavucontrol
-super + v
-    pavucontrol
-
-# xfce4-terminal dropdown
-F12
-    xfce4-terminal --hide-menubar --hide-borders --drop-down
-
-# ArcoLinux-logout
-super + x
-    arcolinux-logout
+	rofi -show run
 
 # File Manager
 super + shift + Return
 	thunar
 
-# Reload sxhkd
-super + shift + s
-	pkill -USR1 -x sxhkd
+# Launch cli-apps
+super + space ; {h,m,r,v}
+	alacritty -e {htop,ncmpcpp,ranger,nvim}
 
-# Reload bspwm
-super + shift + r
-	~/.config/bspwm/bspwmrc
-
-# Close applications
-super + shift + q
-	bspc node -c
-
-# Close applications (Second option)
-super + q
-	bspc node -c
-
-# Xkill
-super + Escape
-    xkill
-
-# Logout
-super + shift + x
-	bspc quit
+# xfce4-terminal dropdown
+F12
+	xfce4-terminal --hide-menubar --hide-borders --drop-down
 
 #################################################################
-# STATE/LAYOUTS/FLAGS
+# USEFULL EXTRAS & SCRIPTS ######################################
 #################################################################
 
-# Set the window state
-super + {t,shift + t,p,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-# Manage layouts
-alt + {t,r,w,q,e,h,v,d,m}
-	bsp-layout set {tall -- --master-size 0.5,rtall -- --master-size 0.5,wide,rwide,even,grid,rgrid,tiled,monocle}
-
-# Alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
-
-# Increase/decrease window gap on focused desktop
-super + bracket{left,right}
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
-
-# Focus selected desktop
-super + Tab
-	bspc desktop -f '^{1-9,10}'
-
-# Set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
-
-#################################################################
-# PRESELECT (Super + Ctrl)
-#################################################################
-
-# Preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# Preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# Cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-#################################################################
-# FOCUS/SWAP
-#################################################################
-
-# Focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} focused:'^{1-9,10}'
-
-# Focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
-
-# Focus next/previous window
-ctrl + alt + Left
-	bspc node --focus west
-
-# Focus next/previous window
-ctrl + alt + Right
-	bspc node --focus east
-
-# Focus Up window
-ctrl +alt + Up
-	bspc node --focus north
-
-# Focus Down window
-ctrl + alt + Down
-	bspc node --focus south
-
-#################################################################
-# VARIETY KEYS WITH PYWAL
-#################################################################
-
-# Wallpaper next
-super + shift + n
-    variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-
-# Wallpaper previous
-super + shift + p
-    variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-
-#################################################################
-# SCRIPTS
-#################################################################
+# Hide polybar
+super + y
+	polybar-msg cmd toggle
 
 # Edit common config files
 alt + ctrl + c
@@ -181,7 +158,7 @@ alt + ctrl + m
 	$HOME/dmenu_scripts/music
 
 # Copy a color to clipboard using dmenu
-alt + ctrl + o        
+alt + ctrl + o
     $HOME/dmenu_scripts/colors
 
 # Search your qutebrowser bookmarks and quickmarks
