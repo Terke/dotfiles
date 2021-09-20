@@ -13,7 +13,7 @@ $HOME/.config/bspwm/autostart.sh
 #bspc config border_radius       8
 bspc config border_width         2
 bspc config window_gap           15
-bspc config top_padding          25
+bspc config top_padding          30
 bspc config bottom_padding       0
 bspc config left_padding         0
 bspc config right_padding        0
@@ -22,7 +22,7 @@ bspc config click_to_focus       true
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-bspc config top_monocle_padding  5
+bspc config top_monocle_padding  0
 bspc config focus_by_distance    true
 bspc config focus_follows_pointer true
 #bspc config history_aware_focus  true
@@ -73,14 +73,19 @@ bspc rule -a Xfce4-terminal state=floating
 #bspc rule -a Xfce4-settings-manager state=tiled
 
 # Open applications on specific workspaces
-bspc rule -a Firefox desktop='^1' follow=on
-bspc rule -a Brave-browser desktop='^1' follow=on
+bspc rule -a firefox desktop='^1' follow=on
 bspc rule -a Chromium desktop='^1'  follow=on
+bspc rule -a Brave-browser desktop='^1' follow=on
 bspc rule -a Vivaldi-stable desktop='^1' follow=on
 bspc rule -a Thunar desktop='^2' follow=on
 bspc rule -a Pcmanfm desktop='^2' follow=on
 bspc rule -a Subl desktop='^3' follow=on
+bspc rule -a sublime_text desktop='^3' follow=on
 bspc rule -a Atom desktop='^3' follow=on
+bspc rule -a Deadbeef desktop='^4' follow=on
+bspc rule -a Clementine desktop='^4' follow=on
+bspc rule -a SoulseekQt desktop='^4' follow=on
+bspc rule -a Picard desktop='^4' follow=on
 bspc rule -a Spotify desktop='^4' follow=on
 bspc rule -a vlc desktop='^5'  follow=on
 bspc rule -a mpv desktop='^5'  follow=on
@@ -90,13 +95,8 @@ bspc rule -a Inkscape desktop='^6' follow=on
 bspc rule -a Thunderbird desktop='^7' follow=on
 bspc rule -a Meld desktop='^8' follow=on
 bspc rule -a Gpick desktop='^9' follow=on
-bspc rule -a Transmission-gtk desktop='^10' follow=on
 bspc rule -a qBittorrent desktop='^10' follow=on
-
-# Spotify fix  --move desktop 4
-#sleep 1
-#wmctrl -r Spotify -t 4
-#exit
+bspc rule -a Transmission-gtk desktop='^10' follow=on
 
 # Polybar hidden when fullscreen for vlc, youtube, mpv ...
 #find out the name of your monitor with xrandr

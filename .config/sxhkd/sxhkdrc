@@ -63,10 +63,6 @@ super + alt + {h,j,k,l}
 super + alt + {1-9}
 	bspc node -o 0.{1-9}
 
-# Set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
-
 #################################################################
 # WINDOW AND DESKTOP ACTIONS ####################################
 #################################################################
@@ -75,9 +71,17 @@ super + ctrl + {m,x,y,z}
 super + {t,shift + t,p,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+# Manage layouts
+alt + {q,w,e,r,t,y,u,i,o}
+	bsp-layout set {tall -- --master-size 0.5,rtall -- --master-size 0.5,wide,rwide,even,grid,rgrid,tiled,monocle}
+
 # Alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
+
+# Set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
 
 #################################################################
 # DESKTOP OPERATIONS ############################################
@@ -91,15 +95,11 @@ super + {_,shift + }{1-9,0}
 {super,alt} + {_,shift +} Tab
 	bspc {desktop,node} -f {next,prev}.local
 
-# Manage layouts
-alt + {q,w,e,r,t,y,u,i,o}
-	bsp-layout set {tall -- --master-size 0.5,rtall -- --master-size 0.5,wide,rwide,even,grid,rgrid,tiled,monocle}
-
 # Rotate all windows {counter-}clockwise by 90 degrees.
 super + {_,shift + }r
-		bspc node @/ --rotate {90,-90}
+	bspc node @/ --rotate {90,-90}
 
-# Incrementally decrease or increase the gaps between the tiled nodes
+# Dynamic gaps
 super + shift + bracket{left,right}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
 
@@ -147,7 +147,7 @@ super + y
 
 # Edit common config files
 alt + ctrl + c
-   	$HOME/dmenu_scripts/conf
+	$HOME/dmenu_scripts/conf
 
 # Search for a process to kill
 alt + ctrl + k
@@ -159,7 +159,7 @@ alt + ctrl + m
 
 # Copy a color to clipboard using dmenu
 alt + ctrl + o
-    $HOME/dmenu_scripts/colors
+	$HOME/dmenu_scripts/colors
 
 # Search your qutebrowser bookmarks and quickmarks
 alt + ctrl + q
@@ -167,7 +167,7 @@ alt + ctrl + q
 
 # dmenu as a reddit viewer using reddio
 alt + ctrl + r
-   	$HOME/dmenu_scripts/reddit
+	$HOME/dmenu_scripts/reddit
 
 # Search various search engines
 alt + ctrl + s
@@ -179,42 +179,42 @@ Print
 
 # Picom Toggle
 ctrl + alt + p
-    ~/.config/bspwm/scripts/picom-toggle
+	~/.config/bspwm/scripts/picom-toggle
 
 #################################################################
-#     MULTIMEDIA KEYS
+# MULTIMEDIA KEYS ###############################################
 #################################################################
 
 # Lowers volume
 F9
-    amixer set Master 10%-
+	amixer set Master 10%-
 
 # Raises volume
 F10
-    amixer set Master 10%+
+	amixer set Master 10%+
 
 # Mute
 F11
-    amixer -D pulse set Master 1+ toggle
+	amixer -D pulse set Master 1+ toggle
 
 # mpc (works for ncmpcpp)
 
-# Stop
+# Play
 F4
-    mpc play
+	mpc play
 
 # Stop
 F5
-    mpc stop
+	mpc stop
 
 # Previous
 F6
-    mpc prev
+	mpc prev
 
 # Toggle
 F7
-    mpc toggle
+	mpc toggle
 
 # Next
 F8
-    mpc next
+	mpc next
