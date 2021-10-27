@@ -15,7 +15,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'sheerun/vim-polyglot'                        " Better Syntax Support
     Plug 'norcalli/nvim-colorizer.lua'                 " Colorizer
     Plug 'junegunn/vim-emoji'                          " Vim needs emojis!
-    Plug 'joshdick/onedark.vim'						   " colorscheme
+    Plug 'joshdick/onedark.vim'						             " colorscheme
+    Plug 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
+    Plug 'vim-python/python-syntax'                    " Python highlighting
 
 call plug#end()
 
@@ -43,6 +45,8 @@ set nobackup                    " No auto backups
 set noswapfile                  " No swap
 set t_Co=256                    " Set if term supports 256 colors.
 set number relativenumber       " Display line numbers
+set cursorline
+" set cursorcolumn
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 syntax enable
 set encoding=utf-8              " The encoding displayed
@@ -139,5 +143,3 @@ set fillchars+=vert:\
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 lua require'plug-colorizer'
-
-
