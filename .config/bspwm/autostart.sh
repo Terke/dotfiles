@@ -20,6 +20,7 @@ nitrogen --restore &
 picom --config $HOME/.config/bspwm/picom.conf &
 xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/bin/play-with-mpv
 run dropbox &
 run volumeicon &
 run pamac-tray &

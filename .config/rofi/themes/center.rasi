@@ -9,7 +9,7 @@
     background-color:            #282c34;
     border-color:                #282c34;
     text-color:                  #bbc2cf;
-    font:                        "SauceCodePro Nerd Font 9";
+    font:                        "SauceCodePro Nerd Font Mono 9";
     prompt-font:                 "Ubuntu Bold 9";
     prompt-background:           #51afef;
     prompt-foreground:           #282c34;
@@ -83,3 +83,16 @@
     font:             @prompt-font;
     border-radius:    2px;
 }
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+/* Not actually relevant for this configuration, but it might
+be useful to someone having issues with their icons' background color
+
+element-icon {
+    background-color: inherit;
+}
+*/
