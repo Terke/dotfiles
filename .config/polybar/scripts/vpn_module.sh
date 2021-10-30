@@ -55,15 +55,15 @@ COLOR_DISCONNECTED=#FF3300
 
 ## [Set 8 favorite VPN locations]
 # These are passed to your VPN as `$VPNCOMMAND_RELAY_SET_LOCATION <input>`.
-VPN_LOCATIONS=("us sea" "us chi" "us nyc" "us" "jp" "au" "fr" "br")
+VPN_LOCATIONS=("al" "bg" "rs" "it" "ro" "gr" "fr" "de")
 
 ## [Set optional rofi menu style]. `man rofi` for help.
 icon_connect=
-icon_fav=
-icon_country=
-rofi_font="Fira Code Retina 15"
-rofi_theme="solarized_alternate"
-rofi_location="-location 5 -xoffset -170 -yoffset -725"
+icon_fav=❤️
+icon_country=🌍
+rofi_font="SauceCodePro Nerd Font Mono 9"
+rofi_theme="center"
+# rofi_location="-location 5 -xoffset -170 -yoffset -725"
 rofi_menu_name="Mullvad VPN"
 
 
