@@ -98,7 +98,7 @@ font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = weather cpu memory netdown netup arch-updates aur-updates date pavolume
+modules-right = weather cpu memory netdown netup arch-updates aur-updates vpn date pavolume
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
