@@ -153,9 +153,9 @@ alt + ctrl + c
 alt + ctrl + k
 	$HOME/dmenu_scripts/kill
 
-# Music player using dmenu
+# Search for a manpage or get a random one
 alt + ctrl + m
-	$HOME/dmenu_scripts/music
+	$HOME/dmenu_scripts/man
 
 # Search your qutebrowser bookmarks and quickmarks
 alt + ctrl + q
