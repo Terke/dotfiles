@@ -147,31 +147,35 @@ super + y
 
 # Edit common config files
 alt + ctrl + c
-	$HOME/dmenu_scripts/conf
+	$HOME/.local/bin/scripts/dmenu/conf
+
+# Launch system monitoring programs
+alt + ctrl + h
+	$HOME/.local/bin/scripts/dmenu/sysmon
 
 # Search for a process to kill
 alt + ctrl + k
-	$HOME/dmenu_scripts/kill
+	$HOME/.local/bin/scripts/dmenu/kill
 
 # Search for a manpage or get a random one
 alt + ctrl + m
-	$HOME/dmenu_scripts/man
+	$HOME/.local/bin/scripts/dmenu/man
 
 # Search your qutebrowser bookmarks and quickmarks
 alt + ctrl + q
-	$HOME/dmenu_scripts/qute
+	$HOME/.local/bin/scripts/dmenu/qute
 
 # dmenu as a reddit viewer using reddio
 alt + ctrl + r
-	$HOME/dmenu_scripts/reddit
+	$HOME/.local/bin/scripts/dmenu/reddit
 
 # Search various search engines
 alt + ctrl + s
-	$HOME/dmenu_scripts/search
+	$HOME/.local/bin/scripts/dmenu/search
 
 # Screenshot
 Print
-   	$HOME/dmenu_scripts/maim
+   	$HOME/.local/bin/scripts/dmenu/maim
 
 # Picom Toggle
 ctrl + alt + p
