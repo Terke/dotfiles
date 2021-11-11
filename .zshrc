@@ -168,6 +168,7 @@ alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | n
 
 # edit configs
 alias bspconf="nvim ~/.config/bspwm/bspwmrc"
+alias sxconf="nvim ~/.config/sxhkd/sxhkdrc"
 alias polyconf="nvim ~/.config/polybar/config"
 alias termconf="nvim ~/.config/alacritty/alacritty.yml"
 alias vimconf="nvim ~/.config/nvim/init.vim"
