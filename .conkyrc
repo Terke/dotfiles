@@ -108,8 +108,7 @@ ${color1}[S]+[Shift]+q${alignr}${color2}kill window${color}
 ${color1}[S]+x${alignr}${color2}power options menu${color}
 ${color1}[S]+{h,j,k,l}${alignr}${color2}move win focus${color}
 ${color1}[S]+[Shift]+{h,j,k,l}${alignr}${color2}swap win${color}
-${color1}[S]+{Arrows}${alignr}${color2}expand win${color}
-${color1}[S]+[Shift]+{Arrows}${alignr}${color2}contract win${color}
+${color1}[S]+{Arrows}${alignr}${color2}resize win${color}
 ${color1}[S]+[alt]+{h,j,k,l}${alignr}${color2}set presel${color}
 ${color1}[S]+[alt]+{1-9}${alignr}${color2}set presel ratio${color}
 ${color1}[S]+{1-9}${alignr}${color2}switch desktop${color}
@@ -130,6 +129,7 @@ ${color1}${hr}${color}
 ${color1}[S]+t${alignr}${color2}tiled window${color}
 ${color1}[S]+[Shift]+t${alignr}${color2}pseudo_tiled${color}
 ${color1}[S]+p${alignr}${color2}floating window${color}
+${color1}[Ctrl]+{Arrows}${alignr}${color2}move_floating_win${color}
 ${color1}[S]+f${alignr}${color2}fullscreen${color}
 ${color1}[S]+m${alignr}${color2}monocle layout${color}
 ${color1}[Alt]+{q-o}${alignr}${color2}manage layouts${color}
