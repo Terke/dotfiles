@@ -4,7 +4,7 @@
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
 	<unique-id>1488955845049151-1</unique-id>
-	<command>/usr/bin/alacritty</command>
+	<command>alacritty</command>
 	<description>Example for a custom action</description>
 	<patterns>*</patterns>
 	<startup-notify/>
@@ -49,24 +49,6 @@
 	<text-files/>
 </action>
 <action>
-	<icon>preferences-desktop-wallpaper</icon>
-	<name>Set wallpaper dual</name>
-	<unique-id>1526628754365261-1</unique-id>
-	<command>nitrogen --save --set-zoom-fill %f</command>
-	<description></description>
-	<patterns>*</patterns>
-	<image-files/>
-</action>
-<action>
-	<icon>preferences-desktop-wallpaper</icon>
-	<name>Set wallpaper single</name>
-	<unique-id>1489091195323731-3</unique-id>
-	<command>nitrogen --save --set-zoom-fill  --head=0 %f  &amp;&amp; nitrogen --set-zoom-fill  --head=1 %f</command>
-	<description></description>
-	<patterns>*</patterns>
-	<image-files/>
-</action>
-<action>
 	<icon>catfish</icon>
 	<name>Search with catfish</name>
 	<unique-id>1489089852658523-2</unique-id>
@@ -99,7 +81,7 @@
 	<icon>cs-startup-programs</icon>
 	<name>Run</name>
 	<unique-id>1526630606202525-4</unique-id>
-	<command>termite -e %f</command>
+	<command>urxvt -e %f</command>
 	<description></description>
 	<patterns>*</patterns>
 	<other-files/>
@@ -122,15 +104,6 @@
 	<description>Convert png to jpg</description>
 	<patterns>*.png</patterns>
 	<image-files/>
-</action>
-<action>
-	<icon>ktexteditorautobrace</icon>
-	<name>Edit as root</name>
-	<unique-id>1526631419798289-11</unique-id>
-	<command>gksudo geany %F</command>
-	<description>edit as root</description>
-	<patterns>*</patterns>
-	<text-files/>
 </action>
 <action>
 	<icon>settings</icon>

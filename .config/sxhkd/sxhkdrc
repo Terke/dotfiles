@@ -190,7 +190,7 @@ alt + ctrl + s
 
 # Screenshot
 Print
-   	$HOME/.local/bin/scripts/dmenu/maim
+   	$HOME/.local/bin/scripts/rofi/screenshot
 
 # Picom Toggle
 ctrl + alt + p
