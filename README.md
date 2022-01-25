@@ -1,5 +1,5 @@
 ## bspwm [![bspwm](https://img.shields.io/badge/BSP-WM-yellow?style=flat-square)](https://github.com/baskerville/bspwm)
-![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/015.png)
+![ScreenShot](https://github.com/Terke/dotfiles/blob/master/screenshots/15.png)
 
 ## Cool Stuff
 
