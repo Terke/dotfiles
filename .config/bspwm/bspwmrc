@@ -84,6 +84,7 @@ bspc rule -a Atom desktop='^3' follow=on
 bspc rule -a Deadbeef desktop='^4' follow=on
 bspc rule -a Clementine desktop='^4' follow=on
 bspc rule -a SoulseekQt desktop='^4' follow=on
+bspc rule -a Nicotine desktop='^4' follow=on
 bspc rule -a Picard desktop='^4' follow=on
 bspc rule -a Spotify desktop='^4' follow=on
 bspc rule -a vlc desktop='^5'  follow=on
