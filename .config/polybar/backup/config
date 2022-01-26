@@ -8,10 +8,12 @@
 ; ░░       ░░░░░░  ░░░  ░░      ░░░░░    ░░░░░░░░ ░░░
 
 [global/wm]
+;https://github.com/jaagr/polybar/wiki/Configuration#global-wm-settings
 margin-top = 0
 margin-bottom = 0
 
 [settings]
+;https://github.com/jaagr/polybar/wiki/Configuration#application-settings
 throttle-output = 5
 throttle-output-for = 10
 throttle-input-for = 30
@@ -22,6 +24,7 @@ compositing-overline = over
 compositing-underline = over
 compositing-border = over
 
+; Define fallback values used by all module formats
 format-foreground = #e06c75
 format-background = #98c379
 format-underline =
@@ -34,17 +37,10 @@ format-offset =
 [colors]
 background = #282c34
 foreground = #abb2bf
-black = #1e2127
-grey = #5c6370
-white = #e6efff
-red = #e06c75
-green = #98c379
-yellow = #e5c07b
-orange = #d19a66
-blue = #61afef
-magenta = #c678dd
-cyan = #56b6c2
 alert = #e06c75
+volume-min = #98c379
+volume-med = #e5c07b
+volume-max = #e06c75
 
 ################################################################################
 ################################################################################
@@ -90,7 +86,7 @@ padding-left = 1
 padding-right = 1
 
 module-margin-left = 0
-module-margin-right = 2
+module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "xos4 Terminus:size=9;2"
@@ -102,7 +98,7 @@ font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = weather cpu memory filesystem eth arch-updates date time volume
+modules-right = weather cpu memory netdown netup arch-updates aur-updates vpn date pavolume
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -131,47 +127,71 @@ ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
+ws-icon-default = ""
 
 format = <label-state> <label-mode>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-underline= ${colors.magenta}
+label-focused-underline= #c678dd
 label-focused-padding = 2
-label-focused-foreground = ${colors.magenta}
+label-focused-foreground = #c678dd
 
 label-occupied = %icon%
 label-occupied-padding = 2
 label-occupied-background = ${colors.background}
-label-occupied-foreground = ${colors.blue}
+label-occupied-foreground = #61afef
 
 label-urgent = %icon%
 label-urgent-padding = 2
 
 label-empty = %icon%
-label-empty-foreground = ${colors.grey}
+label-empty-foreground = #5c6370
 label-empty-padding = 2
 label-empty-background = ${colors.background}
-label-monocle = " [monocle] "
-label-monocle-foreground = ${colors.green}
-label-tiled = " [tiled] "
-label-tiled-foreground = ${colors.green}
-label-fullscreen = " [fullscreen]  "
-label-fullscreen-foreground = ${colors.green}
-label-floating = " [floating] "
-label-floating-foreground = ${colors.green}
-label-pseudotiled = " [pseudotiled] "
-label-pseudotiled-foreground = ${colors.green}
-label-locked = " [locked] "
-label-locked-foreground = ${colors.green}
-label-sticky = " [sticky] "
-label-sticky-foreground = ${colors.green}
-label-private =  " [private] "
-label-private-foreground = ${colors.green}
+label-monocle = "   "
+label-monocle-foreground = ${colors.foreground}
+label-tiled = "   "
+label-tiled-foreground = ${colors.foreground}
+label-fullscreen = "   "
+label-fullscreen-foreground = ${colors.foreground}
+label-floating = "   "
+label-floating-foreground = ${colors.foreground}
+label-pseudotiled = "   "
+label-pseudotiled-foreground = ${colors.foreground}
+label-locked = "   "
+label-locked-foreground = ${colors.foreground}
+label-sticky = "   "
+label-sticky-foreground = ${colors.foreground}
+label-private =  "      "
+label-private-foreground = ${colors.foreground}
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-font = 6
+
+[module/bspwm-alt]
+type = internal/bspwm
+
+enable-click = true
+pin-workspaces = true
+
+format = <label-state>
+
+label-focused = 
+label-focused-padding = 2
+
+label-occupied = 
+label-occupied-padding = 2
+
+label-urgent = 
+label-urgent-padding = 2
+
+label-empty = •
+label-empty-padding = 2
+
+format-foreground = #c678dd
+format-background = ${colors.background}
 
 ################################################################################
 ################################################################################
@@ -180,10 +200,16 @@ format-font = 6
 ################################################################################
 
 [module/xwindow]
+;https://github.com/jaagr/polybar/wiki/Module:-xwindow
 type = internal/xwindow
+
+; Available tokens:
+;   %title%
+; Default: %title%
 label = %title%
 label-maxlen = 50
-format-foreground = ${colors.foreground}
+
+format-foreground = #abb2bf
 format-background = ${colors.background}
 
 ################################################################################
@@ -193,7 +219,7 @@ type = custom/script
 exec = ~/.config/polybar/bar-protonmail/bar_protonmail.py -p
 interval = 10
 click-left = xdg-open https://mail.protonmail.com/inbox
-format-foreground = ${colors.magenta}
+format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "  Mail  "
 
@@ -205,97 +231,98 @@ exec = ~/.config/polybar/scripts/weather
 interval = 600
 label-font = 5
 click-left = xdg-open https://openweathermap.org/city/264371 &
-format-foreground = ${colors.yellow}
+format-foreground = #e5c07b
 format-background = ${colors.background}
 
 ################################################################################
 
 [module/memory]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
 type = internal/memory
 interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
 label = %percentage_used%%
-format = <label>
-format-prefix = "  "
-format-prefix-foreground = ${colors.blue}
-format-foreground = ${colors.foreground}
+
+format = Mem: <label>
+format-prefix = "    "
+format-prefix-foreground = #61afef
+format-foreground = #61afef
 format-background = ${colors.background}
 
 ################################################################################
 
-[module/eth]
+[module/netdown]
 type = internal/network
 interface = enp1s0
-interval = 3.0
-label-connected =  %local_ip%
-label-disconnected = %local_ip% disconnected
-format-connected-foreground = ${colors.foreground}
+label-connected = "%downspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = "   "
+format-connected-prefix-foreground = #98c379
+format-connected-foreground = #98c379
 format-connected-background = ${colors.background}
-format-connected-prefix = "  "
-format-connected-prefix-foreground = ${colors.green}
-format-connected-prefix-background = ${colors.background}
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.alert}
-label-disconnected-foreground = ${colors.foreground}
+
+################################################################################
+
+[module/netup]
+type = internal/network
+interface = enp1s0
+label-connected = "%upspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = "   "
+format-connected-prefix-foreground = #98c379
+format-connected-foreground = #98c379
+format-connected-background = ${colors.background}
 
 ################################################################################
 
 [module/cpu]
+;https://github.com/jaagr/polybar/wiki/Module:-cpu
 type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
 interval = 1
-format-foreground = ${colors.foreground}
+format-foreground = #e06c75
 format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = ${colors.red}
+format-prefix = "    "
+format-prefix-foreground = #e06c75
+
 label-font = 1
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
 format = <label>
-label = %percentage:3%%
+
+
+; Available tokens:
+;   %percentage% (default) - total cpu load
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label = Cpu:%percentage:3%%
 
 ################################################################################
 
-[module/filesystem]
-type = internal/fs
-mount-0 = /
-interval = 30
-fixed-values = false
-spacing = 4
-format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.foreground}
-format-mounted-background = ${colors.background}
-format-mounted-prefix = "  "
-format-mounted-prefix-foreground = ${colors.orange}
-label-mounted = %mountpoint%: %percentage_free%% free of %total%
-label-unmounted = %mountpoint% not mounted
-format-unmounted-foreground = ${colors.foreground}
-format-unmounted-background = ${colors.background}
-
-################################################################################
-
-[module/volume]
-type = internal/pulseaudio
-master-mixer = Master
-label-volume-foreground = ${colors.foreground}
-label-volume = %{A3:pavucontrol & disown:}%percentage%% %{A}
-format-volume = <ramp-volume><label-volume>
-format-volume-padding =
-label-volume-padding = 1
-
-format-volume-background = ${colors.background}
-label-volume-background = ${colors.background}
-ramp-volume-background = ${colors.background}
-
-label-muted = "  "
-label-muted-padding = 1
-label-muted-foreground = ${colors.alert}
-label-muted-background = ${colors.background}
-ramp-volume-0 = ""
-ramp-volume-0-foreground = ${colors.foreground}
-ramp-volume-1 = ""
-ramp-volume-1-foreground = ${colors.green}
-ramp-volume-2 = ""
-ramp-volume-2-foreground = ${colors.orange}
-ramp-volume-3 = ""
-ramp-volume-3-foreground = ${colors.magenta}
-ramp-volume-padding = 1
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/scripts/pavolume --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/scripts/pavolume --togmute
+scroll-up = ~/.config/polybar/scripts/pavolume --up
+scroll-down = ~/.config/polybar/scripts/pavolume --down
+format-foreground = #abb2bf
+format-background = ${colors.background}
 
 ################################################################################
 
@@ -304,10 +331,10 @@ type = custom/script
 exec = ~/.config/polybar/scripts/check-arch-updates
 interval = 1000
 label = %output%
-format-foreground = ${colors.foreground}
+format-foreground = #c678dd
 format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = ${colors.magenta}
+format-prefix = "    "
+format-prefix-foreground = #c678dd
 click-left = pamac-manager &
 
 [module/aur-updates]
@@ -315,10 +342,10 @@ type = custom/script
 exec = ~/.config/polybar/scripts/check-aur-updates
 interval = 1000
 label = [aur: %output%]
-format-foreground = ${colors.magenta}
+format-foreground = #c678dd
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = ${colors.magenta}
+format-prefix-foreground = #c678dd
 click-left = pamac-manager &
 
 ################################################################################
@@ -334,29 +361,33 @@ format =  <label>
 format-background = ${colors.background}
 format-prefix = "    "
 format-prefix-foreground = ${colors.foreground}
-format-underline = ${colors.foreground}
 
 ################################################################################
 
 [module/date]
+;https://github.com/jaagr/polybar/wiki/Module:-date
 type = internal/date
+; Seconds to sleep between updates
 interval = 5
-date = " %a, %d %b %Y"
-format-prefix = "  "
-format-prefix-foreground = ${colors.cyan}
-format-foreground = ${colors.foreground}
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = " %a %b %d, %Y"
+date-alt = " %d %b (%a), %Y"
+time = %l:%M%p
+time-alt = %l:%M%p
+format-prefix = "   "
+format-prefix-foreground = #56b6c2
+format-foreground = #56b6c2
 format-background = ${colors.background}
-label = %date%
-
-[module/time]
-type = internal/date
-interval = 1
-format-prefix = "  "
-format-prefix-foreground = ${colors.red}
-time = %I:%M %p
-format = <label>
-format-background = ${colors.background}
-format-foreground =${colors.foreground}
-label = "%time%"
+label = "%date%   %time% "
 
 ################################################################################
+
+[module/powermenu]
+type = custom/text
+content = 
+content-font = 1
+content-padding = 2
+content-foreground = #e06c75
+content-background = ${colors.background}
+click-left = arcolinux-logout &

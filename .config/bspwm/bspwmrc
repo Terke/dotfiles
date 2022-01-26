@@ -88,6 +88,7 @@ bspc rule -a Picard desktop='^4' follow=on
 bspc rule -a Spotify desktop='^4' follow=on
 bspc rule -a vlc desktop='^5'  follow=on
 bspc rule -a mpv desktop='^5'  follow=on
+bspc rule -a Gimp desktop='^6'  follow=on
 bspc rule -a feh desktop='^6' follow=on
 bspc rule -a Sxiv desktop='^6' follow=on
 bspc rule -a Nitrogen desktop='^6' follow=on
