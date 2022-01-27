@@ -102,7 +102,7 @@ font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = weather cpu memory filesystem eth arch-updates date time volume
+modules-right = weather1 cpu memory filesystem eth arch-updates date time volume
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -208,6 +208,17 @@ click-left = xdg-open https://openweathermap.org/city/264371 &
 format-foreground = ${colors.yellow}
 format-background = ${colors.background}
 
+[module/weather1]
+type = custom/script
+interval = 10
+format = <label>
+format-prefix = "  "
+format-prefix-foreground = ${colors.yellow}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+exec = python -u ~/.config/polybar/scripts/weather.py
+tail = true
+
 ################################################################################
 
 [module/memory]
@@ -244,7 +255,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "  "
+format-prefix = " "
 format-prefix-foreground = ${colors.red}
 label-font = 1
 format = <label>
@@ -334,7 +345,6 @@ format =  <label>
 format-background = ${colors.background}
 format-prefix = "    "
 format-prefix-foreground = ${colors.foreground}
-format-underline = ${colors.foreground}
 
 ################################################################################
 
@@ -342,11 +352,13 @@ format-underline = ${colors.foreground}
 type = internal/date
 interval = 5
 date = " %a, %d %b %Y"
-format-prefix = "  "
+format-prefix = " "
 format-prefix-foreground = ${colors.cyan}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %date%
+
+################################################################################
 
 [module/time]
 type = internal/date

@@ -18,6 +18,10 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+if [ -d "$HOME/.local/bin/scripts" ] ; then
+    PATH="$HOME/.local/bin/scripts:$PATH"
+fi
+
 # ex = EXtractor for all kinds of archives
 # usage: ex <file>
 ex ()
@@ -53,7 +57,7 @@ fi
 
 ## ALIASES ##
 
-# pacman and yay
+# pacman, yay and paru
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 alias upall="paru -Syu --noconfirm"
@@ -75,6 +79,7 @@ alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pac
 # our experimental - best option for the moment
 alias mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
+alias ram='rate-mirrors --allow-root arch | sudo tee /etc/pacman.d/mirrorlist'
 
 # youtube-dl and ytmdl
 alias yt-flac="youtube-dl -f bestaudio --extract-audio --audio-format flac --audio-quality 0 "
@@ -172,6 +177,7 @@ alias sxconf="nvim ~/.config/sxhkd/sxhkdrc"
 alias polyconf="nvim ~/.config/polybar/config"
 alias termconf="nvim ~/.config/alacritty/alacritty.yml"
 alias vimconf="nvim ~/.config/nvim/init.vim"
+alias zconf="nvim ~/.zshrc"
 alias pacmanconf="sudo nvim /etc/pacman.conf"
 alias mirrorconf="sudo nvim /etc/pacman.d/mirrorlist"
 alias lightdmconf="sudo nvim /etc/lightdm/lightdm.conf"
