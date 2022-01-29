@@ -16,7 +16,7 @@
     padding = 15
     horizontal_padding = 30
     frame_width = 0
- frame_color = "#353131"
+ frame_color = "#1e2127"
     #alignment = left
     #x = 15
     #y = 15
@@ -58,7 +58,7 @@
     show_indicators = yes
     icon_position = left
     max_icon_size = 40
-    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/
     sticky_history = yes
     history_length = 20
     dmenu = /usr/bin/dmenu -p dunst:
@@ -83,20 +83,20 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
- background = "#282a38"
- foreground = "#dfdfdf"
+ background = "#282c34"
+ foreground = "#abb2bf"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = ~/.local/share/arch.png
 
 [urgency_normal]
- background = "#282a38"
- foreground = "#dfdfdf"
+ background = "#282c34"
+ foreground = "#abb2bf"
     timeout = 5
 
 [urgency_critical]
- background = "#9b392d"
- foreground = "#dfdfdf"
+ background = "#282c34"
+ foreground = "#e06c75"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules to

@@ -145,7 +145,7 @@ lines_scrolled = 1
 mouse_list_scroll_whole_page = no
 show_hidden_files_in_local_browser = no
 startup_screen = playlist
-#execute_on_song_change="~/Music/album_cover"
+execute_on_song_change="~/.local/bin/scripts/album_cover"
 #execute_on_song_change="/usr/bin/np"
 #execute_on_song_change="~/dotfiles/bin/scripts/tinynotify.sh"
 

@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euf -o pipefail
+
+# CONFIG ----------------------------------------------------
+# This NEEDS to be the same as in mpd.conf
+# music_dir="$HOME/Music/Albums"
+music_dir="$HOME/Music"
+
+# What should the covers be resized to in pixels
+cover_resize="200"
+
+# What is the cover file called?
+img_reg=".*/(cover|front|folder|art).(jpg|jpeg|png|gif)$"
+
+# What do we want the notification to look like?
+artist_color="#abb2bf"
+song_color="#abb2bf"
+
+form="<span color='$artist_color'>%artist%</span> - <span color='$song_color'>%title%</span>"
+# END CONFIG ------------------------------------------------
+
+# These are some variables we need for things to work
+song="$(mpc --format %file% current)"
+songdir="$music_dir/$(dirname "${song}")/"
+raw_cover="/tmp/current_cover.png"
+heading="$(mpc current -f "%album%" | sed "s:&:&amp;:g")"
+message="$(mpc current -f "$form" | sed "s:&:&amp;:g" )"
+
+# Is there music on?
+[[ -z $song ]] && exit 1
+
+# No cover if the folder isn't found
+[[ -z "$songdir" ]] && exit 1
+
+# But if it is found, look for only one of the specified files
+cover="$(find "$songdir" -maxdepth 1 -type f -regextype egrep -regex "$img_reg" 2>/dev/null)"
+
+# Resize the cover
+if [[ -n $cover ]]; then
+		ffmpeg -hide_banner -loglevel panic -nostats -y -i "$cover" -vf scale="$cover_resize":-2 "$raw_cover"
+        cover="$raw_cover"
+fi
+
+# Send the notification
+notify-send -u low -t 8000 -i "$cover" "$heading" "$message"
+
+# add a rule to make sxiv:albumcover floating
+#sxiv "$cover" -N albumcover -g 250x250-10-10 -bpq > /dev/null 2>&1 & pid=$!
+#    { sleep 4; kill "$pid"; } &
