@@ -95,14 +95,14 @@ module-margin-right = 2
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "xos4 Terminus:size=9;2"
 font-1 = "xos4 Terminus:size=9;2"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
-font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
+font-2 = "Font Awesome 6 Free:style=Regular:pixelsize=9;2"
+font-3 = "Font Awesome 6 Free:style=Solid:pixelsize=9;2"
 font-4 = "Weather Icons:size=9;2"
 font-5 = "FontAwesome:size=11;2"
 
 modules-left = bspwm xwindow
 modules-center =
-modules-right = weather1 cpu memory filesystem eth arch-updates date time volume
+modules-right = weather cpu mem filesystem eth arch-updates date time vol
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -153,21 +153,21 @@ label-empty-foreground = ${colors.grey}
 label-empty-padding = 2
 label-empty-background = ${colors.background}
 label-monocle = " [monocle] "
-label-monocle-foreground = ${colors.green}
+label-monocle-foreground = ${colors.cyan}
 label-tiled = " [tiled] "
-label-tiled-foreground = ${colors.green}
+label-tiled-foreground = ${colors.cyan}
 label-fullscreen = " [fullscreen]  "
-label-fullscreen-foreground = ${colors.green}
+label-fullscreen-foreground = ${colors.cyan}
 label-floating = " [floating] "
-label-floating-foreground = ${colors.green}
+label-floating-foreground = ${colors.cyan}
 label-pseudotiled = " [pseudotiled] "
-label-pseudotiled-foreground = ${colors.green}
+label-pseudotiled-foreground = ${colors.cyan}
 label-locked = " [locked] "
-label-locked-foreground = ${colors.green}
+label-locked-foreground = ${colors.cyan}
 label-sticky = " [sticky] "
-label-sticky-foreground = ${colors.green}
+label-sticky-foreground = ${colors.cyan}
 label-private =  " [private] "
-label-private-foreground = ${colors.green}
+label-private-foreground = ${colors.cyan}
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -199,7 +199,7 @@ format-prefix = "  Mail  "
 
 ################################################################################
 
-[module/weather]
+[module/weather_full]
 type = custom/script
 exec = ~/.config/polybar/scripts/weather
 interval = 600
@@ -208,7 +208,9 @@ click-left = xdg-open https://openweathermap.org/city/264371 &
 format-foreground = ${colors.yellow}
 format-background = ${colors.background}
 
-[module/weather1]
+################################################################################
+
+[module/weather]
 type = custom/script
 interval = 10
 format = <label>
@@ -221,7 +223,20 @@ tail = true
 
 ################################################################################
 
-[module/memory]
+[module/cpu]
+type = internal/cpu
+interval = 1
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = ${colors.red}
+label-font = 1
+format = <label>
+label = %percentage:3%%
+
+################################################################################
+
+[module/mem]
 type = internal/memory
 interval = 1
 label = %percentage_used%%
@@ -230,6 +245,46 @@ format-prefix = "  "
 format-prefix-foreground = ${colors.blue}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+
+################################################################################
+
+[module/temp]
+type = internal/temperature
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+warn-temperature = 60
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+format-padding = 1
+format-background = ${colors.background}
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.red}
+format-prefix-foreground = ${colors.foreground}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-foreground = ${colors.foreground}
+
+################################################################################
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+interval = 30
+fixed-values = false
+spacing = 4
+format-mounted = <label-mounted>
+format-mounted-foreground = ${colors.foreground}
+format-mounted-background = ${colors.background}
+format-mounted-prefix = "  "
+format-mounted-prefix-foreground = ${colors.orange}
+label-mounted = %mountpoint%: %percentage_free%% of %total%
+label-unmounted = %mountpoint% not mounted
+format-unmounted-foreground = ${colors.foreground}
+format-unmounted-background = ${colors.background}
 
 ################################################################################
 
@@ -250,38 +305,72 @@ label-disconnected-foreground = ${colors.foreground}
 
 ################################################################################
 
-[module/cpu]
-type = internal/cpu
-interval = 1
+[module/vpn]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/vpn_module.sh
+click-left = $HOME/.config/polybar/scripts/vpn_module.sh --toggle-connection &
+click-right = $HOME/.config/polybar/scripts/vpn_module.sh --location-menu &
+click-middle = $HOME/.config/polybar/scripts/vpn_module.sh --ip-address &
+interval = 5
+format =  <label>
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+
+################################################################################
+
+[module/arch-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-arch-updates
+interval = 1000
+label = %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = " "
+format-prefix = "  "
+format-prefix-foreground = ${colors.magenta}
+click-left = pamac-manager &
+
+################################################################################
+
+[module/aur-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-aur-updates
+interval = 1000
+label = [aur: %output%]
+format-foreground = ${colors.magenta}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = ${colors.magenta}
+click-left = pamac-manager &
+
+################################################################################
+
+[module/date]
+type = internal/date
+interval = 5
+date = " %a, %d %b %Y"
+format-prefix = "  "
+format-prefix-foreground = ${colors.cyan}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+label = %date%
+
+################################################################################
+
+[module/time]
+type = internal/date
+interval = 1
+format-prefix = "  "
 format-prefix-foreground = ${colors.red}
-label-font = 1
+time = %I:%M %p
 format = <label>
-label = %percentage:3%%
+format-background = ${colors.background}
+format-foreground =${colors.foreground}
+label = "%time%"
 
 ################################################################################
 
-[module/filesystem]
-type = internal/fs
-mount-0 = /
-interval = 30
-fixed-values = false
-spacing = 4
-format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.foreground}
-format-mounted-background = ${colors.background}
-format-mounted-prefix = "  "
-format-mounted-prefix-foreground = ${colors.orange}
-label-mounted = %mountpoint%: %percentage_free%% free of %total%
-label-unmounted = %mountpoint% not mounted
-format-unmounted-foreground = ${colors.foreground}
-format-unmounted-background = ${colors.background}
-
-################################################################################
-
-[module/volume]
+[module/vol]
 type = internal/pulseaudio
 master-mixer = Master
 label-volume-foreground = ${colors.foreground}
@@ -307,68 +396,5 @@ ramp-volume-2-foreground = ${colors.orange}
 ramp-volume-3 = ""
 ramp-volume-3-foreground = ${colors.magenta}
 ramp-volume-padding = 1
-
-################################################################################
-
-[module/arch-updates]
-type = custom/script
-exec = ~/.config/polybar/scripts/check-arch-updates
-interval = 1000
-label = %output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = ${colors.magenta}
-click-left = pamac-manager &
-
-[module/aur-updates]
-type = custom/script
-exec = ~/.config/polybar/scripts/check-aur-updates
-interval = 1000
-label = [aur: %output%]
-format-foreground = ${colors.magenta}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = ${colors.magenta}
-click-left = pamac-manager &
-
-################################################################################
-
-[module/vpn]
-type = custom/script
-exec = $HOME/.config/polybar/scripts/vpn_module.sh
-click-left = $HOME/.config/polybar/scripts/vpn_module.sh --toggle-connection &
-click-right = $HOME/.config/polybar/scripts/vpn_module.sh --location-menu &
-click-middle = $HOME/.config/polybar/scripts/vpn_module.sh --ip-address &
-interval = 5
-format =  <label>
-format-background = ${colors.background}
-format-prefix = "    "
-format-prefix-foreground = ${colors.foreground}
-
-################################################################################
-
-[module/date]
-type = internal/date
-interval = 5
-date = " %a, %d %b %Y"
-format-prefix = " "
-format-prefix-foreground = ${colors.cyan}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-label = %date%
-
-################################################################################
-
-[module/time]
-type = internal/date
-interval = 1
-format-prefix = "  "
-format-prefix-foreground = ${colors.red}
-time = %I:%M %p
-format = <label>
-format-background = ${colors.background}
-format-foreground =${colors.foreground}
-label = "%time%"
 
 ################################################################################

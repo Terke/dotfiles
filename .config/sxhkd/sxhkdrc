@@ -143,6 +143,8 @@ super + F12
 # File Manager
 super + shift + Return
 	thunar
+super + shift + f
+	pcmanfm
 
 # Launch cli-apps
 super + space ; {h,m,r,v,w}
