@@ -78,8 +78,7 @@ bspc rule -a Chromium desktop='^1'  follow=on
 bspc rule -a qutebrowser desktop='^1' follow=on
 bspc rule -a Thunar desktop='^2' follow=on
 bspc rule -a Pcmanfm desktop='^2' follow=on
-bspc rule -a Subl desktop='^3' follow=on
-bspc rule -a subl desktop='^3' follow=on
+bspc rule -a subl desktop='^3'  follow=on
 bspc rule -a Atom desktop='^3' follow=on
 bspc rule -a Deadbeef desktop='^4' follow=on
 bspc rule -a Clementine desktop='^4' follow=on
@@ -97,6 +96,7 @@ bspc rule -a Inkscape desktop='^6' follow=on
 bspc rule -a Thunderbird desktop='^7' follow=on
 bspc rule -a Signal desktop='^7' follow=on
 bspc rule -a Meld desktop='^8' follow=on
+bspc rule -a Soffice desktop='^8' follow=on
 bspc rule -a Lxappearance desktop='^9' follow=on
 bspc rule -a Gpick desktop='^9' follow=on
 bspc rule -a qBittorrent desktop='^10' follow=on
